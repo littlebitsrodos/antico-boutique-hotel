@@ -321,4 +321,116 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // --------------------------------------------------------------------------
+    // Premium Lightbox Controller
+    // --------------------------------------------------------------------------
+    const galleryImages = document.querySelectorAll('.room-gallery img, .gallery-grid img, .gallery-item img');
+
+    if (galleryImages.length > 0) {
+        // Create Lightbox DOM
+        const lightbox = document.createElement('div');
+        lightbox.className = 'lightbox-overlay';
+        lightbox.innerHTML = `
+            <button class="lightbox-btn lightbox-close" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <button class="lightbox-btn lightbox-prev" aria-label="Previous">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <button class="lightbox-btn lightbox-next" aria-label="Next">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+            <div class="lightbox-container">
+                <img src="" alt="" class="lightbox-image">
+                <div class="lightbox-caption"></div>
+            </div>
+        `;
+        document.body.appendChild(lightbox);
+
+        // Elements
+        const lightboxImg = lightbox.querySelector('.lightbox-image');
+        const lightboxCaption = lightbox.querySelector('.lightbox-caption');
+        const closeBtn = lightbox.querySelector('.lightbox-close');
+        const prevBtn = lightbox.querySelector('.lightbox-prev');
+        const nextBtn = lightbox.querySelector('.lightbox-next');
+
+        let currentIndex = 0;
+        // Convert NodeList to Array for easier index handling and strictly filter for the current visible gallery
+        // Simplification: We treat all images on the page as one sequence or group them by container?
+        // For a simple premium feel, treating images within the same section/container as a group is best.
+        let currentGroup = [];
+
+        function openLightbox(index, group) {
+            currentGroup = group;
+            currentIndex = index;
+            updateLightboxImage();
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function updateLightboxImage() {
+            const img = currentGroup[currentIndex];
+            lightboxImg.src = img.src; // Uses the same src (already optimized webp)
+            lightboxImg.alt = img.alt;
+            lightboxCaption.textContent = img.alt;
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + currentGroup.length) % currentGroup.length;
+            updateLightboxImage();
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % currentGroup.length;
+            updateLightboxImage();
+        }
+
+        // Attach Click Events to Images
+        // We group images based on their parent container to avoid jumping between unrelated galleries
+        const galleryContainers = document.querySelectorAll('.room-gallery, .gallery-grid, .instagram-grid, .services-grid');
+
+        galleryContainers.forEach(container => {
+            const images = Array.from(container.querySelectorAll('img'));
+            images.forEach((img, index) => {
+                img.addEventListener('click', (e) => {
+                    e.stopPropagation(); // Prevent other interactions
+                    openLightbox(index, images);
+                });
+            });
+        });
+
+        // Event Listeners for Controls
+        closeBtn.addEventListener('click', closeLightbox);
+        prevBtn.addEventListener('click', (e) => { e.stopPropagation(); prevImage(); });
+        nextBtn.addEventListener('click', (e) => { e.stopPropagation(); nextImage(); });
+
+        // Close on background click
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target.classList.contains('lightbox-container')) {
+                closeLightbox();
+            }
+        });
+
+        // Keyboard Navigation
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') prevImage();
+            if (e.key === 'ArrowRight') nextImage();
+        });
+    }
+
 });
