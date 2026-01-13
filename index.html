@@ -120,12 +120,31 @@
     </ul>
   </div>
 
-  <!-- Hero Section -->
+  <!-- Hero Section with Image Slider -->
   <section class="hero">
-    <div class="hero-bg">
-      <img src="images/hero_courtyard.webp" alt="Palazzo Antico courtyard at dusk with fountain and bougainvillea"
-        width="1024" height="1024" fetchpriority="high">
-      <div class="hero-overlay"></div>
+    <div class="hero-slider">
+      <div class="slide active">
+        <img src="images/hero_courtyard.webp" alt="Palazzo Antico courtyard at dusk" width="1024" height="1024">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="slide">
+        <img src="images/room_tower_suite.webp" alt="Tower Suite with panoramic views" width="1024" height="1024">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="slide">
+        <img src="images/experience_restaurant.webp" alt="Fine dining in stone cellar" width="1024" height="1024">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="slide">
+        <img src="images/experience_terrace.webp" alt="Rooftop terrace at sunset" width="1024" height="1024">
+        <div class="hero-overlay"></div>
+      </div>
+    </div>
+    <div class="hero-slider-indicators">
+      <button class="hero-slider-indicator active" aria-label="Slide 1"></button>
+      <button class="hero-slider-indicator" aria-label="Slide 2"></button>
+      <button class="hero-slider-indicator" aria-label="Slide 3"></button>
+      <button class="hero-slider-indicator" aria-label="Slide 4"></button>
     </div>
     <div class="hero-content">
       <p class="hero-subtitle">Est. 1489 • Rhodes, Greece</p>
@@ -144,6 +163,7 @@
       </svg>
     </div>
   </section>
+
 
   <!-- Welcome Section -->
   <section class="welcome section-lg">
@@ -383,8 +403,69 @@
     </div>
   </section>
 
+  <!-- Instagram Social Grid -->
+  <section class="instagram-section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-eyebrow">Guest Moments</p>
+        <h2 class="section-title">Share Your Stay</h2>
+        <p class="section-description">Real moments from our guests. Tag #PalazzoAntico to be featured.</p>
+      </div>
+      <div class="instagram-grid">
+        <div class="instagram-item slide-up stagger-delay-1">
+          <img src="images/hero_courtyard.webp" alt="Guest photo - Courtyard view" loading="lazy">
+          <div class="instagram-overlay">
+            <span class="instagram-icon">📸</span>
+            <span>@traveler_dreams</span>
+          </div>
+        </div>
+        <div class="instagram-item slide-up stagger-delay-2">
+          <img src="images/experience_terrace.webp" alt="Guest photo - Rooftop breakfast" loading="lazy">
+          <div class="instagram-overlay">
+            <span class="instagram-icon">📸</span>
+            <span>@mediterranean_soul</span>
+          </div>
+        </div>
+        <div class="instagram-item slide-up stagger-delay-3">
+          <img src="images/room_knights_suite.webp" alt="Guest photo - Knights Suite" loading="lazy">
+          <div class="instagram-overlay">
+            <span class="instagram-icon">📸</span>
+            <span>@luxury_escapes</span>
+          </div>
+        </div>
+        <div class="instagram-item slide-up stagger-delay-4">
+          <img src="images/experience_restaurant.webp" alt="Guest photo - Fine dining" loading="lazy">
+          <div class="instagram-overlay">
+            <span class="instagram-icon">📸</span>
+            <span>@foodie_adventures</span>
+          </div>
+        </div>
+        <div class="instagram-item slide-up stagger-delay-5">
+          <img src="images/experience_oldtown.webp" alt="Guest photo - Old town exploration" loading="lazy">
+          <div class="instagram-overlay">
+            <span class="instagram-icon">📸</span>
+            <span>@history_hunter</span>
+          </div>
+        </div>
+        <div class="instagram-item slide-up stagger-delay-6">
+          <img src="images/tower_suite_sunset.webp" alt="Guest photo - Sunset views" loading="lazy">
+          <div class="instagram-overlay">
+            <span class="instagram-icon">📸</span>
+            <span>@sunset_chaser</span>
+          </div>
+        </div>
+      </div>
+      <div class="instagram-cta fade-in">
+        <a href="https://instagram.com/palazzoantico" target="_blank" rel="noopener noreferrer">
+          <span>📷</span> Follow @PalazzoAntico on Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Experience Section -->
-  <section class="experience" style="background-image: url('images/experience_oldtown.png');">
+
+  <section class="experience" style="background-image: url('images/experience_oldtown.webp');">
     <div class="experience-overlay"></div>
     <div class="container experience-content">
       <p class="section-eyebrow text-gold">Medieval Rhodes</p>

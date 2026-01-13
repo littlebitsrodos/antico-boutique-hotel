@@ -207,4 +207,118 @@ document.addEventListener('DOMContentLoaded', function () {
         return re.test(email);
     }
 
+    // --------------------------------------------------------------------------
+    // Interactive Spotlight Cursor
+    // --------------------------------------------------------------------------
+    const spotlight = document.createElement('div');
+    spotlight.className = 'cursor-spotlight';
+    document.body.appendChild(spotlight);
+
+    let mouseX = 0, mouseY = 0;
+    let spotlightX = 0, spotlightY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    function animateSpotlight() {
+        // Smooth following effect
+        spotlightX += (mouseX - spotlightX) * 0.1;
+        spotlightY += (mouseY - spotlightY) * 0.1;
+
+        spotlight.style.left = spotlightX + 'px';
+        spotlight.style.top = spotlightY + 'px';
+
+        requestAnimationFrame(animateSpotlight);
+    }
+    animateSpotlight();
+
+    // --------------------------------------------------------------------------
+    // Hero Image Slider
+    // --------------------------------------------------------------------------
+    const heroSlider = document.querySelector('.hero-slider');
+
+    if (heroSlider) {
+        const slides = heroSlider.querySelectorAll('.slide');
+        const indicators = document.querySelectorAll('.hero-slider-indicator');
+        let currentSlide = 0;
+        const slideInterval = 6000; // 6 seconds per slide
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (indicators[i]) indicators[i].classList.remove('active');
+            });
+
+            slides[index].classList.add('active');
+            if (indicators[index]) indicators[index].classList.add('active');
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            const next = (currentSlide + 1) % slides.length;
+            showSlide(next);
+        }
+
+        // Auto-advance slides
+        let slideTimer = setInterval(nextSlide, slideInterval);
+
+        // Click on indicators
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                clearInterval(slideTimer);
+                showSlide(index);
+                slideTimer = setInterval(nextSlide, slideInterval);
+            });
+        });
+
+        // Pause on hover
+        heroSlider.addEventListener('mouseenter', () => {
+            clearInterval(slideTimer);
+        });
+
+        heroSlider.addEventListener('mouseleave', () => {
+            slideTimer = setInterval(nextSlide, slideInterval);
+        });
+    }
+
+    // --------------------------------------------------------------------------
+    // Enhanced Slide-up Animation Observer
+    // --------------------------------------------------------------------------
+    const slideUpElements = document.querySelectorAll('.slide-up');
+
+    const slideUpObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                slideUpObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    });
+
+    slideUpElements.forEach(element => {
+        slideUpObserver.observe(element);
+    });
+
+    // --------------------------------------------------------------------------
+    // Instagram Grid Lightbox (optional enhancement)
+    // --------------------------------------------------------------------------
+    const instagramItems = document.querySelectorAll('.instagram-item');
+
+    instagramItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // Could add lightbox functionality here
+            // For now, just a subtle scale animation
+            item.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                item.style.transform = '';
+            }, 150);
+        });
+    });
+
 });
