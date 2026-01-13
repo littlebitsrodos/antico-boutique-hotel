@@ -20,6 +20,10 @@
     <meta name="twitter:card" content="summary_large_image">
 
     <link rel="canonical" href="https://palazzoantico.gr/room-scholars-study.html">
+  <!-- Preload critical assets -->
+  <link rel="preload" href="images/room_scholars_study.png" as="image" fetchpriority="high">
+  <link rel="preload" href="css/style.css" as="style">
+
     <title>The Scholar's Study | Palazzo Antico - Unique Boutique Hotel Rhodes</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -380,7 +384,7 @@
 
     <main>
         <section class="room-hero">
-            <div class="hero-bg"><img src="images/room_scholars_study.png" alt="The Scholar's Study" loading="eager">
+            <div class="hero-bg"><img src="images/room_scholars_study.png" alt="The Scholar's Study" width="1024" height="1024" fetchpriority="high" loading="eager">
                 <div class="hero-overlay"></div>
             </div>
             <div class="room-hero-content">
@@ -752,7 +756,7 @@
         </div>
     </footer>
     <a href="contact.html" class="book-btn-floating">Book Now</a>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>

@@ -30,7 +30,11 @@
   <link rel="canonical" href="https://palazzoantico.gr/">
   <title>Palazzo Antico | Boutique Hotel in Medieval Rhodes</title>
 
-  <!-- Google Fonts -->
+  <!-- Preload critical assets -->
+  <link rel="preload" href="images/hero_courtyard.png" as="image" fetchpriority="high">
+  <link rel="preload" href="css/style.css" as="style">
+
+  <!-- Google Fonts with display=swap for better performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -39,6 +43,7 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+
 
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
@@ -118,7 +123,8 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-bg">
-      <img src="images/hero_courtyard.png" alt="Palazzo Antico courtyard at dusk with fountain and bougainvillea">
+      <img src="images/hero_courtyard.png" alt="Palazzo Antico courtyard at dusk with fountain and bougainvillea"
+        width="1024" height="1024" fetchpriority="high">
       <div class="hero-overlay"></div>
     </div>
     <div class="hero-content">
@@ -551,7 +557,7 @@
   <a href="contact.html" class="book-btn-floating">Book Now</a>
 
   <!-- JavaScript -->
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 
 </html>

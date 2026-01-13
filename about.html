@@ -23,6 +23,10 @@
     <meta name="twitter:card" content="summary_large_image">
 
     <link rel="canonical" href="https://palazzoantico.gr/about.html">
+  <!-- Preload critical assets -->
+  <link rel="preload" href="images/hero_courtyard.png" as="image" fetchpriority="high">
+  <link rel="preload" href="css/style.css" as="style">
+
     <title>About Us | Palazzo Antico - Luxury Boutique Hotel Rhodes</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -91,7 +95,7 @@
     <!-- Page Hero -->
     <section class="page-hero">
         <div class="hero-bg">
-            <img src="images/hero_courtyard.png" alt="Palazzo Antico courtyard">
+            <img src="images/hero_courtyard.png" alt="Palazzo Antico courtyard" width="1024" height="1024" fetchpriority="high">
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
@@ -294,7 +298,7 @@
     </footer>
 
     <a href="contact.html" class="book-btn-floating">Book Now</a>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>
