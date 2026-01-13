@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="The Knight's Suite at Palazzo Antico - Our signature 45m² suite featuring exposed stone walls, four-poster bed, and private terrace in medieval Rhodes old town.">
+    <meta name="keywords"
+        content="Rhodes luxury hotel, medieval suite, Knights of St John, boutique hotel Greece, Palazzo Antico">
+    <meta name="author" content="Palazzo Antico">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://palazzoantico.gr/room-knights-suite.html">
+    <meta property="og:title" content="The Knight's Suite | Palazzo Antico">
+    <meta property="og:description"
+        content="Our signature 45m² suite featuring exposed stone walls, four-poster bed, and private terrace in medieval Rhodes.">
+    <meta property="og:image" content="https://palazzoantico.gr/images/room_knights_suite.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Knight's Suite | Palazzo Antico">
+    <meta name="twitter:description"
+        content="Our signature 45m² suite featuring exposed stone walls, four-poster bed, and private terrace in medieval Rhodes.">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://palazzoantico.gr/room-knights-suite.html">
+
+    <title>The Knight's Suite | Palazzo Antico - Luxury Boutique Hotel Rhodes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Structured Data - Hotel Room -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HotelRoom",
+        "name": "The Knight's Suite",
+        "description": "Named after the Knights of St. John who once walked these halls, this signature suite features exposed stone walls, a magnificent four-poster bed, and an ensuite bathroom with rain shower and deep soaking tub.",
+        "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": 2
+        },
+        "bed": {
+            "@type": "BedDetails",
+            "typeOfBed": "King",
+            "numberOfBeds": 1
+        },
+        "amenityFeature": [
+            {"@type": "LocationFeatureSpecification", "name": "Private Terrace"},
+            {"@type": "LocationFeatureSpecification", "name": "Rain Shower"},
+            {"@type": "LocationFeatureSpecification", "name": "Soaking Tub"},
+            {"@type": "LocationFeatureSpecification", "name": "Free WiFi"},
+            {"@type": "LocationFeatureSpecification", "name": "Air Conditioning"}
+        ],
+        "floorSize": {
+            "@type": "QuantitativeValue",
+            "value": 45,
+            "unitCode": "MTK"
+        },
+        "offers": {
+            "@type": "Offer",
+            "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": 280,
+                "priceCurrency": "EUR",
+                "unitText": "night"
+            }
+        }
+    }
+    </script>
+
+    <style>
+        /* Room Page Specific Styles - Mobile First */
+        .room-hero {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+        }
+
+        .room-hero-content {
+            position: relative;
+            z-index: 1;
+            padding: var(--space-6);
+            max-width: 800px;
+        }
+
+        .room-category {
+            font-family: var(--font-accent);
+            font-size: var(--text-base);
+            font-style: italic;
+            color: var(--gold);
+            margin-bottom: var(--space-2);
+        }
+
+        .room-hero-title {
+            font-size: var(--text-3xl);
+            color: var(--white);
+            margin-bottom: var(--space-3);
+        }
+
+        .room-hero-price {
+            font-family: var(--font-heading);
+            font-size: var(--text-xl);
+            color: var(--gold);
+        }
+
+        .room-hero-price span {
+            font-size: var(--text-sm);
+            color: var(--cream);
+            font-family: var(--font-body);
+        }
+
+        /* Gallery Grid - Mobile First */
+        .room-gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-3);
+        }
+
+        .room-gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+            transition: transform var(--transition-base);
+            cursor: pointer;
+        }
+
+        .room-gallery img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Amenities Grid - Mobile First */
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-4);
+        }
+
+        .amenity-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            padding: var(--space-3);
+            background: var(--white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .amenity-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--cream);
+            border-radius: var(--radius-full);
+            font-size: var(--text-lg);
+            flex-shrink: 0;
+        }
+
+        .amenity-text h4 {
+            font-size: var(--text-sm);
+            margin-bottom: 2px;
+        }
+
+        .amenity-text p {
+            font-size: var(--text-xs);
+            color: var(--stone-warm);
+        }
+
+        /* Reviews Section */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-6);
+        }
+
+        .review-card {
+            background: var(--white);
+            padding: var(--space-5);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            margin-bottom: var(--space-3);
+        }
+
+        .review-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-full);
+            background: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 600;
+            font-size: var(--text-lg);
+        }
+
+        .review-meta h4 {
+            font-size: var(--text-base);
+            margin-bottom: 2px;
+        }
+
+        .review-meta p {
+            font-size: var(--text-xs);
+            color: var(--stone-warm);
+        }
+
+        .review-stars {
+            color: var(--gold);
+            font-size: var(--text-sm);
+            margin-bottom: var(--space-3);
+        }
+
+        .review-text {
+            font-size: var(--text-sm);
+            line-height: 1.7;
+            color: var(--stone-warm);
+        }
+
+        /* Neighborhood Section */
+        .neighborhood-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-4);
+        }
+
+        .neighborhood-item {
+            display: flex;
+            gap: var(--space-4);
+            padding: var(--space-4);
+            background: var(--white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .neighborhood-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--terracotta);
+            color: var(--white);
+            border-radius: var(--radius-md);
+            font-size: var(--text-xl);
+            flex-shrink: 0;
+        }
+
+        .neighborhood-text h4 {
+            font-size: var(--text-base);
+            margin-bottom: var(--space-1);
+        }
+
+        .neighborhood-text p {
+            font-size: var(--text-sm);
+            color: var(--stone-warm);
+        }
+
+        .neighborhood-text .distance {
+            font-size: var(--text-xs);
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        /* Other Rooms Grid - Mobile First */
+        .other-rooms-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-4);
+        }
+
+        .other-room-card {
+            position: relative;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            height: 220px;
+            text-decoration: none;
+        }
+
+        .other-room-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .other-room-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .other-room-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 60%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: var(--space-4);
+        }
+
+        .other-room-card h4 {
+            color: var(--white);
+            font-size: var(--text-base);
+            margin-bottom: var(--space-1);
+        }
+
+        .other-room-card p {
+            color: var(--gold);
+            font-size: var(--text-sm);
+        }
+
+        /* Tablet and up */
+        @media (min-width: 640px) {
+            .room-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .room-gallery img {
+                height: 220px;
+            }
+
+            .amenities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .neighborhood-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .other-rooms-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Desktop */
+        @media (min-width: 768px) {
+            .room-hero {
+                height: 70vh;
+                min-height: 500px;
+            }
+
+            .room-hero-content {
+                padding: var(--space-12);
+            }
+
+            .room-hero-title {
+                font-size: var(--text-5xl);
+            }
+
+            .room-hero-price {
+                font-size: var(--text-2xl);
+            }
+
+            .reviews-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 992px) {
+            .room-gallery {
+                grid-template-columns: repeat(5, 1fr);
+            }
+
+            .room-gallery img {
+                height: 250px;
+            }
+
+            .amenities-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .neighborhood-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .other-rooms-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .other-room-card {
+                height: 280px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .amenities-grid {
+                grid-template-columns: repeat(6, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="nav scrolled" role="navigation" aria-label="Main navigation">
+            <div class="container nav-inner">
+                <a href="index.html" class="nav-logo" aria-label="Palazzo Antico - Home">PALAZZO ANTICO</a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="rooms.html" class="nav-link">Rooms</a></li>
+                    <li><a href="experience.html" class="nav-link">Experience</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-overlay" aria-hidden="true"></div>
+    <nav class="mobile-menu" role="navigation" aria-label="Mobile navigation">
+        <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+            <li><a href="rooms.html" class="mobile-nav-link">Rooms</a></li>
+            <li><a href="experience.html" class="mobile-nav-link">Experience</a></li>
+            <li><a href="about.html" class="mobile-nav-link">About</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Room Hero -->
+        <section class="room-hero" aria-label="The Knight's Suite hero image">
+            <div class="hero-bg">
+                <img src="images/room_knights_suite.png"
+                    alt="The Knight's Suite at Palazzo Antico featuring exposed stone walls and four-poster bed"
+                    loading="eager">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="room-hero-content">
+                <p class="room-category">Signature Suite</p>
+                <h1 class="room-hero-title">The Knight's Suite</h1>
+                <p class="room-hero-price">From €280 <span>/ night</span></p>
+            </div>
+        </section>
+
+        <!-- Room Description -->
+        <section class="section-lg" aria-labelledby="suite-description">
+            <div class="container">
+                <div class="welcome-grid">
+                    <div class="fade-in">
+                        <p class="welcome-eyebrow">45 m² of Medieval Luxury</p>
+                        <h2 class="welcome-title" id="suite-description">A Suite Fit for a Knight</h2>
+                        <p class="welcome-text">
+                            Named after the Knights of St. John who once walked these halls, The Knight's Suite is the
+                            crown jewel of Palazzo Antico. This magnificent 45m² space transports you to another era
+                            while surrounding you with every modern comfort.
+                        </p>
+                        <p class="welcome-text">
+                            The suite features original exposed stone walls dating back to the 15th century, a
+                            magnificent hand-forged iron four-poster bed draped in the finest Egyptian cotton linens,
+                            and an ensuite bathroom worthy of royalty with both a rain shower and deep soaking tub
+                            carved from local stone.
+                        </p>
+                        <p class="welcome-text">
+                            Wake to the gentle sounds of the courtyard fountain and enjoy your morning coffee on the
+                            private terrace, surrounded by centuries of history. As evening falls, watch the sunset
+                            paint the ancient walls in shades of gold and amber.
+                        </p>
+                    </div>
+                    <div class="welcome-image fade-in">
+                        <img src="images/room_knights_suite.png"
+                            alt="The Knight's Suite interior with four-poster bed and stone walls" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="section-lg" style="background: var(--cream);" aria-labelledby="gallery-title">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <p class="section-eyebrow">Visual Tour</p>
+                    <h2 class="section-title" id="gallery-title">Gallery</h2>
+                </div>
+                <div class="room-gallery">
+                    <img src="images/room_knights_suite.png" alt="The Knight's Suite main bedroom view" class="fade-in"
+                        loading="lazy">
+                    <img src="images/knights_suite_bathroom.png"
+                        alt="Luxurious bathroom with stone soaking tub and rain shower" class="fade-in" loading="lazy">
+                    <img src="images/knights_suite_terrace.png" alt="Private terrace overlooking the courtyard"
+                        class="fade-in" loading="lazy">
+                    <img src="images/knights_suite_detail.png" alt="Bedside detail with antique lamp and fresh flowers"
+                        class="fade-in" loading="lazy">
+                    <img src="images/knights_suite_sitting.png" alt="Cozy sitting area with fireplace and armchairs"
+                        class="fade-in" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Amenities -->
+        <section class="section-lg" aria-labelledby="amenities-title">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <p class="section-eyebrow">Room Features</p>
+                    <h2 class="section-title" id="amenities-title">Amenities & Services</h2>
+                </div>
+                <div class="amenities-grid">
+                    <article class="amenity-item fade-in">
+                        <div class="amenity-icon" aria-hidden="true">🛏️</div>
+                        <div class="amenity-text">
+                            <h4>King Size Bed</h4>
+                            <p>Four-poster iron bed with premium linens</p>
+                        </div>
+                    </article>
+                    <article class="amenity-item fade-in">
+                        <div class="amenity-icon" aria-hidden="true">📐</div>
+                        <div class="amenity-text">
+                            <h4>45 m² Space</h4>
+                            <p>Generous living area with sitting space</p>
+                        </div>
+                    </article>
+                    <article class="amenity-item fade-in">
+                        <div class="amenity-icon" aria-hidden="true">🚿</div>
+                        <div class="amenity-text">
+                            <h4>Rain Shower</h4>
+                            <p>Luxurious overhead rainfall experience</p>
+                        </div>
+                    </article>
+                    <article class="amenity-item fade-in">
+                        <div class="amenity-icon" aria-hidden="true">🛁</div>
+                        <div class="amenity-text">
+                            <h4>Soaking Tub</h4>
+                            <p>Deep stone bathtub for relaxation</p>
+                        </div>
+                    </article>
+                    <article class="amenity-item fade-in">
+                        <div class="amenity-icon" aria-hidden="true">🏛️</div>
+                        <div class="amenity-text">
+                            <h4>Private Terrace</h4>
+                            <p>Outdoor space overlooking courtyard</p>
+                        </div>
+                    </article>
+                    <article class="amenity-item fade-in">
+                        <div class="amenity-icon" aria-hidden="true">❄️</div>
+                        <div class="amenity-text">
+                            <h4>Climate Control</h4>
+                            <p>Individual A/C and heating</p>
+                        </div>
+                    </article>
+                    <article class="amenity-item fade-in">
+                        <div class="amenity-icon" aria-hidden="true">📶</div>
+                        <div class="amenity-text">
+                            <h4>Free WiFi</h4>
+                            <p>High-speed internet throughout</p>
+                        </div>
+                    </article>
+                    <article class="amenity-item fade-in">
+                        <div class="amenity-icon" aria-hidden="true">☕</div>
+                        <div class="amenity-text">
+                            <h4>Coffee & Tea</h4>
+                            <p>Nespresso machine and tea selection</p>
+                        </div>
+                    </article>
+                    <article class="amenity-item fade-in">
+                        <div class="amenity-icon" aria-hidden="true">🍷</div>
+                        <div class="amenity-text">
+                            <h4>Mini Bar</h4>
+                            <p>Stocked with local wines and treats</p>
+                        </div>
+                    </article>
+                    <article class="amenity-item fade-in">
+                        <div class="amenity-icon" aria-hidden="true">🧴</div>
+                        <div class="amenity-text">
+                            <h4>Luxury Toiletries</h4>
+                            <p>Organic Greek olive oil products</p>
+                        </div>
+                    </article>
+                    <article class="amenity-item fade-in">
+                        <div class="amenity-icon" aria-hidden="true">👔</div>
+                        <div class="amenity-text">
+                            <h4>Robes & Slippers</h4>
+                            <p>Plush bathrobes and soft slippers</p>
+                        </div>
+                    </article>
+                    <article class="amenity-item fade-in">
+                        <div class="amenity-icon" aria-hidden="true">🔒</div>
+                        <div class="amenity-text">
+                            <h4>In-Room Safe</h4>
+                            <p>Secure storage for valuables</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guest Reviews -->
+        <section class="section-lg" style="background: var(--cream);" aria-labelledby="reviews-title">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <p class="section-eyebrow">Guest Experiences</p>
+                    <h2 class="section-title" id="reviews-title">What Our Guests Say</h2>
+                </div>
+                <div class="reviews-grid">
+                    <article class="review-card fade-in">
+                        <div class="review-header">
+                            <div class="review-avatar">MK</div>
+                            <div class="review-meta">
+                                <h4>Maria & Klaus</h4>
+                                <p>Munich, Germany • October 2024</p>
+                            </div>
+                        </div>
+                        <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <p class="review-text">"Absolutely magical! Waking up in a room with 600-year-old walls, yet
+                            with every modern comfort, was unforgettable. The four-poster bed and stone bathtub made our
+                            anniversary trip perfect."</p>
+                    </article>
+                    <article class="review-card fade-in">
+                        <div class="review-header">
+                            <div class="review-avatar">JT</div>
+                            <div class="review-meta">
+                                <h4>James Thompson</h4>
+                                <p>London, UK • September 2024</p>
+                            </div>
+                        </div>
+                        <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <p class="review-text">"The Knight's Suite exceeded all expectations. The attention to
+                            historical detail combined with thoughtful modern amenities creates a truly unique
+                            experience. The private terrace is perfect for sunset drinks."</p>
+                    </article>
+                    <article class="review-card fade-in">
+                        <div class="review-header">
+                            <div class="review-avatar">SC</div>
+                            <div class="review-meta">
+                                <h4>Sophie Chen</h4>
+                                <p>Singapore • August 2024</p>
+                            </div>
+                        </div>
+                        <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <p class="review-text">"A history lover's dream! The exposed stone walls tell stories of
+                            centuries past. Staff were incredibly knowledgeable about the building's history. The
+                            breakfast in the courtyard was divine."</p>
+                    </article>
+                    <article class="review-card fade-in">
+                        <div class="review-header">
+                            <div class="review-avatar">PL</div>
+                            <div class="review-meta">
+                                <h4>Pierre & Lucille</h4>
+                                <p>Paris, France • July 2024</p>
+                            </div>
+                        </div>
+                        <div class="review-stars" aria-label="4 out of 5 stars">★★★★☆</div>
+                        <p class="review-text">"Romantic and authentic. We felt like we stepped back in time. The
+                            soaking tub with candles was the highlight. Only wish we could have stayed longer. We're
+                            already planning our return."</p>
+                    </article>
+                    <article class="review-card fade-in">
+                        <div class="review-header">
+                            <div class="review-avatar">AN</div>
+                            <div class="review-meta">
+                                <h4>Alexandra Novak</h4>
+                                <p>Prague, Czech Republic • June 2024</p>
+                            </div>
+                        </div>
+                        <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <p class="review-text">"This is what a boutique hotel should be. Every detail has been
+                            thoughtfully considered—from the locally-made toiletries to the curated book selection. The
+                            location in the old town is unbeatable."</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Neighborhood -->
+        <section class="section-lg" aria-labelledby="neighborhood-title">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <p class="section-eyebrow">Explore the Area</p>
+                    <h2 class="section-title" id="neighborhood-title">Neighborhood Highlights</h2>
+                    <p class="section-description">Palazzo Antico is perfectly situated on historic Ippoton Street, at
+                        the heart of the UNESCO-protected medieval old town.</p>
+                </div>
+                <div class="neighborhood-grid">
+                    <article class="neighborhood-item fade-in">
+                        <div class="neighborhood-icon" aria-hidden="true">🏰</div>
+                        <div class="neighborhood-text">
+                            <h4>Palace of the Grand Master</h4>
+                            <p>Magnificent 14th-century fortress and museum of medieval Rhodes</p>
+                            <span class="distance">3 min walk</span>
+                        </div>
+                    </article>
+                    <article class="neighborhood-item fade-in">
+                        <div class="neighborhood-icon" aria-hidden="true">🛤️</div>
+                        <div class="neighborhood-text">
+                            <h4>Street of the Knights</h4>
+                            <p>Europe's best-preserved medieval street with original 15th-century inns</p>
+                            <span class="distance">On your doorstep</span>
+                        </div>
+                    </article>
+                    <article class="neighborhood-item fade-in">
+                        <div class="neighborhood-icon" aria-hidden="true">🕌</div>
+                        <div class="neighborhood-text">
+                            <h4>Süleymaniye Mosque</h4>
+                            <p>Ottoman-era mosque with stunning architecture and views</p>
+                            <span class="distance">5 min walk</span>
+                        </div>
+                    </article>
+                    <article class="neighborhood-item fade-in">
+                        <div class="neighborhood-icon" aria-hidden="true">⚓</div>
+                        <div class="neighborhood-text">
+                            <h4>Mandraki Harbor</h4>
+                            <p>Historic harbor with the famous deer statues and windmills</p>
+                            <span class="distance">10 min walk</span>
+                        </div>
+                    </article>
+                    <article class="neighborhood-item fade-in">
+                        <div class="neighborhood-icon" aria-hidden="true">🍽️</div>
+                        <div class="neighborhood-text">
+                            <h4>Tavernas & Restaurants</h4>
+                            <p>Authentic Greek cuisine in atmospheric medieval settings</p>
+                            <span class="distance">2 min walk</span>
+                        </div>
+                    </article>
+                    <article class="neighborhood-item fade-in">
+                        <div class="neighborhood-icon" aria-hidden="true">🏖️</div>
+                        <div class="neighborhood-text">
+                            <h4>Elli Beach</h4>
+                            <p>Sandy beach with crystal-clear waters and water sports</p>
+                            <span class="distance">15 min walk</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking CTA -->
+        <section class="experience"
+            style="background-image: url('images/knights_suite_terrace.png'); padding: var(--space-16) 0;"
+            aria-labelledby="booking-cta">
+            <div class="experience-overlay"></div>
+            <div class="container experience-content">
+                <h2 class="experience-title" id="booking-cta">Reserve The Knight's Suite</h2>
+                <p class="experience-text">Experience medieval luxury at its finest. Book your stay in our signature
+                    suite and create memories that will last a lifetime.</p>
+                <a href="contact.html" class="btn btn-gold">Book Now - From €280/night</a>
+            </div>
+        </section>
+
+        <!-- Other Rooms -->
+        <section class="section-lg" aria-labelledby="other-rooms-title">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <p class="section-eyebrow">Explore More</p>
+                    <h2 class="section-title" id="other-rooms-title">Other Rooms & Suites</h2>
+                </div>
+                <div class="other-rooms-grid">
+                    <a href="room-venetian.html" class="other-room-card fade-in">
+                        <img src="images/room_venetian.png" alt="The Venetian Room with vaulted ceilings"
+                            loading="lazy">
+                        <div class="other-room-card-overlay">
+                            <h4>The Venetian Room</h4>
+                            <p>From €220/night</p>
+                        </div>
+                    </a>
+                    <a href="room-courtyard.html" class="other-room-card fade-in">
+                        <img src="images/room_courtyard.png" alt="The Courtyard Room overlooking the garden"
+                            loading="lazy">
+                        <div class="other-room-card-overlay">
+                            <h4>The Courtyard Room</h4>
+                            <p>From €180/night</p>
+                        </div>
+                    </a>
+                    <a href="room-tower-suite.html" class="other-room-card fade-in">
+                        <img src="images/room_tower_suite.png" alt="The Tower Suite penthouse with panoramic views"
+                            loading="lazy">
+                        <div class="other-room-card-overlay">
+                            <h4>The Tower Suite</h4>
+                            <p>From €350/night</p>
+                        </div>
+                    </a>
+                    <a href="room-scholars-study.html" class="other-room-card fade-in">
+                        <img src="images/room_scholars_study.png" alt="The Scholar's Study with curated library"
+                            loading="lazy">
+                        <div class="other-room-card-overlay">
+                            <h4>The Scholar's Study</h4>
+                            <p>From €200/night</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">PALAZZO ANTICO</h3>
+                    <p class="footer-tagline">Where history meets hospitality</p>
+                    <p class="footer-description">A luxury boutique hotel in a restored 15th-century Venetian palazzo.
+                    </p>
+                </div>
+                <div class="footer-links-group">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="rooms.html" class="footer-link">Our Rooms</a></li>
+                        <li><a href="experience.html" class="footer-link">Experience</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4 class="footer-title">Our Rooms</h4>
+                    <ul class="footer-links">
+                        <li><a href="room-knights-suite.html" class="footer-link" aria-current="page">The Knight's
+                                Suite</a></li>
+                        <li><a href="room-venetian.html" class="footer-link">The Venetian Room</a></li>
+                        <li><a href="room-courtyard.html" class="footer-link">The Courtyard Room</a></li>
+                        <li><a href="room-tower-suite.html" class="footer-link">The Tower Suite</a></li>
+                        <li><a href="room-scholars-study.html" class="footer-link">The Scholar's Study</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 class="footer-title">Contact</h4>
+                    <address>
+                        <div class="footer-contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                aria-hidden="true">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <span>15 Ippoton Street<br>Old Town, Rhodes 85100</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                aria-hidden="true">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72" />
+                            </svg>
+                            <a href="tel:+302241012345" class="footer-link">+30 22410 12345</a>
+                        </div>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Palazzo Antico. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="contact.html" class="book-btn-floating" aria-label="Book your stay now">Book Now</a>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
