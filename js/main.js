@@ -415,6 +415,7 @@ document.addEventListener('DOMContentLoaded', function () {
         closeBtn.addEventListener('click', closeLightbox);
         prevBtn.addEventListener('click', (e) => { e.stopPropagation(); prevImage(); });
         nextBtn.addEventListener('click', (e) => { e.stopPropagation(); nextImage(); });
+        lightboxImg.addEventListener('click', (e) => { e.stopPropagation(); nextImage(); });
 
         // Close on background click
         lightbox.addEventListener('click', (e) => {
