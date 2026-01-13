@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Pages -->
+  <url>
+    <loc>https://palazzoantico.gr/</loc>
+    <lastmod>2024-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://palazzoantico.gr/rooms.html</loc>
+    <lastmod>2024-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://palazzoantico.gr/experience.html</loc>
+    <lastmod>2024-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://palazzoantico.gr/about.html</loc>
+    <lastmod>2024-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palazzoantico.gr/contact.html</loc>
+    <lastmod>2024-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Individual Room Pages -->
+  <url>
+    <loc>https://palazzoantico.gr/room-knights-suite.html</loc>
+    <lastmod>2024-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://palazzoantico.gr/room-venetian.html</loc>
+    <lastmod>2024-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://palazzoantico.gr/room-courtyard.html</loc>
+    <lastmod>2024-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://palazzoantico.gr/room-tower-suite.html</loc>
+    <lastmod>2024-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://palazzoantico.gr/room-scholars-study.html</loc>
+    <lastmod>2024-01-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>
