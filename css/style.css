@@ -1653,3 +1653,136 @@ body:hover .cursor-spotlight {
 .hover-glow:hover {
   box-shadow: 0 0 30px rgba(201, 168, 76, 0.3);
 }
+
+/* --------------------------------------------------------------------------
+   Premium Lightbox Gallery
+   -------------------------------------------------------------------------- */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(26, 24, 23, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), visibility 0.4s;
+}
+
+.lightbox-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-container {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  transform: scale(0.95);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  user-select: none;
+}
+
+.lightbox-overlay.active .lightbox-image {
+  transform: scale(1);
+}
+
+.lightbox-btn {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.lightbox-btn:hover {
+  background: var(--white);
+  color: var(--stone-dark);
+  border-color: var(--white);
+  transform: scale(1.1);
+}
+
+.lightbox-close {
+  top: 20px;
+  right: 20px;
+  z-index: 2010;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2010;
+}
+
+.lightbox-prev {
+  left: 20px;
+}
+
+.lightbox-prev:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-next {
+  right: 20px;
+}
+
+.lightbox-next:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-caption {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+}
+
+/* Gallery Grid Enhancements (Hover Icon) */
+.room-gallery,
+.gallery-grid {
+    position: relative;
+}
+
+.room-gallery img,
+.gallery-grid img,
+.gallery-item img {
+    cursor: zoom-in;
+    transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+.room-gallery img:hover,
+.gallery-grid img:hover,
+.gallery-item img:hover {
+    transform: scale(1.03);
+    filter: brightness(1.1);
+    box-shadow: var(--shadow-xl);
+    z-index: 10;
+}
