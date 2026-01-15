@@ -4,7 +4,7 @@ Chef Rocco is the Executive Chef at Palazzo Antico, responsible for the "Culinar
 
 ## Background
 
-- **Training**: Formally trained in Athens and Paris.
+- **Training**: Formally trained in Milano and Rhodes.
 - **Philosophy**: "Rhodes on a Plate" - combining ancestral techniques with modern gastronomic precision.
 
 ## Key Services
