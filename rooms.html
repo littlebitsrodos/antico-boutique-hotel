@@ -1,53 +1,70 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore our five unique rooms and suites at Palazzo Antico. Each space blends medieval character with modern luxury in Rhodes old town."
+    />
+    <meta
+      name="keywords"
+      content="Palazzo Antico rooms, Rhodes hotel rooms, luxury suites, Tower Suite, Knights Suite, boutique hotel accommodation"
+    />
+    <meta name="author" content="Palazzo Antico" />
+    <meta name="robots" content="index, follow" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Explore our five unique rooms and suites at Palazzo Antico. Each space blends medieval character with modern luxury in Rhodes old town." />
-  <meta name="keywords"
-    content="Palazzo Antico rooms, Rhodes hotel rooms, luxury suites, Tower Suite, Knights Suite, boutique hotel accommodation" />
-  <meta name="author" content="Palazzo Antico" />
-  <meta name="robots" content="index, follow" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://palazzoantico.gr/rooms.html" />
+    <meta property="og:title" content="Rooms & Suites | Palazzo Antico" />
+    <meta
+      property="og:description"
+      content="Five unique rooms where medieval grandeur meets contemporary comfort. From €180 to €350 per night."
+    />
+    <meta
+      property="og:image"
+      content="https://palazzoantico.gr/images/room_knights_suite.webp"
+    />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://palazzoantico.gr/rooms.html" />
-  <meta property="og:title" content="Rooms & Suites | Palazzo Antico" />
-  <meta property="og:description"
-    content="Five unique rooms where medieval grandeur meets contemporary comfort. From €180 to €350 per night." />
-  <meta property="og:image" content="https://palazzoantico.gr/images/room_knights_suite.webp" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
+    <!-- PWA Configuration -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#c9a84c" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="Palazzo Antico" />
 
-  <!-- PWA Configuration -->
-  <link rel="manifest" href="/manifest.json" />
-  <meta name="theme-color" content="#c9a84c" />
-  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="apple-mobile-web-app-title" content="Palazzo Antico" />
+    <link rel="canonical" href="https://palazzoantico.gr/rooms.html" />
+    <!-- Preload critical assets -->
+    <link
+      rel="preload"
+      href="images/room_knights_suite.webp"
+      as="image"
+      fetchpriority="high"
+    />
+    <link rel="preload" href="css/style.css" as="style" />
 
-  <link rel="canonical" href="https://palazzoantico.gr/rooms.html" />
-  <!-- Preload critical assets -->
-  <link rel="preload" href="images/room_knights_suite.webp" as="image" fetchpriority="high" />
-  <link rel="preload" href="css/style.css" as="style" />
+    <title>
+      Rooms & Suites | Palazzo Antico - Luxury Boutique Hotel Rhodes
+    </title>
 
-  <title>
-    Rooms & Suites | Palazzo Antico - Luxury Boutique Hotel Rhodes
-  </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-
-  <!-- Schema.org Structured Data -->
-  <script type="application/ld+json">
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "ItemList",
@@ -88,396 +105,466 @@
       }
     </script>
 
-  <style>
-    .rooms-overview-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--space-8);
-    }
-
-    .room-overview-card {
-      position: relative;
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      background: var(--white);
-      box-shadow: var(--shadow-lg);
-      transition:
-        transform var(--transition-base),
-        box-shadow var(--transition-base);
-    }
-
-    .room-overview-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-xl);
-    }
-
-    .room-overview-image {
-      height: 300px;
-      overflow: hidden;
-    }
-
-    .room-overview-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform var(--transition-slow);
-    }
-
-    .room-overview-card:hover .room-overview-image img {
-      transform: scale(1.05);
-    }
-
-    .room-overview-content {
-      padding: var(--space-6);
-    }
-
-    .room-overview-category {
-      font-family: var(--font-accent);
-      font-size: var(--text-sm);
-      font-style: italic;
-      color: var(--gold);
-      margin-bottom: var(--space-2);
-    }
-
-    .room-overview-name {
-      font-size: var(--text-xl);
-      margin-bottom: var(--space-3);
-    }
-
-    .room-overview-description {
-      color: var(--stone-warm);
-      font-size: var(--text-sm);
-      margin-bottom: var(--space-4);
-      line-height: 1.6;
-    }
-
-    .room-overview-meta {
-      display: flex;
-      gap: var(--space-4);
-      margin-bottom: var(--space-4);
-      padding-top: var(--space-4);
-      border-top: 1px solid var(--cream);
-    }
-
-    .room-overview-meta span {
-      display: flex;
-      align-items: center;
-      gap: var(--space-2);
-      font-size: var(--text-xs);
-      color: var(--stone-warm);
-    }
-
-    .room-overview-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .room-overview-price {
-      font-family: var(--font-heading);
-      font-size: var(--text-lg);
-      color: var(--terracotta);
-    }
-
-    .room-overview-price span {
-      font-size: var(--text-sm);
-      color: var(--stone-warm);
-      font-family: var(--font-body);
-    }
-
-    /* Featured room - full width */
-    .room-overview-card.featured {
-      grid-column: span 2;
-    }
-
-    .room-overview-card.featured .room-overview-image {
-      height: 400px;
-    }
-
-    @media (max-width: 992px) {
+    <style>
       .rooms-overview-grid {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-8);
       }
 
+      .room-overview-card {
+        position: relative;
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        background: var(--white);
+        box-shadow: var(--shadow-lg);
+        transition:
+          transform var(--transition-base),
+          box-shadow var(--transition-base);
+      }
+
+      .room-overview-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-xl);
+      }
+
+      .room-overview-image {
+        height: 300px;
+        overflow: hidden;
+      }
+
+      .room-overview-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform var(--transition-slow);
+      }
+
+      .room-overview-card:hover .room-overview-image img {
+        transform: scale(1.05);
+      }
+
+      .room-overview-content {
+        padding: var(--space-6);
+      }
+
+      .room-overview-category {
+        font-family: var(--font-accent);
+        font-size: var(--text-sm);
+        font-style: italic;
+        color: var(--gold);
+        margin-bottom: var(--space-2);
+      }
+
+      .room-overview-name {
+        font-size: var(--text-xl);
+        margin-bottom: var(--space-3);
+      }
+
+      .room-overview-description {
+        color: var(--stone-warm);
+        font-size: var(--text-sm);
+        margin-bottom: var(--space-4);
+        line-height: 1.6;
+      }
+
+      .room-overview-meta {
+        display: flex;
+        gap: var(--space-4);
+        margin-bottom: var(--space-4);
+        padding-top: var(--space-4);
+        border-top: 1px solid var(--cream);
+      }
+
+      .room-overview-meta span {
+        display: flex;
+        align-items: center;
+        gap: var(--space-2);
+        font-size: var(--text-xs);
+        color: var(--stone-warm);
+      }
+
+      .room-overview-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .room-overview-price {
+        font-family: var(--font-heading);
+        font-size: var(--text-lg);
+        color: var(--terracotta);
+      }
+
+      .room-overview-price span {
+        font-size: var(--text-sm);
+        color: var(--stone-warm);
+        font-family: var(--font-body);
+      }
+
+      /* Featured room - full width */
       .room-overview-card.featured {
-        grid-column: span 1;
+        grid-column: span 2;
       }
-    }
-  </style>
-</head>
 
-<body>
-  <!-- Navigation -->
-  <nav class="nav scrolled">
-    <div class="container nav-inner">
-      <a href="index.html" class="nav-logo">PALAZZO ANTICO</a>
-      <ul class="nav-links">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="rooms.html" class="nav-link">Rooms</a></li>
-        <li><a href="experience.html" class="nav-link">Experience</a></li>
-        <li><a href="retreats.html" class="nav-link">Retreats</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      .room-overview-card.featured .room-overview-image {
+        height: 400px;
+      }
+
+      @media (max-width: 992px) {
+        .rooms-overview-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .room-overview-card.featured {
+          grid-column: span 1;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="nav scrolled">
+      <div class="container nav-inner">
+        <a href="index.html" class="nav-logo">PALAZZO ANTICO</a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="rooms.html" class="nav-link">Rooms</a></li>
+          <li><a href="experience.html" class="nav-link">Experience</a></li>
+          <li><a href="retreats.html" class="nav-link">Retreats</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-overlay"></div>
+    <div class="mobile-menu">
+      <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="rooms.html" class="mobile-nav-link">Rooms</a></li>
+        <li>
+          <a href="experience.html" class="mobile-nav-link">Experience</a>
+        </li>
+        <li><a href="retreats.html" class="mobile-nav-link">Retreats</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </div>
-  </nav>
 
-  <!-- Mobile Menu -->
-  <div class="mobile-overlay"></div>
-  <div class="mobile-menu">
-    <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
-    <ul class="mobile-nav-links">
-      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
-      <li><a href="rooms.html" class="mobile-nav-link">Rooms</a></li>
-      <li>
-        <a href="experience.html" class="mobile-nav-link">Experience</a>
-      </li>
-      <li><a href="retreats.html" class="mobile-nav-link">Retreats</a></li>
-      <li><a href="about.html" class="mobile-nav-link">About</a></li>
-      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
-    </ul>
-  </div>
-
-  <!-- Page Hero -->
-  <section class="page-hero">
-    <div class="hero-bg">
-      <img src="images/room_knights_suite.webp" alt="Luxury room at Palazzo Antico" width="1024" height="1024"
-        fetchpriority="high" />
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="hero-content">
-      <p class="hero-subtitle">Accommodations</p>
-      <h1 class="hero-title">Our Rooms & Suites</h1>
-      <p class="hero-description">
-        Five unique spaces where medieval grandeur meets contemporary comfort
-      </p>
-    </div>
-  </section>
-
-  <!-- Rooms Overview -->
-  <section class="section-lg">
-    <div class="container">
-      <div class="section-header fade-in">
-        <p class="section-eyebrow">Choose Your Sanctuary</p>
-        <h2 class="section-title">Discover Our Collection</h2>
-        <p class="section-description">
-          Each room tells its own story, from the grandeur of The Knight's
-          Suite to the intellectual charm of The Scholar's Study.
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="hero-bg">
+        <img
+          src="images/room_knights_suite.webp"
+          alt="Luxury room at Palazzo Antico"
+          width="1024"
+          height="1024"
+          fetchpriority="high"
+        />
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <p class="hero-subtitle">Accommodations</p>
+        <h1 class="hero-title">Our Rooms & Suites</h1>
+        <p class="hero-description">
+          Five unique spaces where medieval grandeur meets contemporary comfort
         </p>
       </div>
+    </section>
 
-      <div class="rooms-overview-grid">
-        <!-- Tower Suite - Featured -->
-        <a href="room-tower-suite.html" class="room-overview-card featured fade-in">
-          <div class="room-overview-image">
-            <img src="images/room_tower_suite.webp" alt="The Tower Suite" width="800" height="600" />
-          </div>
-          <div class="room-overview-content">
-            <p class="room-overview-category">Penthouse Suite</p>
-            <h3 class="room-overview-name">The Tower Suite</h3>
-            <p class="room-overview-description">
-              Our crown jewel. A 55m² penthouse occupying the original
-              medieval watchtower with 360° panoramic views, private rooftop
-              terrace, and jacuzzi tub. The most spectacular sunset views in
-              all of Rhodes.
-            </p>
-            <div class="room-overview-meta">
-              <span>🛏️ King Bed</span>
-              <span>📐 55 m²</span>
-              <span>🌅 360° Views</span>
-              <span>🍷 Private Terrace</span>
-              <span>🛁 Jacuzzi</span>
-            </div>
-            <div class="room-overview-footer">
-              <span class="room-overview-price">€350 <span>/ night</span></span>
-              <span class="btn btn-outline-dark">View Details</span>
-            </div>
-          </div>
-        </a>
+    <!-- Rooms Overview -->
+    <section class="section-lg">
+      <div class="container">
+        <div class="section-header fade-in">
+          <p class="section-eyebrow">Choose Your Sanctuary</p>
+          <h2 class="section-title">Discover Our Collection</h2>
+          <p class="section-description">
+            Each room tells its own story, from the grandeur of The Knight's
+            Suite to the intellectual charm of The Scholar's Study.
+          </p>
+        </div>
 
-        <!-- Knight's Suite -->
-        <a href="room-knights-suite.html" class="room-overview-card fade-in">
-          <div class="room-overview-image">
-            <img src="images/room_knights_suite.webp" alt="The Knight's Suite" width="800" height="600" />
-          </div>
-          <div class="room-overview-content">
-            <p class="room-overview-category">Signature Suite</p>
-            <h3 class="room-overview-name">The Knight's Suite</h3>
-            <p class="room-overview-description">
-              Named after the Knights of St. John, featuring exposed stone
-              walls, a four-poster bed, and ensuite with rain shower and
-              soaking tub.
-            </p>
-            <div class="room-overview-meta">
-              <span>🛏️ King Bed</span>
-              <span>📐 45 m²</span>
-              <span>🛁 Soaking Tub</span>
+        <div class="rooms-overview-grid">
+          <!-- Tower Suite - Featured -->
+          <a
+            href="room-tower-suite.html"
+            class="room-overview-card featured fade-in"
+          >
+            <div class="room-overview-image">
+              <img
+                src="images/room_tower_suite.webp"
+                alt="The Tower Suite"
+                width="800"
+                height="600"
+              />
             </div>
-            <div class="room-overview-footer">
-              <span class="room-overview-price">€280 <span>/ night</span></span>
-              <span class="btn btn-outline-dark">View Details</span>
+            <div class="room-overview-content">
+              <p class="room-overview-category">Penthouse Suite</p>
+              <h3 class="room-overview-name">The Tower Suite</h3>
+              <p class="room-overview-description">
+                Our crown jewel. A 55m² penthouse occupying the original
+                medieval watchtower with 360° panoramic views, private rooftop
+                terrace, and jacuzzi tub. The most spectacular sunset views in
+                all of Rhodes.
+              </p>
+              <div class="room-overview-meta">
+                <span>🛏️ King Bed</span>
+                <span>📐 55 m²</span>
+                <span>🌅 360° Views</span>
+                <span>🍷 Private Terrace</span>
+                <span>🛁 Jacuzzi</span>
+              </div>
+              <div class="room-overview-footer">
+                <span class="room-overview-price"
+                  >€350 <span>/ night</span></span
+                >
+                <span class="btn btn-outline-dark">View Details</span>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
 
-        <!-- Venetian Room -->
-        <a href="room-venetian.html" class="room-overview-card fade-in">
-          <div class="room-overview-image">
-            <img src="images/room_venetian.webp" alt="The Venetian Room" width="800" height="600" />
-          </div>
-          <div class="room-overview-content">
-            <p class="room-overview-category">Superior Room</p>
-            <h3 class="room-overview-name">The Venetian Room</h3>
-            <p class="room-overview-description">
-              Elegant accommodation with terracotta floors, vaulted ceilings,
-              and a private balcony overlooking medieval rooftops.
-            </p>
-            <div class="room-overview-meta">
-              <span>🛏️ Queen Bed</span>
-              <span>📐 35 m²</span>
-              <span>🏠 Balcony</span>
+          <!-- Knight's Suite -->
+          <a href="room-knights-suite.html" class="room-overview-card fade-in">
+            <div class="room-overview-image">
+              <img
+                src="images/room_knights_suite.webp"
+                alt="The Knight's Suite"
+                width="800"
+                height="600"
+              />
             </div>
-            <div class="room-overview-footer">
-              <span class="room-overview-price">€220 <span>/ night</span></span>
-              <span class="btn btn-outline-dark">View Details</span>
+            <div class="room-overview-content">
+              <p class="room-overview-category">Signature Suite</p>
+              <h3 class="room-overview-name">The Knight's Suite</h3>
+              <p class="room-overview-description">
+                Named after the Knights of St. John, featuring exposed stone
+                walls, a four-poster bed, and ensuite with rain shower and
+                soaking tub.
+              </p>
+              <div class="room-overview-meta">
+                <span>🛏️ King Bed</span>
+                <span>📐 45 m²</span>
+                <span>🛁 Soaking Tub</span>
+              </div>
+              <div class="room-overview-footer">
+                <span class="room-overview-price"
+                  >€280 <span>/ night</span></span
+                >
+                <span class="btn btn-outline-dark">View Details</span>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
 
-        <!-- Scholar's Study -->
-        <a href="room-scholars-study.html" class="room-overview-card fade-in">
-          <div class="room-overview-image">
-            <img src="images/room_scholars_study.webp" alt="The Scholar's Study" width="800" height="600" />
-          </div>
-          <div class="room-overview-content">
-            <p class="room-overview-category">Deluxe Room</p>
-            <h3 class="room-overview-name">The Scholar's Study</h3>
-            <p class="room-overview-description">
-              A haven for the curious mind with curated library, vintage
-              writing desk, and views of the medieval street below.
-            </p>
-            <div class="room-overview-meta">
-              <span>🛏️ Queen Bed</span>
-              <span>📐 32 m²</span>
-              <span>📚 Library</span>
+          <!-- Venetian Room -->
+          <a href="room-venetian.html" class="room-overview-card fade-in">
+            <div class="room-overview-image">
+              <img
+                src="images/room_venetian.webp"
+                alt="The Venetian Room"
+                width="800"
+                height="600"
+              />
             </div>
-            <div class="room-overview-footer">
-              <span class="room-overview-price">€200 <span>/ night</span></span>
-              <span class="btn btn-outline-dark">View Details</span>
+            <div class="room-overview-content">
+              <p class="room-overview-category">Superior Room</p>
+              <h3 class="room-overview-name">The Venetian Room</h3>
+              <p class="room-overview-description">
+                Elegant accommodation with terracotta floors, vaulted ceilings,
+                and a private balcony overlooking medieval rooftops.
+              </p>
+              <div class="room-overview-meta">
+                <span>🛏️ Queen Bed</span>
+                <span>📐 35 m²</span>
+                <span>🏠 Balcony</span>
+              </div>
+              <div class="room-overview-footer">
+                <span class="room-overview-price"
+                  >€220 <span>/ night</span></span
+                >
+                <span class="btn btn-outline-dark">View Details</span>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
 
-        <!-- Courtyard Room -->
-        <a href="room-courtyard.html" class="room-overview-card fade-in">
-          <div class="room-overview-image">
-            <img src="images/room_courtyard.webp" alt="The Courtyard Room" width="800" height="600" />
-          </div>
-          <div class="room-overview-content">
-            <p class="room-overview-category">Classic Room</p>
-            <h3 class="room-overview-name">The Courtyard Room</h3>
-            <p class="room-overview-description">
-              Intimate and cozy, overlooking our tranquil internal courtyard
-              with its fountain and bougainvillea.
-            </p>
-            <div class="room-overview-meta">
-              <span>🛏️ Double Bed</span>
-              <span>📐 28 m²</span>
-              <span>🌿 Garden View</span>
+          <!-- Scholar's Study -->
+          <a href="room-scholars-study.html" class="room-overview-card fade-in">
+            <div class="room-overview-image">
+              <img
+                src="images/room_scholars_study.webp"
+                alt="The Scholar's Study"
+                width="800"
+                height="600"
+              />
             </div>
-            <div class="room-overview-footer">
-              <span class="room-overview-price">€180 <span>/ night</span></span>
-              <span class="btn btn-outline-dark">View Details</span>
+            <div class="room-overview-content">
+              <p class="room-overview-category">Deluxe Room</p>
+              <h3 class="room-overview-name">The Scholar's Study</h3>
+              <p class="room-overview-description">
+                A haven for the curious mind with curated library, vintage
+                writing desk, and views of the medieval street below.
+              </p>
+              <div class="room-overview-meta">
+                <span>🛏️ Queen Bed</span>
+                <span>📐 32 m²</span>
+                <span>📚 Library</span>
+              </div>
+              <div class="room-overview-footer">
+                <span class="room-overview-price"
+                  >€200 <span>/ night</span></span
+                >
+                <span class="btn btn-outline-dark">View Details</span>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+
+          <!-- Courtyard Room -->
+          <a href="room-courtyard.html" class="room-overview-card fade-in">
+            <div class="room-overview-image">
+              <img
+                src="images/room_courtyard.webp"
+                alt="The Courtyard Room"
+                width="800"
+                height="600"
+              />
+            </div>
+            <div class="room-overview-content">
+              <p class="room-overview-category">Classic Room</p>
+              <h3 class="room-overview-name">The Courtyard Room</h3>
+              <p class="room-overview-description">
+                Intimate and cozy, overlooking our tranquil internal courtyard
+                with its fountain and bougainvillea.
+              </p>
+              <div class="room-overview-meta">
+                <span>🛏️ Double Bed</span>
+                <span>📐 28 m²</span>
+                <span>🌿 Garden View</span>
+              </div>
+              <div class="room-overview-footer">
+                <span class="room-overview-price"
+                  >€180 <span>/ night</span></span
+                >
+                <span class="btn btn-outline-dark">View Details</span>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA Section -->
-  <section class="experience" style="
+    <!-- CTA Section -->
+    <section
+      class="experience"
+      style="
         background-image: url(&quot;images/hero_courtyard.png&quot;);
         padding: var(--space-20) 0;
-      ">
-    <div class="experience-overlay"></div>
-    <div class="container experience-content">
-      <h2 class="experience-title">Ready to Experience Medieval Luxury?</h2>
-      <p class="experience-text">
-        Book your stay at Palazzo Antico and discover a truly unique
-        hospitality experience in the heart of Rhodes.
-      </p>
-      <a href="contact.html" class="btn btn-gold">Book Your Stay</a>
-    </div>
-  </section>
+      "
+    >
+      <div class="experience-overlay"></div>
+      <div class="container experience-content">
+        <h2 class="experience-title">Ready to Experience Medieval Luxury?</h2>
+        <p class="experience-text">
+          Book your stay at Palazzo Antico and discover a truly unique
+          hospitality experience in the heart of Rhodes.
+        </p>
+        <a href="contact.html" class="btn btn-gold">Book Your Stay</a>
+      </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <h3 class="footer-logo">PALAZZO ANTICO</h3>
-          <p class="footer-tagline">Where history meets hospitality</p>
-          <p class="footer-description">
-            A luxury boutique hotel in a restored 15th-century Venetian
-            palazzo.
-          </p>
-          <div class="footer-social">
-            <a href="#" class="footer-social-link" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24"
-                fill="currentColor">
-                <path
-                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-              </svg></a>
-            <a href="#" class="footer-social-link" aria-label="Instagram"><svg width="20" height="20"
-                viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z" />
-              </svg></a>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3 class="footer-logo">PALAZZO ANTICO</h3>
+            <p class="footer-tagline">Where history meets hospitality</p>
+            <p class="footer-description">
+              A luxury boutique hotel in a restored 15th-century Venetian
+              palazzo.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="footer-social-link" aria-label="Facebook"
+                ><svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  /></svg
+              ></a>
+              <a href="#" class="footer-social-link" aria-label="Instagram"
+                ><svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"
+                  /></svg
+              ></a>
+            </div>
           </div>
-        </div>
-        <div class="footer-links-group">
-          <h4 class="footer-title">Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="rooms.html" class="footer-link">Our Rooms</a></li>
-            <li>
-              <a href="experience.html" class="footer-link">Experience</a>
-            </li>
-            <li><a href="retreats.html" class="footer-link">Retreats</a></li>
-            <li>
-              <a href="chef-rocco.html" class="footer-link">Chef Rocco</a>
-            </li>
-            <li><a href="about.html" class="footer-link">About Us</a></li>
-            <li><a href="contact.html" class="footer-link">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-links-group">
-          <h4 class="footer-title">Our Rooms</h4>
-          <ul class="footer-links">
-            <li>
-              <a href="room-knights-suite.html" class="footer-link">The Knight's Suite</a>
-            </li>
-            <li>
-              <a href="room-venetian.html" class="footer-link">The Venetian Room</a>
-            </li>
-            <li>
-              <a href="room-courtyard.html" class="footer-link">The Courtyard Room</a>
-            </li>
-            <li>
-              <a href="room-tower-suite.html" class="footer-link">The Tower Suite</a>
-            </li>
-            <li>
-              <a href="room-scholars-study.html" class="footer-link">The Scholar's Study</a>
-            </li>
-          </ul>
-        </div>
+          <div class="footer-links-group">
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="rooms.html" class="footer-link">Our Rooms</a></li>
+              <li>
+                <a href="experience.html" class="footer-link">Experience</a>
+              </li>
+              <li><a href="retreats.html" class="footer-link">Retreats</a></li>
+              <li>
+                <a href="chef-rocco.html" class="footer-link">Chef Rocco</a>
+              </li>
+              <li><a href="about.html" class="footer-link">About Us</a></li>
+              <li><a href="contact.html" class="footer-link">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-group">
+            <h4 class="footer-title">Our Rooms</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="room-knights-suite.html" class="footer-link"
+                  >The Knight's Suite</a
+                >
+              </li>
+              <li>
+                <a href="room-venetian.html" class="footer-link"
+                  >The Venetian Room</a
+                >
+              </li>
+              <li>
+                <a href="room-courtyard.html" class="footer-link"
+                  >The Courtyard Room</a
+                >
+              </li>
+              <li>
+                <a href="room-tower-suite.html" class="footer-link"
+                  >The Tower Suite</a
+                >
+              </li>
+              <li>
+                <a href="room-scholars-study.html" class="footer-link"
+                  >The Scholar's Study</a
+                >
+              </li>
+            </ul>
+          </div>
 
-        <!-- Rent the Whole Palazzo Callout -->
-        <div class="room-card fade-in" style="
+          <!-- Rent the Whole Palazzo Callout -->
+          <div
+            class="room-card fade-in"
+            style="
               grid-column: 1 / -1;
               display: flex;
               flex-direction: column;
@@ -485,54 +572,70 @@
               text-align: center;
               background-color: var(--cream);
               border: 2px solid var(--gold);
-            ">
-          <div class="room-card-content" style="padding: var(--space-8)">
-            <p class="section-eyebrow" style="color: var(--terracotta)">
-              Exclusive Use
-            </p>
-            <h3 class="room-card-name">Rent the Whole Palazzo</h3>
-            <p class="room-card-description" style="max-width: 600px; margin: 0 auto var(--space-6)">
-              Planning a family reunion, corporate retreat, or creative
-              workshop? Book all 5 suites for complete privacy, personalized
-              catering by Chef Rocco, and exclusive access to all common
-              areas.
-            </p>
-            <a href="retreats.html" class="btn btn-primary">Plan Your Retreat</a>
+            "
+          >
+            <div class="room-card-content" style="padding: var(--space-8)">
+              <p class="section-eyebrow" style="color: var(--terracotta)">
+                Exclusive Use
+              </p>
+              <h3 class="room-card-name">Rent the Whole Palazzo</h3>
+              <p
+                class="room-card-description"
+                style="max-width: 600px; margin: 0 auto var(--space-6)"
+              >
+                Planning a family reunion, corporate retreat, or creative
+                workshop? Book all 5 suites for complete privacy, personalized
+                catering by Chef Rocco, and exclusive access to all common
+                areas.
+              </p>
+              <a href="retreats.html" class="btn btn-primary"
+                >Plan Your Retreat</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <h4 class="footer-title">Contact</h4>
+          <div class="footer-contact-item">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span>15 Ippoton Street<br />Old Town, Rhodes 85100</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72"
+              />
+            </svg>
+            <span>+30 22410 12345</span>
           </div>
         </div>
       </div>
-      <div class="footer-contact">
-        <h4 class="footer-title">Contact</h4>
-        <div class="footer-contact-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-            <circle cx="12" cy="10" r="3" />
-          </svg>
-          <span>15 Ippoton Street<br />Old Town, Rhodes 85100</span>
-        </div>
-        <div class="footer-contact-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path
-              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72" />
-          </svg>
-          <span>+30 22410 12345</span>
-        </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Palazzo Antico. All rights reserved.</p>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 Palazzo Antico. All rights reserved.</p>
-    </div>
-  </footer>
+    </footer>
 
-  <a href="contact.html" class="book-btn-floating">Book Now</a>
-  <script src="js/main.js" defer></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js');
-      });
-    }
-  </script>
-</body>
-
+    <a href="contact.html" class="book-btn-floating">Book Now</a>
+    <script src="js/main.js" defer></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./sw.js");
+        });
+      }
+    </script>
+  </body>
 </html>

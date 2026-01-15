@@ -1,6 +1,3 @@
 {
-  "http://localhost:52277/index.html": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1768496770951-50580.report.html",
-  "http://localhost:52277/rooms.html": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1768496772015-82082.report.html",
-  "http://localhost:52277/about.html": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1768496773150-61499.report.html",
-  "http://localhost:52277/contact.html": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1768496774049-94011.report.html"
+  "http://localhost:51838/retreats.html": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1768501648554-12229.report.html"
 }

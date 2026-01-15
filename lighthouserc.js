@@ -15,7 +15,7 @@ module.exports = {
         "room-knights-suite.html",
         "room-scholars-study.html",
         "room-tower-suite.html",
-        "room-venetian.html"
+        "room-venetian.html",
       ],
     },
 

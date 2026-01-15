@@ -1,572 +1,586 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chef Rocco | Palazzo Antico Rhodes</title>
+    <meta
+      name="description"
+      content="Meet Chef Rocco, the culinary artist behind Palazzo Antico's Mediterranean cuisine. Private dining, cooking classes, and wine experiences in Rhodes."
+    />
+    <link rel="canonical" href="https://palazzoantico.gr/chef-rocco.html" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chef Rocco | Palazzo Antico Rhodes</title>
-  <meta name="description"
-    content="Meet Chef Rocco, the culinary artist behind Palazzo Antico's Mediterranean cuisine. Private dining, cooking classes, and wine experiences in Rhodes." />
-  <link rel="canonical" href="https://palazzoantico.gr/chef-rocco.html" />
+    <!-- Preload hero image -->
+    <link
+      rel="preload"
+      href="images/experience_restaurant.webp"
+      as="image"
+      fetchpriority="high"
+    />
 
-  <!-- Preload hero image -->
-  <link rel="preload" href="images/experience_restaurant.webp" as="image" fetchpriority="high" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-
-  <style>
-    /* ==========================================================================
+    <style>
+      /* ==========================================================================
          CHEF ROCCO PAGE - CINEMATIC DESIGN
          ========================================================================== */
 
-    /* Hero Section */
-    .chef-hero {
-      position: relative;
-      height: 100vh;
-      min-height: 700px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      background: var(--stone-dark);
-    }
+      /* Hero Section */
+      .chef-hero {
+        position: relative;
+        height: 100vh;
+        min-height: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background: var(--stone-dark);
+      }
 
-    .chef-hero-bg {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-    }
+      .chef-hero-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+      }
 
-    .chef-hero-bg img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.7;
-    }
+      .chef-hero-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.7;
+      }
 
-    .chef-hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom,
+      .chef-hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
           rgba(44, 40, 37, 0.3) 0%,
           rgba(44, 40, 37, 0.6) 50%,
-          rgba(44, 40, 37, 0.9) 100%);
-    }
-
-    .chef-hero-content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      max-width: 900px;
-      padding: 0 var(--space-8);
-    }
-
-    .chef-hero-quote {
-      font-family: var(--font-heading);
-      font-size: clamp(2.5rem, 5vw, 4.5rem);
-      color: var(--white);
-      line-height: 1.2;
-      margin-bottom: var(--space-8);
-      font-weight: 400;
-    }
-
-    .chef-hero-quote span {
-      color: var(--gold);
-    }
-
-    .chef-hero-attribution {
-      font-family: var(--font-accent);
-      font-size: var(--text-xl);
-      color: var(--gold);
-      font-style: italic;
-      letter-spacing: 0.1em;
-    }
-
-    .chef-hero-scroll {
-      position: absolute;
-      bottom: var(--space-12);
-      left: 50%;
-      transform: translateX(-50%);
-      color: var(--cream);
-      font-size: var(--text-xs);
-      text-transform: uppercase;
-      letter-spacing: 0.3em;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: var(--space-2);
-      animation: float 3s ease-in-out infinite;
-    }
-
-    @keyframes float {
-
-      0%,
-      100% {
-        transform: translateX(-50%) translateY(0);
+          rgba(44, 40, 37, 0.9) 100%
+        );
       }
 
-      50% {
-        transform: translateX(-50%) translateY(-10px);
-      }
-    }
-
-    /* Origin Story Section */
-    .origin-section {
-      padding: var(--space-32) 0;
-      background: var(--cream-light);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .origin-watermark {
-      position: absolute;
-      font-size: clamp(8rem, 20vw, 25rem);
-      font-family: var(--font-heading);
-      color: rgba(0, 0, 0, 0.02);
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      white-space: nowrap;
-      font-weight: 700;
-    }
-
-    .origin-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: var(--space-16);
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .origin-image-wrapper {
-      position: relative;
-    }
-
-    .origin-image-wrapper::before {
-      content: '';
-      position: absolute;
-      top: var(--space-6);
-      left: var(--space-6);
-      right: calc(-1 * var(--space-6));
-      bottom: calc(-1 * var(--space-6));
-      border: 2px solid var(--gold);
-      z-index: -1;
-    }
-
-    .origin-image-wrapper img {
-      width: 100%;
-      border-radius: var(--radius-sm);
-      box-shadow: var(--shadow-2xl);
-    }
-
-    .origin-content {
-      padding: var(--space-8);
-    }
-
-    .origin-eyebrow {
-      font-family: var(--font-accent);
-      font-size: var(--text-lg);
-      color: var(--gold);
-      font-style: italic;
-      margin-bottom: var(--space-4);
-      letter-spacing: 0.1em;
-    }
-
-    .origin-title {
-      font-family: var(--font-heading);
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      color: var(--stone-dark);
-      margin-bottom: var(--space-8);
-      line-height: 1.2;
-    }
-
-    .origin-text {
-      font-size: var(--text-lg);
-      line-height: 1.9;
-      color: var(--stone-warm);
-      margin-bottom: var(--space-6);
-    }
-
-    .origin-signature {
-      font-family: var(--font-accent);
-      font-size: var(--text-2xl);
-      color: var(--terracotta);
-      font-style: italic;
-      margin-top: var(--space-8);
-      padding-top: var(--space-8);
-      border-top: 1px solid var(--gold-light);
-    }
-
-    /* Philosophy Section */
-    .philosophy-section {
-      position: relative;
-      min-height: 80vh;
-      display: flex;
-      align-items: center;
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .philosophy-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg,
-          rgba(44, 40, 37, 0.9) 0%,
-          rgba(44, 40, 37, 0.7) 100%);
-    }
-
-    .philosophy-content {
-      position: relative;
-      z-index: 1;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: var(--space-20) var(--space-8);
-      text-align: center;
-    }
-
-    .philosophy-title {
-      font-family: var(--font-heading);
-      font-size: clamp(2rem, 4vw, 3rem);
-      color: var(--white);
-      margin-bottom: var(--space-16);
-    }
-
-    .philosophy-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--space-12);
-    }
-
-    .philosophy-card {
-      text-align: center;
-      padding: var(--space-8);
-      border: 1px solid rgba(201, 168, 76, 0.3);
-      background: rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(4px);
-      transition: all 0.4s ease;
-    }
-
-    .philosophy-card:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: var(--gold);
-      transform: translateY(-8px);
-    }
-
-    .philosophy-icon {
-      font-size: 3rem;
-      margin-bottom: var(--space-4);
-    }
-
-    .philosophy-card-title {
-      font-family: var(--font-heading);
-      font-size: var(--text-xl);
-      color: var(--gold);
-      margin-bottom: var(--space-3);
-    }
-
-    .philosophy-card-text {
-      font-size: var(--text-base);
-      color: rgba(255, 255, 255, 0.8);
-      line-height: 1.7;
-    }
-
-    /* Experiences Bento Grid */
-    .experiences-section {
-      padding: var(--space-32) 0;
-      background: var(--white);
-    }
-
-    .bento-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 350px);
-      gap: var(--space-6);
-    }
-
-    .bento-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: var(--radius-lg);
-      cursor: pointer;
-    }
-
-    .bento-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .bento-item:hover img {
-      transform: scale(1.1);
-    }
-
-    .bento-item--featured {
-      grid-row: span 2;
-    }
-
-    .bento-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top,
-          rgba(44, 40, 37, 0.9) 0%,
-          rgba(44, 40, 37, 0.2) 50%,
-          transparent 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: var(--space-8);
-      transition: background 0.4s ease;
-    }
-
-    .bento-item:hover .bento-overlay {
-      background: linear-gradient(to top,
-          rgba(44, 40, 37, 0.95) 0%,
-          rgba(44, 40, 37, 0.4) 60%,
-          rgba(44, 40, 37, 0.1) 100%);
-    }
-
-    .bento-title {
-      font-family: var(--font-heading);
-      font-size: var(--text-2xl);
-      color: var(--white);
-      margin-bottom: var(--space-2);
-    }
-
-    .bento-desc {
-      font-size: var(--text-sm);
-      color: rgba(255, 255, 255, 0.8);
-      margin-bottom: var(--space-4);
-      max-width: 300px;
-    }
-
-    .bento-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .bento-price {
-      font-family: var(--font-heading);
-      font-size: var(--text-xl);
-      color: var(--gold);
-    }
-
-    .bento-cta {
-      font-size: var(--text-xs);
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--white);
-      border: 1px solid var(--white);
-      padding: var(--space-2) var(--space-4);
-      transition: all 0.3s ease;
-    }
-
-    .bento-cta:hover {
-      background: var(--white);
-      color: var(--stone-dark);
-    }
-
-    /* Signature Menu Section */
-    .menu-section {
-      padding: var(--space-32) 0;
-      background: var(--cream);
-      position: relative;
-    }
-
-    .menu-card {
-      max-width: 900px;
-      margin: 0 auto;
-      background: var(--white);
-      padding: var(--space-16);
-      box-shadow:
-        0 4px 6px rgba(0, 0, 0, 0.02),
-        0 20px 40px rgba(0, 0, 0, 0.06);
-      border: 1px solid var(--cream-dark);
-      position: relative;
-    }
-
-    .menu-card::before {
-      content: '';
-      position: absolute;
-      inset: var(--space-4);
-      border: 1px solid var(--gold-light);
-      pointer-events: none;
-    }
-
-    .menu-header {
-      text-align: center;
-      margin-bottom: var(--space-12);
-      padding-bottom: var(--space-8);
-      border-bottom: 1px solid var(--cream-dark);
-    }
-
-    .menu-logo {
-      font-family: var(--font-heading);
-      font-size: var(--text-3xl);
-      color: var(--stone-dark);
-      letter-spacing: 0.1em;
-      margin-bottom: var(--space-2);
-    }
-
-    .menu-subtitle {
-      font-family: var(--font-accent);
-      font-size: var(--text-lg);
-      color: var(--gold);
-      font-style: italic;
-    }
-
-    .menu-columns {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-12);
-    }
-
-    .menu-category-title {
-      font-family: var(--font-accent);
-      font-size: var(--text-xl);
-      color: var(--gold);
-      text-align: center;
-      font-style: italic;
-      margin-bottom: var(--space-8);
-    }
-
-    .menu-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: var(--space-4) 0;
-      border-bottom: 1px dotted var(--cream-dark);
-    }
-
-    .menu-item:last-child {
-      border-bottom: none;
-    }
-
-    .menu-item-name {
-      font-weight: 500;
-      color: var(--stone-dark);
-      margin-bottom: var(--space-1);
-    }
-
-    .menu-item-desc {
-      font-size: var(--text-sm);
-      color: var(--stone-warm);
-      font-style: italic;
-    }
-
-    .menu-item-price {
-      font-family: var(--font-heading);
-      color: var(--terracotta);
-      white-space: nowrap;
-      margin-left: var(--space-4);
-    }
-
-    .menu-footer {
-      text-align: center;
-      margin-top: var(--space-12);
-      padding-top: var(--space-8);
-      border-top: 1px solid var(--cream-dark);
-    }
-
-    .menu-note {
-      font-family: var(--font-accent);
-      font-style: italic;
-      color: var(--stone-warm);
-    }
-
-    /* Testimonials Section */
-    .testimonials-section {
-      padding: var(--space-20) 0;
-      background: var(--stone-dark);
-      overflow: hidden;
-    }
-
-    .testimonial-track {
-      display: flex;
-      gap: var(--space-8);
-      animation: scroll 30s linear infinite;
-    }
-
-    @keyframes scroll {
-      0% {
-        transform: translateX(0);
+      .chef-hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        max-width: 900px;
+        padding: 0 var(--space-8);
       }
 
-      100% {
+      .chef-hero-quote {
+        font-family: var(--font-heading);
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        color: var(--white);
+        line-height: 1.2;
+        margin-bottom: var(--space-8);
+        font-weight: 400;
+      }
+
+      .chef-hero-quote span {
+        color: var(--gold);
+      }
+
+      .chef-hero-attribution {
+        font-family: var(--font-accent);
+        font-size: var(--text-xl);
+        color: var(--gold);
+        font-style: italic;
+        letter-spacing: 0.1em;
+      }
+
+      .chef-hero-scroll {
+        position: absolute;
+        bottom: var(--space-12);
+        left: 50%;
         transform: translateX(-50%);
+        color: var(--cream);
+        font-size: var(--text-xs);
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-2);
+        animation: float 3s ease-in-out infinite;
       }
-    }
 
-    .testimonial-card {
-      flex-shrink: 0;
-      width: 400px;
-      background: rgba(255, 255, 255, 0.05);
-      padding: var(--space-8);
-      border: 1px solid rgba(201, 168, 76, 0.2);
-    }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateX(-50%) translateY(0);
+        }
 
-    .testimonial-text {
-      font-family: var(--font-accent);
-      font-size: var(--text-lg);
-      font-style: italic;
-      color: var(--cream);
-      line-height: 1.8;
-      margin-bottom: var(--space-6);
-    }
+        50% {
+          transform: translateX(-50%) translateY(-10px);
+        }
+      }
 
-    .testimonial-author {
-      font-size: var(--text-sm);
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
+      /* Origin Story Section */
+      .origin-section {
+        padding: var(--space-32) 0;
+        background: var(--cream-light);
+        position: relative;
+        overflow: hidden;
+      }
 
-    /* Responsive */
-    @media (max-width: 992px) {
+      .origin-watermark {
+        position: absolute;
+        font-size: clamp(8rem, 20vw, 25rem);
+        font-family: var(--font-heading);
+        color: rgba(0, 0, 0, 0.02);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        white-space: nowrap;
+        font-weight: 700;
+      }
+
       .origin-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-12);
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: var(--space-16);
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .origin-image-wrapper {
+        position: relative;
       }
 
       .origin-image-wrapper::before {
-        display: none;
+        content: "";
+        position: absolute;
+        top: var(--space-6);
+        left: var(--space-6);
+        right: calc(-1 * var(--space-6));
+        bottom: calc(-1 * var(--space-6));
+        border: 2px solid var(--gold);
+        z-index: -1;
+      }
+
+      .origin-image-wrapper img {
+        width: 100%;
+        border-radius: var(--radius-sm);
+        box-shadow: var(--shadow-2xl);
+      }
+
+      .origin-content {
+        padding: var(--space-8);
+      }
+
+      .origin-eyebrow {
+        font-family: var(--font-accent);
+        font-size: var(--text-lg);
+        color: var(--gold);
+        font-style: italic;
+        margin-bottom: var(--space-4);
+        letter-spacing: 0.1em;
+      }
+
+      .origin-title {
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        color: var(--stone-dark);
+        margin-bottom: var(--space-8);
+        line-height: 1.2;
+      }
+
+      .origin-text {
+        font-size: var(--text-lg);
+        line-height: 1.9;
+        color: var(--stone-warm);
+        margin-bottom: var(--space-6);
+      }
+
+      .origin-signature {
+        font-family: var(--font-accent);
+        font-size: var(--text-2xl);
+        color: var(--terracotta);
+        font-style: italic;
+        margin-top: var(--space-8);
+        padding-top: var(--space-8);
+        border-top: 1px solid var(--gold-light);
+      }
+
+      /* Philosophy Section */
+      .philosophy-section {
+        position: relative;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .philosophy-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(44, 40, 37, 0.9) 0%,
+          rgba(44, 40, 37, 0.7) 100%
+        );
+      }
+
+      .philosophy-content {
+        position: relative;
+        z-index: 1;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: var(--space-20) var(--space-8);
+        text-align: center;
+      }
+
+      .philosophy-title {
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 4vw, 3rem);
+        color: var(--white);
+        margin-bottom: var(--space-16);
       }
 
       .philosophy-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-8);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-12);
+      }
+
+      .philosophy-card {
+        text-align: center;
+        padding: var(--space-8);
+        border: 1px solid rgba(201, 168, 76, 0.3);
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(4px);
+        transition: all 0.4s ease;
+      }
+
+      .philosophy-card:hover {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: var(--gold);
+        transform: translateY(-8px);
+      }
+
+      .philosophy-icon {
+        font-size: 3rem;
+        margin-bottom: var(--space-4);
+      }
+
+      .philosophy-card-title {
+        font-family: var(--font-heading);
+        font-size: var(--text-xl);
+        color: var(--gold);
+        margin-bottom: var(--space-3);
+      }
+
+      .philosophy-card-text {
+        font-size: var(--text-base);
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.7;
+      }
+
+      /* Experiences Bento Grid */
+      .experiences-section {
+        padding: var(--space-32) 0;
+        background: var(--white);
       }
 
       .bento-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-      }
-
-      .bento-item--featured {
-        grid-row: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 350px);
+        gap: var(--space-6);
       }
 
       .bento-item {
-        height: 350px;
+        position: relative;
+        overflow: hidden;
+        border-radius: var(--radius-lg);
+        cursor: pointer;
+      }
+
+      .bento-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .bento-item:hover img {
+        transform: scale(1.1);
+      }
+
+      .bento-item--featured {
+        grid-row: span 2;
+      }
+
+      .bento-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(44, 40, 37, 0.9) 0%,
+          rgba(44, 40, 37, 0.2) 50%,
+          transparent 100%
+        );
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: var(--space-8);
+        transition: background 0.4s ease;
+      }
+
+      .bento-item:hover .bento-overlay {
+        background: linear-gradient(
+          to top,
+          rgba(44, 40, 37, 0.95) 0%,
+          rgba(44, 40, 37, 0.4) 60%,
+          rgba(44, 40, 37, 0.1) 100%
+        );
+      }
+
+      .bento-title {
+        font-family: var(--font-heading);
+        font-size: var(--text-2xl);
+        color: var(--white);
+        margin-bottom: var(--space-2);
+      }
+
+      .bento-desc {
+        font-size: var(--text-sm);
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: var(--space-4);
+        max-width: 300px;
+      }
+
+      .bento-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .bento-price {
+        font-family: var(--font-heading);
+        font-size: var(--text-xl);
+        color: var(--gold);
+      }
+
+      .bento-cta {
+        font-size: var(--text-xs);
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: var(--white);
+        border: 1px solid var(--white);
+        padding: var(--space-2) var(--space-4);
+        transition: all 0.3s ease;
+      }
+
+      .bento-cta:hover {
+        background: var(--white);
+        color: var(--stone-dark);
+      }
+
+      /* Signature Menu Section */
+      .menu-section {
+        padding: var(--space-32) 0;
+        background: var(--cream);
+        position: relative;
+      }
+
+      .menu-card {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--white);
+        padding: var(--space-16);
+        box-shadow:
+          0 4px 6px rgba(0, 0, 0, 0.02),
+          0 20px 40px rgba(0, 0, 0, 0.06);
+        border: 1px solid var(--cream-dark);
+        position: relative;
+      }
+
+      .menu-card::before {
+        content: "";
+        position: absolute;
+        inset: var(--space-4);
+        border: 1px solid var(--gold-light);
+        pointer-events: none;
+      }
+
+      .menu-header {
+        text-align: center;
+        margin-bottom: var(--space-12);
+        padding-bottom: var(--space-8);
+        border-bottom: 1px solid var(--cream-dark);
+      }
+
+      .menu-logo {
+        font-family: var(--font-heading);
+        font-size: var(--text-3xl);
+        color: var(--stone-dark);
+        letter-spacing: 0.1em;
+        margin-bottom: var(--space-2);
+      }
+
+      .menu-subtitle {
+        font-family: var(--font-accent);
+        font-size: var(--text-lg);
+        color: var(--gold);
+        font-style: italic;
       }
 
       .menu-columns {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-12);
       }
-    }
-  </style>
 
-  <!-- Schema.org Structured Data -->
-  <script type="application/ld+json">
+      .menu-category-title {
+        font-family: var(--font-accent);
+        font-size: var(--text-xl);
+        color: var(--gold);
+        text-align: center;
+        font-style: italic;
+        margin-bottom: var(--space-8);
+      }
+
+      .menu-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: var(--space-4) 0;
+        border-bottom: 1px dotted var(--cream-dark);
+      }
+
+      .menu-item:last-child {
+        border-bottom: none;
+      }
+
+      .menu-item-name {
+        font-weight: 500;
+        color: var(--stone-dark);
+        margin-bottom: var(--space-1);
+      }
+
+      .menu-item-desc {
+        font-size: var(--text-sm);
+        color: var(--stone-warm);
+        font-style: italic;
+      }
+
+      .menu-item-price {
+        font-family: var(--font-heading);
+        color: var(--terracotta);
+        white-space: nowrap;
+        margin-left: var(--space-4);
+      }
+
+      .menu-footer {
+        text-align: center;
+        margin-top: var(--space-12);
+        padding-top: var(--space-8);
+        border-top: 1px solid var(--cream-dark);
+      }
+
+      .menu-note {
+        font-family: var(--font-accent);
+        font-style: italic;
+        color: var(--stone-warm);
+      }
+
+      /* Testimonials Section */
+      .testimonials-section {
+        padding: var(--space-20) 0;
+        background: var(--stone-dark);
+        overflow: hidden;
+      }
+
+      .testimonial-track {
+        display: flex;
+        gap: var(--space-8);
+        animation: scroll 30s linear infinite;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .testimonial-card {
+        flex-shrink: 0;
+        width: 400px;
+        background: rgba(255, 255, 255, 0.05);
+        padding: var(--space-8);
+        border: 1px solid rgba(201, 168, 76, 0.2);
+      }
+
+      .testimonial-text {
+        font-family: var(--font-accent);
+        font-size: var(--text-lg);
+        font-style: italic;
+        color: var(--cream);
+        line-height: 1.8;
+        margin-bottom: var(--space-6);
+      }
+
+      .testimonial-author {
+        font-size: var(--text-sm);
+        color: var(--gold);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      /* Responsive */
+      @media (max-width: 992px) {
+        .origin-grid {
+          grid-template-columns: 1fr;
+          gap: var(--space-12);
+        }
+
+        .origin-image-wrapper::before {
+          display: none;
+        }
+
+        .philosophy-grid {
+          grid-template-columns: 1fr;
+          gap: var(--space-8);
+        }
+
+        .bento-grid {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
+        }
+
+        .bento-item--featured {
+          grid-row: auto;
+        }
+
+        .bento-item {
+          height: 350px;
+        }
+
+        .menu-columns {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
@@ -579,421 +593,487 @@
         "description": "Executive Chef at Palazzo Antico, specializing in Mediterranean cuisine with contemporary Rhodian influences."
       }
     </script>
-</head>
+  </head>
 
-<body>
-  <!-- Navigation -->
-  <nav class="nav">
-    <div class="container nav-inner">
-      <a href="index.html" class="nav-logo">PALAZZO ANTICO</a>
-      <ul class="nav-links">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="rooms.html" class="nav-link">Rooms</a></li>
-        <li><a href="experience.html" class="nav-link">Experience</a></li>
-        <li><a href="retreats.html" class="nav-link">Retreats</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
+  <body>
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="container nav-inner">
+        <a href="index.html" class="nav-logo">PALAZZO ANTICO</a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="rooms.html" class="nav-link">Rooms</a></li>
+          <li><a href="experience.html" class="nav-link">Experience</a></li>
+          <li><a href="retreats.html" class="nav-link">Retreats</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-overlay"></div>
+    <div class="mobile-menu">
+      <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="rooms.html" class="mobile-nav-link">Rooms</a></li>
+        <li>
+          <a href="experience.html" class="mobile-nav-link">Experience</a>
+        </li>
+        <li><a href="retreats.html" class="mobile-nav-link">Retreats</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </div>
-  </nav>
 
-  <!-- Mobile Menu -->
-  <div class="mobile-overlay"></div>
-  <div class="mobile-menu">
-    <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
-    <ul class="mobile-nav-links">
-      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
-      <li><a href="rooms.html" class="mobile-nav-link">Rooms</a></li>
-      <li><a href="experience.html" class="mobile-nav-link">Experience</a></li>
-      <li><a href="retreats.html" class="mobile-nav-link">Retreats</a></li>
-      <li><a href="about.html" class="mobile-nav-link">About</a></li>
-      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
-    </ul>
-  </div>
-
-  <!-- Cinematic Hero -->
-  <section class="chef-hero">
-    <div class="chef-hero-bg">
-      <img src="images/experience_restaurant.webp" alt="Chef Rocco's Kitchen" width="1920" height="1080"
-        fetchpriority="high" />
-      <div class="chef-hero-overlay"></div>
-    </div>
-    <div class="chef-hero-content fade-in">
-      <h1 class="chef-hero-quote">
-        "I don't cook food.<br />
-        I compose <span>memories</span>."
-      </h1>
-      <p class="chef-hero-attribution">— Chef Rocco</p>
-    </div>
-    <div class="chef-hero-scroll">
-      <span>Discover</span>
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M12 5v14M5 12l7 7 7-7" />
-      </svg>
-    </div>
-  </section>
-
-  <!-- Origin Story -->
-  <section class="origin-section">
-    <div class="origin-watermark">CUCINA</div>
-    <div class="container">
-      <div class="origin-grid">
-        <div class="origin-image-wrapper fade-in-left">
-          <img src="images/chef_rocco_portrait.webp" alt="Chef Rocco - Executive Chef" width="800" height="1000" />
-        </div>
-        <div class="origin-content fade-in-right">
-          <p class="origin-eyebrow">The Artisan</p>
-          <h2 class="origin-title">Where Tradition Meets Innovation</h2>
-          <p class="origin-text">
-            Born in the sun-drenched hills of Calabria and trained in the Michelin-starred
-            kitchens of Rome and Paris, Chef Rocco discovered his true calling on the shores
-            of Rhodes. Here, where the Aegean whispers ancient secrets, he found the perfect
-            marriage of Mediterranean traditions.
-          </p>
-          <p class="origin-text">
-            His philosophy is deceptively simple: let the ingredient speak. Every morning
-            begins at the harbor, selecting the day's catch directly from fishermen whose
-            families have worked these waters for generations. The herbs come from our
-            courtyard garden. The olive oil, from a single family grove in Lindos.
-          </p>
-          <p class="origin-text">
-            The result is cuisine that tastes of place—dishes that could only exist here,
-            in this moment, under this Aegean sky.
-          </p>
-          <p class="origin-signature">— Rocco Chierici</p>
-        </div>
+    <!-- Cinematic Hero -->
+    <section class="chef-hero">
+      <div class="chef-hero-bg">
+        <img
+          src="images/experience_restaurant.webp"
+          alt="Chef Rocco's Kitchen"
+          width="1920"
+          height="1080"
+          fetchpriority="high"
+        />
+        <div class="chef-hero-overlay"></div>
       </div>
-    </div>
-  </section>
-
-  <!-- Philosophy Section -->
-  <section class="philosophy-section" style="background-image: url('images/experience_terrace.webp')">
-    <div class="philosophy-overlay"></div>
-    <div class="philosophy-content">
-      <h2 class="philosophy-title fade-in">The Kitchen Philosophy</h2>
-      <div class="philosophy-grid">
-        <div class="philosophy-card fade-in">
-          <div class="philosophy-icon">🌊</div>
-          <h3 class="philosophy-card-title">From the Sea</h3>
-          <p class="philosophy-card-text">
-            Daily selections from Rhodian fishermen. Octopus, bream, and lobster
-            that swam in the Aegean hours before reaching your plate.
-          </p>
-        </div>
-        <div class="philosophy-card fade-in">
-          <div class="philosophy-icon">🌿</div>
-          <h3 class="philosophy-card-title">From the Land</h3>
-          <p class="philosophy-card-text">
-            Herbs harvested from our courtyard garden. Tomatoes ripened in the
-            Rhodian sun. Olive oil from century-old groves in Lindos.
-          </p>
-        </div>
-        <div class="philosophy-card fade-in">
-          <div class="philosophy-icon">📜</div>
-          <h3 class="philosophy-card-title">From Tradition</h3>
-          <p class="philosophy-card-text">
-            Recipes refined over generations, reimagined with contemporary technique.
-            The soul of the Mediterranean, served with modern elegance.
-          </p>
-        </div>
+      <div class="chef-hero-content fade-in">
+        <h1 class="chef-hero-quote">
+          "I don't cook food.<br />
+          I compose <span>memories</span>."
+        </h1>
+        <p class="chef-hero-attribution">— Chef Rocco</p>
       </div>
-    </div>
-  </section>
-
-  <!-- Experiences Bento Grid -->
-  <section class="experiences-section">
-    <div class="container">
-      <div class="section-header fade-in">
-        <p class="section-eyebrow">Culinary Experiences</p>
-        <h2 class="section-title">Beyond the Table</h2>
-        <p class="section-description">
-          Intimate culinary journeys designed for the discerning palate
-        </p>
+      <div class="chef-hero-scroll">
+        <span>Discover</span>
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M12 5v14M5 12l7 7 7-7" />
+        </svg>
       </div>
+    </section>
 
-      <div class="bento-grid">
-        <!-- Featured: Private Dining -->
-        <div class="bento-item bento-item--featured fade-in">
-          <img src="images/tower_suite_terrace.webp" alt="Private Rooftop Dining" />
-          <div class="bento-overlay">
-            <h3 class="bento-title">Private Dining</h3>
-            <p class="bento-desc">
-              An intimate 9-course tasting menu on our candlelit terrace.
-              Chef Rocco crafts each course tableside as the sun sets over the Aegean.
+    <!-- Origin Story -->
+    <section class="origin-section">
+      <div class="origin-watermark">CUCINA</div>
+      <div class="container">
+        <div class="origin-grid">
+          <div class="origin-image-wrapper fade-in-left">
+            <img
+              src="images/chef_rocco_portrait.webp"
+              alt="Chef Rocco - Executive Chef"
+              width="800"
+              height="1000"
+            />
+          </div>
+          <div class="origin-content fade-in-right">
+            <p class="origin-eyebrow">The Artisan</p>
+            <h2 class="origin-title">Where Tradition Meets Innovation</h2>
+            <p class="origin-text">
+              Born in the sun-drenched hills of Calabria and trained in the
+              Michelin-starred kitchens of Rome and Paris, Chef Rocco discovered
+              his true calling on the shores of Rhodes. Here, where the Aegean
+              whispers ancient secrets, he found the perfect marriage of
+              Mediterranean traditions.
             </p>
-            <div class="bento-footer">
-              <span class="bento-price">From €180</span>
-              <a href="contact.html?service=private-dining" class="bento-cta">Reserve</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Cooking Class -->
-        <div class="bento-item fade-in">
-          <img src="images/experience_restaurant.webp" alt="Cooking Masterclass" />
-          <div class="bento-overlay">
-            <h3 class="bento-title">The Masterclass</h3>
-            <p class="bento-desc">
-              Market-to-table workshop. Master handmade pasta and traditional Rhodian meze.
+            <p class="origin-text">
+              His philosophy is deceptively simple: let the ingredient speak.
+              Every morning begins at the harbor, selecting the day's catch
+              directly from fishermen whose families have worked these waters
+              for generations. The herbs come from our courtyard garden. The
+              olive oil, from a single family grove in Lindos.
             </p>
-            <div class="bento-footer">
-              <span class="bento-price">€140</span>
-              <a href="contact.html?service=cooking" class="bento-cta">Book</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Wine Pairing -->
-        <div class="bento-item fade-in">
-          <img src="images/knights_suite_sitting.webp" alt="Wine Experience" />
-          <div class="bento-overlay">
-            <h3 class="bento-title">Wine & Meze</h3>
-            <p class="bento-desc">
-              Seven Aegean varietals paired with signature small plates at sunset.
+            <p class="origin-text">
+              The result is cuisine that tastes of place—dishes that could only
+              exist here, in this moment, under this Aegean sky.
             </p>
-            <div class="bento-footer">
-              <span class="bento-price">€95</span>
-              <a href="contact.html?service=wine" class="bento-cta">Join</a>
-            </div>
+            <p class="origin-signature">— Rocco Chierici</p>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- In-Suite -->
-        <div class="bento-item fade-in">
-          <img src="images/room_tower_suite.webp" alt="In-Suite Dining" />
-          <div class="bento-overlay">
-            <h3 class="bento-title">In-Suite</h3>
-            <p class="bento-desc">
-              Restaurant-quality dining in the privacy of your suite.
+    <!-- Philosophy Section -->
+    <section
+      class="philosophy-section"
+      style="background-image: url(&quot;images/experience_terrace.webp&quot;)"
+    >
+      <div class="philosophy-overlay"></div>
+      <div class="philosophy-content">
+        <h2 class="philosophy-title fade-in">The Kitchen Philosophy</h2>
+        <div class="philosophy-grid">
+          <div class="philosophy-card fade-in">
+            <div class="philosophy-icon">🌊</div>
+            <h3 class="philosophy-card-title">From the Sea</h3>
+            <p class="philosophy-card-text">
+              Daily selections from Rhodian fishermen. Octopus, bream, and
+              lobster that swam in the Aegean hours before reaching your plate.
             </p>
-            <div class="bento-footer">
-              <span class="bento-price">From €200</span>
-              <a href="contact.html?service=insuite" class="bento-cta">Arrange</a>
-            </div>
           </div>
-        </div>
-
-        <!-- Sunrise Breakfast -->
-        <div class="bento-item fade-in">
-          <img src="images/experience_terrace.webp" alt="Sunrise Breakfast" />
-          <div class="bento-overlay">
-            <h3 class="bento-title">Sunrise Breakfast</h3>
-            <p class="bento-desc">
-              Mediterranean breakfast on the rooftop as the old town awakens.
+          <div class="philosophy-card fade-in">
+            <div class="philosophy-icon">🌿</div>
+            <h3 class="philosophy-card-title">From the Land</h3>
+            <p class="philosophy-card-text">
+              Herbs harvested from our courtyard garden. Tomatoes ripened in the
+              Rhodian sun. Olive oil from century-old groves in Lindos.
             </p>
-            <div class="bento-footer">
-              <span class="bento-price">€45</span>
-              <a href="contact.html?service=breakfast" class="bento-cta">Add</a>
-            </div>
+          </div>
+          <div class="philosophy-card fade-in">
+            <div class="philosophy-icon">📜</div>
+            <h3 class="philosophy-card-title">From Tradition</h3>
+            <p class="philosophy-card-text">
+              Recipes refined over generations, reimagined with contemporary
+              technique. The soul of the Mediterranean, served with modern
+              elegance.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Signature Menu -->
-  <section class="menu-section">
-    <div class="container">
-      <div class="menu-card fade-in">
-        <div class="menu-header">
-          <h2 class="menu-logo">PALAZZO ANTICO</h2>
-          <p class="menu-subtitle">Carte du Jour</p>
-        </div>
-
-        <div class="menu-columns">
-          <div class="menu-category">
-            <h3 class="menu-category-title">Les Entrées</h3>
-            <div class="menu-item">
-              <div>
-                <p class="menu-item-name">Aegean Octopus Carpaccio</p>
-                <p class="menu-item-desc">Citrus vinaigrette, capers, fresh herbs</p>
-              </div>
-              <span class="menu-item-price">€24</span>
-            </div>
-            <div class="menu-item">
-              <div>
-                <p class="menu-item-name">Wild Sea Bream Crudo</p>
-                <p class="menu-item-desc">Pomegranate, samphire, olive emulsion</p>
-              </div>
-              <span class="menu-item-price">€26</span>
-            </div>
-            <div class="menu-item">
-              <div>
-                <p class="menu-item-name">Courtyard Herb Tart</p>
-                <p class="menu-item-desc">Local goat cheese, pine nuts, burnt honey</p>
-              </div>
-              <span class="menu-item-price">€19</span>
-            </div>
-          </div>
-
-          <div class="menu-category">
-            <h3 class="menu-category-title">Les Plats</h3>
-            <div class="menu-item">
-              <div>
-                <p class="menu-item-name">Aegean Lobster Tagliolini</p>
-                <p class="menu-item-desc">Handmade pasta, saffron, cherry tomatoes</p>
-              </div>
-              <span class="menu-item-price">€48</span>
-            </div>
-            <div class="menu-item">
-              <div>
-                <p class="menu-item-name">Lamb Kleftiko</p>
-                <p class="menu-item-desc">12-hour slow-roasted, lemon potatoes</p>
-              </div>
-              <span class="menu-item-price">€38</span>
-            </div>
-            <div class="menu-item">
-              <div>
-                <p class="menu-item-name">Day-Boat Sea Bream</p>
-                <p class="menu-item-desc">Whole fish, fennel, olives, orzo</p>
-              </div>
-              <span class="menu-item-price">€42</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="menu-footer">
-          <p class="menu-note">Menu changes weekly based on local market availability</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="testimonials-section">
-    <div class="testimonial-track">
-      <div class="testimonial-card">
-        <p class="testimonial-text">
-          "The private dining experience was extraordinary. Chef Rocco's
-          passion for local ingredients is evident in every exquisite bite."
-        </p>
-        <p class="testimonial-author">— Elena K., Athens</p>
-      </div>
-      <div class="testimonial-card">
-        <p class="testimonial-text">
-          "We came for one cooking class and booked three more.
-          An unforgettable culinary journey through Rhodes."
-        </p>
-        <p class="testimonial-author">— Marcus & Julia, London</p>
-      </div>
-      <div class="testimonial-card">
-        <p class="testimonial-text">
-          "The sunrise breakfast on the terrace—with Chef Rocco's fresh
-          pastries—was the highlight of our honeymoon."
-        </p>
-        <p class="testimonial-author">— David R., New York</p>
-      </div>
-      <div class="testimonial-card">
-        <p class="testimonial-text">
-          "Michelin-quality cuisine in a setting that feels like a
-          Renaissance painting. Truly magical."
-        </p>
-        <p class="testimonial-author">— Sophie M., Paris</p>
-      </div>
-      <!-- Duplicate for seamless loop -->
-      <div class="testimonial-card">
-        <p class="testimonial-text">
-          "The private dining experience was extraordinary. Chef Rocco's
-          passion for local ingredients is evident in every exquisite bite."
-        </p>
-        <p class="testimonial-author">— Elena K., Athens</p>
-      </div>
-      <div class="testimonial-card">
-        <p class="testimonial-text">
-          "We came for one cooking class and booked three more.
-          An unforgettable culinary journey through Rhodes."
-        </p>
-        <p class="testimonial-author">— Marcus & Julia, London</p>
-      </div>
-      <div class="testimonial-card">
-        <p class="testimonial-text">
-          "The sunrise breakfast on the terrace—with Chef Rocco's fresh
-          pastries—was the highlight of our honeymoon."
-        </p>
-        <p class="testimonial-author">— David R., New York</p>
-      </div>
-      <div class="testimonial-card">
-        <p class="testimonial-text">
-          "Michelin-quality cuisine in a setting that feels like a
-          Renaissance painting. Truly magical."
-        </p>
-        <p class="testimonial-author">— Sophie M., Paris</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="section-lg" style="background: var(--cream-light); text-align: center;">
-    <div class="container container-narrow">
-      <p class="section-eyebrow">Reserve Your Experience</p>
-      <h2 class="section-title">Dine With Us</h2>
-      <p class="section-description" style="margin-bottom: var(--space-10);">
-        Whether a private tasting menu, cooking class, or simple breakfast
-        on the terrace, every meal at Palazzo Antico is crafted with intention.
-      </p>
-      <a href="contact.html" class="btn btn-primary">Make a Reservation</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <h3 class="footer-logo">PALAZZO ANTICO</h3>
-          <p class="footer-tagline">Where history meets hospitality</p>
-          <p class="footer-description">
-            A luxury boutique hotel in a restored 15th-century Venetian palazzo.
+    <!-- Experiences Bento Grid -->
+    <section class="experiences-section">
+      <div class="container">
+        <div class="section-header fade-in">
+          <p class="section-eyebrow">Culinary Experiences</p>
+          <h2 class="section-title">Beyond the Table</h2>
+          <p class="section-description">
+            Intimate culinary journeys designed for the discerning palate
           </p>
         </div>
-        <div class="footer-links-group">
-          <h4 class="footer-title">Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="rooms.html" class="footer-link">Our Rooms</a></li>
-            <li><a href="experience.html" class="footer-link">Experience</a></li>
-            <li><a href="retreats.html" class="footer-link">Retreats</a></li>
-            <li><a href="chef-rocco.html" class="footer-link active">Chef Rocco</a></li>
-            <li><a href="contact.html" class="footer-link">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-links-group">
-          <h4 class="footer-title">Dining</h4>
-          <ul class="footer-links">
-            <li><a href="#" class="footer-link">Private Dining</a></li>
-            <li><a href="#" class="footer-link">Cooking Classes</a></li>
-            <li><a href="#" class="footer-link">Wine Experiences</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h4 class="footer-title">Contact</h4>
-          <div class="footer-contact-item">
-            <span>15 Ippoton Street, Old Town, Rhodes 85100</span>
+
+        <div class="bento-grid">
+          <!-- Featured: Private Dining -->
+          <div class="bento-item bento-item--featured fade-in">
+            <img
+              src="images/tower_suite_terrace.webp"
+              alt="Private Rooftop Dining"
+            />
+            <div class="bento-overlay">
+              <h3 class="bento-title">Private Dining</h3>
+              <p class="bento-desc">
+                An intimate 9-course tasting menu on our candlelit terrace. Chef
+                Rocco crafts each course tableside as the sun sets over the
+                Aegean.
+              </p>
+              <div class="bento-footer">
+                <span class="bento-price">From €180</span>
+                <a href="contact.html?service=private-dining" class="bento-cta"
+                  >Reserve</a
+                >
+              </div>
+            </div>
           </div>
-          <div class="footer-contact-item">
-            <span>+30 22410 12345</span>
+
+          <!-- Cooking Class -->
+          <div class="bento-item fade-in">
+            <img
+              src="images/experience_restaurant.webp"
+              alt="Cooking Masterclass"
+            />
+            <div class="bento-overlay">
+              <h3 class="bento-title">The Masterclass</h3>
+              <p class="bento-desc">
+                Market-to-table workshop. Master handmade pasta and traditional
+                Rhodian meze.
+              </p>
+              <div class="bento-footer">
+                <span class="bento-price">€140</span>
+                <a href="contact.html?service=cooking" class="bento-cta"
+                  >Book</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Wine Pairing -->
+          <div class="bento-item fade-in">
+            <img
+              src="images/knights_suite_sitting.webp"
+              alt="Wine Experience"
+            />
+            <div class="bento-overlay">
+              <h3 class="bento-title">Wine & Meze</h3>
+              <p class="bento-desc">
+                Seven Aegean varietals paired with signature small plates at
+                sunset.
+              </p>
+              <div class="bento-footer">
+                <span class="bento-price">€95</span>
+                <a href="contact.html?service=wine" class="bento-cta">Join</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- In-Suite -->
+          <div class="bento-item fade-in">
+            <img src="images/room_tower_suite.webp" alt="In-Suite Dining" />
+            <div class="bento-overlay">
+              <h3 class="bento-title">In-Suite</h3>
+              <p class="bento-desc">
+                Restaurant-quality dining in the privacy of your suite.
+              </p>
+              <div class="bento-footer">
+                <span class="bento-price">From €200</span>
+                <a href="contact.html?service=insuite" class="bento-cta"
+                  >Arrange</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Sunrise Breakfast -->
+          <div class="bento-item fade-in">
+            <img src="images/experience_terrace.webp" alt="Sunrise Breakfast" />
+            <div class="bento-overlay">
+              <h3 class="bento-title">Sunrise Breakfast</h3>
+              <p class="bento-desc">
+                Mediterranean breakfast on the rooftop as the old town awakens.
+              </p>
+              <div class="bento-footer">
+                <span class="bento-price">€45</span>
+                <a href="contact.html?service=breakfast" class="bento-cta"
+                  >Add</a
+                >
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Palazzo Antico. All rights reserved.</p>
+    </section>
+
+    <!-- Signature Menu -->
+    <section class="menu-section">
+      <div class="container">
+        <div class="menu-card fade-in">
+          <div class="menu-header">
+            <h2 class="menu-logo">PALAZZO ANTICO</h2>
+            <p class="menu-subtitle">Carte du Jour</p>
+          </div>
+
+          <div class="menu-columns">
+            <div class="menu-category">
+              <h3 class="menu-category-title">Les Entrées</h3>
+              <div class="menu-item">
+                <div>
+                  <p class="menu-item-name">Aegean Octopus Carpaccio</p>
+                  <p class="menu-item-desc">
+                    Citrus vinaigrette, capers, fresh herbs
+                  </p>
+                </div>
+                <span class="menu-item-price">€24</span>
+              </div>
+              <div class="menu-item">
+                <div>
+                  <p class="menu-item-name">Wild Sea Bream Crudo</p>
+                  <p class="menu-item-desc">
+                    Pomegranate, samphire, olive emulsion
+                  </p>
+                </div>
+                <span class="menu-item-price">€26</span>
+              </div>
+              <div class="menu-item">
+                <div>
+                  <p class="menu-item-name">Courtyard Herb Tart</p>
+                  <p class="menu-item-desc">
+                    Local goat cheese, pine nuts, burnt honey
+                  </p>
+                </div>
+                <span class="menu-item-price">€19</span>
+              </div>
+            </div>
+
+            <div class="menu-category">
+              <h3 class="menu-category-title">Les Plats</h3>
+              <div class="menu-item">
+                <div>
+                  <p class="menu-item-name">Aegean Lobster Tagliolini</p>
+                  <p class="menu-item-desc">
+                    Handmade pasta, saffron, cherry tomatoes
+                  </p>
+                </div>
+                <span class="menu-item-price">€48</span>
+              </div>
+              <div class="menu-item">
+                <div>
+                  <p class="menu-item-name">Lamb Kleftiko</p>
+                  <p class="menu-item-desc">
+                    12-hour slow-roasted, lemon potatoes
+                  </p>
+                </div>
+                <span class="menu-item-price">€38</span>
+              </div>
+              <div class="menu-item">
+                <div>
+                  <p class="menu-item-name">Day-Boat Sea Bream</p>
+                  <p class="menu-item-desc">Whole fish, fennel, olives, orzo</p>
+                </div>
+                <span class="menu-item-price">€42</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-footer">
+            <p class="menu-note">
+              Menu changes weekly based on local market availability
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>
+    </section>
 
-  <a href="contact.html" class="book-btn-floating">Book Now</a>
-  <script src="js/main.js" defer></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js');
-      });
-    }
-  </script>
-</body>
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+      <div class="testimonial-track">
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "The private dining experience was extraordinary. Chef Rocco's
+            passion for local ingredients is evident in every exquisite bite."
+          </p>
+          <p class="testimonial-author">— Elena K., Athens</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "We came for one cooking class and booked three more. An
+            unforgettable culinary journey through Rhodes."
+          </p>
+          <p class="testimonial-author">— Marcus & Julia, London</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "The sunrise breakfast on the terrace—with Chef Rocco's fresh
+            pastries—was the highlight of our honeymoon."
+          </p>
+          <p class="testimonial-author">— David R., New York</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "Michelin-quality cuisine in a setting that feels like a Renaissance
+            painting. Truly magical."
+          </p>
+          <p class="testimonial-author">— Sophie M., Paris</p>
+        </div>
+        <!-- Duplicate for seamless loop -->
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "The private dining experience was extraordinary. Chef Rocco's
+            passion for local ingredients is evident in every exquisite bite."
+          </p>
+          <p class="testimonial-author">— Elena K., Athens</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "We came for one cooking class and booked three more. An
+            unforgettable culinary journey through Rhodes."
+          </p>
+          <p class="testimonial-author">— Marcus & Julia, London</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "The sunrise breakfast on the terrace—with Chef Rocco's fresh
+            pastries—was the highlight of our honeymoon."
+          </p>
+          <p class="testimonial-author">— David R., New York</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "Michelin-quality cuisine in a setting that feels like a Renaissance
+            painting. Truly magical."
+          </p>
+          <p class="testimonial-author">— Sophie M., Paris</p>
+        </div>
+      </div>
+    </section>
 
+    <!-- CTA Section -->
+    <section
+      class="section-lg"
+      style="background: var(--cream-light); text-align: center"
+    >
+      <div class="container container-narrow">
+        <p class="section-eyebrow">Reserve Your Experience</p>
+        <h2 class="section-title">Dine With Us</h2>
+        <p class="section-description" style="margin-bottom: var(--space-10)">
+          Whether a private tasting menu, cooking class, or simple breakfast on
+          the terrace, every meal at Palazzo Antico is crafted with intention.
+        </p>
+        <a href="contact.html" class="btn btn-primary">Make a Reservation</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3 class="footer-logo">PALAZZO ANTICO</h3>
+            <p class="footer-tagline">Where history meets hospitality</p>
+            <p class="footer-description">
+              A luxury boutique hotel in a restored 15th-century Venetian
+              palazzo.
+            </p>
+          </div>
+          <div class="footer-links-group">
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="rooms.html" class="footer-link">Our Rooms</a></li>
+              <li>
+                <a href="experience.html" class="footer-link">Experience</a>
+              </li>
+              <li><a href="retreats.html" class="footer-link">Retreats</a></li>
+              <li>
+                <a href="chef-rocco.html" class="footer-link active"
+                  >Chef Rocco</a
+                >
+              </li>
+              <li><a href="contact.html" class="footer-link">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-group">
+            <h4 class="footer-title">Dining</h4>
+            <ul class="footer-links">
+              <li><a href="#" class="footer-link">Private Dining</a></li>
+              <li><a href="#" class="footer-link">Cooking Classes</a></li>
+              <li><a href="#" class="footer-link">Wine Experiences</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4 class="footer-title">Contact</h4>
+            <div class="footer-contact-item">
+              <span>15 Ippoton Street, Old Town, Rhodes 85100</span>
+            </div>
+            <div class="footer-contact-item">
+              <span>+30 22410 12345</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Palazzo Antico. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <a href="contact.html" class="book-btn-floating">Book Now</a>
+    <script src="js/main.js" defer></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./sw.js");
+        });
+      }
+    </script>
+  </body>
 </html>

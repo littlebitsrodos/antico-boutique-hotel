@@ -10,14 +10,17 @@
   /* Color Palette - Medieval Stone & Mediterranean Warmth */
   --stone-dark: #2c2825;
   --stone-warm: #8b7355;
-  --terracotta: #c4785a;
-  --terracotta-dark: #a5614a;
-  --olive: #6b7b4c;
-  --olive-dark: #566340;
+  --terracotta: #a85d40;
+  /* Darkened for AA contrast */
+  --terracotta-dark: #8a4a32;
+  --olive: #5d6b42;
+  /* Darkened for AA contrast */
+  --olive-dark: #4a5332;
   --cream: #f5f1eb;
   --cream-light: #faf8f5;
-  --gold: #8b6914;
-  --gold-light: #a67c1a;
+  --gold: #7a5c12;
+  /* Darkened for AA contrast */
+  --gold-light: #946f18;
   --white: #ffffff;
   --black: #1a1817;
 
@@ -461,13 +464,15 @@ h6 {
 
 .btn-gold {
   background-color: var(--gold);
-  color: var(--stone-dark);
+  color: var(--white);
+  /* Changed from stone-dark for better contrast on gold */
 }
 
 .btn-gold:hover {
   background-color: var(--gold-light);
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
+  color: var(--white);
 }
 
 /* Floating Book Button */
@@ -522,10 +527,12 @@ h6 {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom,
-      rgba(44, 40, 37, 0.3) 0%,
-      rgba(44, 40, 37, 0.5) 50%,
-      rgba(44, 40, 37, 0.7) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(44, 40, 37, 0.3) 0%,
+    rgba(44, 40, 37, 0.5) 50%,
+    rgba(44, 40, 37, 0.7) 100%
+  );
 }
 
 .hero-content {
@@ -585,7 +592,6 @@ h6 {
 }
 
 @keyframes bounce {
-
   0%,
   20%,
   50%,
@@ -1031,7 +1037,8 @@ h6 {
 
 .footer-link {
   font-size: var(--text-sm);
-  color: var(--stone-warm);
+  color: #e5e5e5;
+  /* Improved contrast for footer links */
   transition: color var(--transition-fast);
 }
 
@@ -1045,7 +1052,8 @@ h6 {
   gap: var(--space-3);
   margin-bottom: var(--space-4);
   font-size: var(--text-sm);
-  color: var(--stone-warm);
+  color: #e5e5e5;
+  /* Improved contrast for contact items */
 }
 
 .footer-contact-item svg {
@@ -1344,10 +1352,12 @@ h6 {
   border-radius: 50%;
   pointer-events: none;
   z-index: 9998;
-  background: radial-gradient(circle,
-      rgba(201, 168, 76, 0.15) 0%,
-      rgba(201, 168, 76, 0.05) 40%,
-      transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(201, 168, 76, 0.15) 0%,
+    rgba(201, 168, 76, 0.05) 40%,
+    transparent 70%
+  );
   transform: translate(-50%, -50%);
   transition:
     opacity 0.3s ease,
@@ -1456,9 +1466,11 @@ body:hover .cursor-spotlight {
 .instagram-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom,
-      transparent 0%,
-      rgba(44, 40, 37, 0.8) 100%);
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(44, 40, 37, 0.8) 100%
+  );
   display: flex;
   flex-direction: column;
   align-items: center;

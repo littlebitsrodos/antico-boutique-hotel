@@ -39,6 +39,7 @@ This project uses:
 - **GitHub Actions** for CI to check formatting and links on pull requests.
 - **Lighthouse CI (The Scoreboard)** for performance, SEO, and accessibility auditing.
 - **Sharp (The Shrink)** for automatic image optimization and compression.
+- **PWA Ready**: Offline-capable and installable with manifest and service worker.
 
 ## Gamified Workflow
 
