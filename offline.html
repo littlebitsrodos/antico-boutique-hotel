@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#c9a84c" />
+    <title>Offline | Palazzo Antico</title>
+    <style>
+        :root {
+            --stone-dark: #2c2825;
+            --gold: #c9a84c;
+            --cream: #f5f1eb;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--stone-dark) 0%, #1a1817 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            color: var(--cream);
+        }
+
+        .offline-container {
+            text-align: center;
+            max-width: 400px;
+        }
+
+        .offline-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .offline-logo {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--gold);
+            letter-spacing: 0.1em;
+            margin-bottom: 2rem;
+        }
+
+        .offline-title {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 1.75rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .offline-message {
+            font-size: 1rem;
+            line-height: 1.6;
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+
+        .offline-divider {
+            width: 60px;
+            height: 2px;
+            background: var(--gold);
+            margin: 2rem auto;
+        }
+
+        .offline-contact {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        .offline-phone {
+            display: block;
+            font-size: 1.25rem;
+            color: var(--gold);
+            margin-top: 0.5rem;
+            text-decoration: none;
+        }
+
+        .offline-phone:hover {
+            text-decoration: underline;
+        }
+
+        .retry-btn {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.75rem 2rem;
+            background: var(--gold);
+            color: var(--stone-dark);
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .retry-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(201, 168, 76, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="offline-container">
+        <div class="offline-icon">📡</div>
+        <div class="offline-logo">PALAZZO ANTICO</div>
+        <h1 class="offline-title">You're Offline</h1>
+        <p class="offline-message">
+            It seems you've lost your connection. Please check your internet and try
+            again. We look forward to welcoming you back to medieval Rhodes.
+        </p>
+        <button class="retry-btn" onclick="window.location.reload()">
+            Try Again
+        </button>
+        <div class="offline-divider"></div>
+        <p class="offline-contact">
+            Need assistance? Call us directly:
+            <a href="tel:+302241012345" class="offline-phone">+30 22410 12345</a>
+        </p>
+    </div>
+</body>
+
+</html>

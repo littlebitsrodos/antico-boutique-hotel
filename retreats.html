@@ -661,7 +661,6 @@
         </div>
       </div>
       <div class="venue-card fade-in">
-        <img src="images/scholars_study_library.webp" alt="The Library" />
         <div class="venue-overlay">
           <h3 class="venue-title">The Library</h3>
           <p class="venue-activities">Writing Residencies • Quiet Reflection • Research</p>
@@ -859,7 +858,7 @@
           <img src="images/scholars_study_library.webp" alt="Creative Space" />
           <div class="partner-image-overlay">
             <div class="partner-image-text">
-              <h4>Now Booking 2027</h4>
+              <h3>Now Booking 2027</h3>
               <p>Accepting proposals for next season</p>
             </div>
           </div>
@@ -1029,6 +1028,13 @@
 
   <a href="contact.html" class="book-btn-floating">Book Now</a>
   <script src="js/main.js" defer></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js');
+      });
+    }
+  </script>
 </body>
 
 </html>

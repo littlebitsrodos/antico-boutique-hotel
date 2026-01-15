@@ -987,6 +987,13 @@
 
   <a href="contact.html" class="book-btn-floating">Book Now</a>
   <script src="js/main.js" defer></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js');
+      });
+    }
+  </script>
 </body>
 
 </html>

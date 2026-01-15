@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#2c2825"/>
+  <g fill="#c9a84c">
+    <!-- Stylized medieval tower/palazzo -->
+    <rect x="180" y="140" width="152" height="280" rx="4"/>
+    <rect x="200" y="100" width="112" height="50"/>
+    <rect x="220" y="70" width="72" height="40"/>
+    <!-- Windows -->
+    <rect x="210" y="180" width="30" height="45" rx="15" ry="15" fill="#2c2825"/>
+    <rect x="272" y="180" width="30" height="45" rx="15" ry="15" fill="#2c2825"/>
+    <rect x="210" y="260" width="30" height="45" rx="15" ry="15" fill="#2c2825"/>
+    <rect x="272" y="260" width="30" height="45" rx="15" ry="15" fill="#2c2825"/>
+    <!-- Door -->
+    <rect x="231" y="350" width="50" height="70" rx="25" ry="25" fill="#2c2825"/>
+    <!-- Crenellations -->
+    <rect x="180" y="125" width="20" height="25" fill="#2c2825"/>
+    <rect x="212" y="125" width="20" height="25" fill="#2c2825"/>
+    <rect x="244" y="125" width="24" height="25" fill="#2c2825"/>
+    <rect x="280" y="125" width="20" height="25" fill="#2c2825"/>
+    <rect x="312" y="125" width="20" height="25" fill="#2c2825"/>
+  </g>
+</svg>
