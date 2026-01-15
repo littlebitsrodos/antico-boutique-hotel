@@ -38,7 +38,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400&family=Inter:wght@300;400;600&family=Playfair+Display:wght@500;600&display=swap"
-    rel="stylesheet" media="print" onload="this.media='all'" />
+    rel="stylesheet" />
 
   <!-- Critical CSS (Above the Fold) -->
   <style>
@@ -342,7 +342,8 @@
   <section class="hero">
     <div class="hero-slider">
       <div class="slide active">
-        <img src="images/hero_courtyard.webp" alt="Palazzo Antico courtyard at dusk" width="1024" height="1024" />
+        <img src="images/hero_courtyard.webp" alt="Palazzo Antico courtyard at dusk" width="1024" height="1024"
+          fetchpriority="high" loading="eager" />
         <div class="hero-overlay"></div>
       </div>
       <div class="slide">
@@ -390,7 +391,8 @@
     <div class="container">
       <div class="welcome-grid">
         <div class="welcome-image fade-in-left">
-          <img src="images/experience_restaurant.webp" alt="Fine dining in our stone-walled restaurant" />
+          <img src="images/experience_restaurant.webp" alt="Fine dining in our stone-walled restaurant" width="1200"
+            height="800" />
         </div>
         <div class="welcome-content fade-in-right">
           <p class="welcome-eyebrow">Welcome to Our Story</p>
@@ -445,7 +447,8 @@
         <!-- Knight's Suite -->
         <div class="room-card fade-in">
           <div class="room-card-image">
-            <img src="images/room_knights_suite.webp" alt="The Knight's Suite with stone walls and four-poster bed" />
+            <img src="images/room_knights_suite.webp" alt="The Knight's Suite with stone walls and four-poster bed"
+              width="800" height="600" />
           </div>
           <div class="room-card-content">
             <h3 class="room-card-name">The Knight's Suite</h3>
@@ -484,7 +487,8 @@
         <!-- Venetian Room -->
         <div class="room-card fade-in">
           <div class="room-card-image">
-            <img src="images/room_venetian.webp" alt="The Venetian Room with arched ceiling and balcony" />
+            <img src="images/room_venetian.webp" alt="The Venetian Room with arched ceiling and balcony" width="800"
+              height="600" />
           </div>
           <div class="room-card-content">
             <h3 class="room-card-name">The Venetian Room</h3>
@@ -523,7 +527,8 @@
         <!-- Courtyard Room -->
         <div class="room-card fade-in">
           <div class="room-card-image">
-            <img src="images/room_courtyard.webp" alt="The Courtyard Room with window view of fountain" />
+            <img src="images/room_courtyard.webp" alt="The Courtyard Room with window view of fountain" width="800"
+              height="600" />
           </div>
           <div class="room-card-content">
             <h3 class="room-card-name">The Courtyard Room</h3>
@@ -562,7 +567,8 @@
         <!-- Tower Suite -->
         <div class="room-card fade-in">
           <div class="room-card-image">
-            <img src="images/room_tower_suite.webp" alt="The Tower Suite with panoramic views" />
+            <img src="images/room_tower_suite.webp" alt="The Tower Suite with panoramic views" width="800"
+              height="600" />
           </div>
           <div class="room-card-content">
             <h3 class="room-card-name">The Tower Suite</h3>
@@ -601,8 +607,8 @@
         <!-- Scholar's Study -->
         <div class="room-card fade-in">
           <div class="room-card-image">
-            <img src="images/room_scholars_study.webp"
-              alt="The Scholar's Study with curated library and writing desk" />
+            <img src="images/room_scholars_study.webp" alt="The Scholar's Study with curated library and writing desk"
+              width="800" height="600" />
           </div>
           <div class="room-card-content">
             <h3 class="room-card-name">The Scholar's Study</h3>
@@ -653,42 +659,48 @@
       </div>
       <div class="instagram-grid">
         <div class="instagram-item slide-up stagger-delay-1">
-          <img src="images/hero_courtyard.webp" alt="Guest photo - Courtyard view" loading="lazy" />
+          <img src="images/hero_courtyard.webp" alt="Guest photo - Courtyard view" loading="lazy" width="600"
+            height="600" />
           <div class="instagram-overlay">
             <span class="instagram-icon">📸</span>
             <span>@traveler_dreams</span>
           </div>
         </div>
         <div class="instagram-item slide-up stagger-delay-2">
-          <img src="images/experience_terrace.webp" alt="Guest photo - Rooftop breakfast" loading="lazy" />
+          <img src="images/experience_terrace.webp" alt="Guest photo - Rooftop breakfast" loading="lazy" width="600"
+            height="600" />
           <div class="instagram-overlay">
             <span class="instagram-icon">📸</span>
             <span>@mediterranean_soul</span>
           </div>
         </div>
         <div class="instagram-item slide-up stagger-delay-3">
-          <img src="images/room_knights_suite.webp" alt="Guest photo - Knights Suite" loading="lazy" />
+          <img src="images/room_knights_suite.webp" alt="Guest photo - Knights Suite" loading="lazy" width="600"
+            height="600" />
           <div class="instagram-overlay">
             <span class="instagram-icon">📸</span>
             <span>@luxury_escapes</span>
           </div>
         </div>
         <div class="instagram-item slide-up stagger-delay-4">
-          <img src="images/experience_restaurant.webp" alt="Guest photo - Fine dining" loading="lazy" />
+          <img src="images/experience_restaurant.webp" alt="Guest photo - Fine dining" loading="lazy" width="600"
+            height="600" />
           <div class="instagram-overlay">
             <span class="instagram-icon">📸</span>
             <span>@foodie_adventures</span>
           </div>
         </div>
         <div class="instagram-item slide-up stagger-delay-5">
-          <img src="images/experience_oldtown.webp" alt="Guest photo - Old town exploration" loading="lazy" />
+          <img src="images/experience_oldtown.webp" alt="Guest photo - Old town exploration" loading="lazy" width="600"
+            height="600" />
           <div class="instagram-overlay">
             <span class="instagram-icon">📸</span>
             <span>@history_hunter</span>
           </div>
         </div>
         <div class="instagram-item slide-up stagger-delay-6">
-          <img src="images/tower_suite_sunset.webp" alt="Guest photo - Sunset views" loading="lazy" />
+          <img src="images/tower_suite_sunset.webp" alt="Guest photo - Sunset views" loading="lazy" width="600"
+            height="600" />
           <div class="instagram-overlay">
             <span class="instagram-icon">📸</span>
             <span>@sunset_chaser</span>
@@ -758,7 +770,8 @@
         <div class="location-map fade-in-left">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3226.2!2d28.226!3d36.445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDI2JzQyLjAiTiAyOMKwMTMnMzMuNiJF!5e0!3m2!1sen!2sgr!4v1699999999999!5m2!1sen!2sgr"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Palazzo Antico Location in Rhodes Old Town"></iframe>
         </div>
         <div class="location-content fade-in-right">
           <p class="section-eyebrow text-gold">Our Location</p>
