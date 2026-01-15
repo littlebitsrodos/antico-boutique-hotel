@@ -1,447 +1,648 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Host your retreat at Palazzo Antico. Versatile spaces for creative arts, wellness, and corporate leadership retreats in the heart of Medieval Rhodes.">
-    <meta name="keywords"
-        content="Rhodes retreats, painting retreat Greece, luxury retreat venue, corporate retreat Rhodes, wellness retreat venue, Palazzo Antico retreats">
-    <meta name="author" content="Palazzo Antico">
-    <meta name="robots" content="index, follow">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Host your retreat at Palazzo Antico. Versatile spaces for creative arts, wellness, and corporate leadership retreats in the heart of Medieval Rhodes." />
+  <meta name="keywords"
+    content="Rhodes retreats, painting retreat Greece, luxury retreat venue, corporate retreat Rhodes, wellness retreat venue, Palazzo Antico retreats" />
+  <meta name="author" content="Palazzo Antico" />
+  <meta name="robots" content="index, follow" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://palazzoantico.gr/retreats.html">
-    <meta property="og:title" content="Retreats | Palazzo Antico - A Creative Sanctuary">
-    <meta property="og:description"
-        content="Discover the perfect setting for your next retreat. Historic ambiance, tailored hospitality, and versatile spaces for art, wellness, and connection.">
-    <meta property="og:image" content="https://palazzoantico.gr/images/hero_courtyard.webp">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://palazzoantico.gr/retreats.html" />
+  <meta property="og:title" content="Retreats | Palazzo Antico - A Creative Sanctuary" />
+  <meta property="og:description"
+    content="Discover the perfect setting for your next retreat. Historic ambiance, tailored hospitality, and versatile spaces for art, wellness, and connection." />
+  <meta property="og:image" content="https://palazzoantico.gr/images/hero_courtyard.webp" />
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
 
-    <link rel="canonical" href="https://palazzoantico.gr/retreats.html">
+  <link rel="canonical" href="https://palazzoantico.gr/retreats.html" />
 
-    <!-- Preload critical assets -->
-    <link rel="preload" href="images/hero_courtyard.webp" as="image" fetchpriority="high">
-    <link rel="preload" href="css/style.css" as="style">
+  <!-- Preload critical assets -->
+  <link rel="preload" href="images/hero_courtyard.webp" as="image" fetchpriority="high" />
+  <link rel="preload" href="css/style.css" as="style" />
 
-    <title>Retreats | Palazzo Antico - Luxury Retreat Venue Rhodes</title>
+  <title>Retreats | Palazzo Antico - Luxury Retreat Venue Rhodes</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 
-    <style>
-        .retreats-hero {
-            position: relative;
-            height: 70vh;
-            min-height: 500px;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        .retreats-hero-bg {
-            position: absolute;
-            inset: 0;
-            z-index: -1;
-        }
-
-        .retreats-hero-bg img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .retreat-intro-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-12);
-            align-items: center;
-        }
-
-        .retreat-features {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--space-8);
-            margin-top: var(--space-12);
-        }
-
-        .retreat-feature-card {
-            background: var(--cream);
-            padding: var(--space-6);
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--cream-dark);
-            text-align: center;
-        }
-
-        .retreat-feature-icon {
-            font-size: 3rem;
-            margin-bottom: var(--space-4);
-            display: inline-block;
-        }
-
-        .retreat-type-card {
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-            transition: transform var(--transition-base), box-shadow var(--transition-base);
-            height: 100%;
-        }
-
-        .retreat-type-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .retreat-type-image {
-            height: 250px;
-            width: 100%;
-            object-fit: cover;
-        }
-
-        .retreat-type-content {
-            padding: var(--space-6);
-        }
-
-        .retreat-type-title {
-            font-size: var(--text-xl);
-            margin-bottom: var(--space-3);
-            font-family: var(--font-heading);
-        }
-
-        .past-retreat-highlight {
-            background-color: var(--stone-dark);
-            color: var(--white);
-            padding: var(--space-12) 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .past-retreat-highlight::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('images/scholars_study_street.webp') center/cover no-repeat;
-            opacity: 0.1;
-            z-index: 0;
-        }
-
-        .highlight-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        @media (max-width: 992px) {
-            .retreat-intro-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .retreat-features {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MeetingRoom",
-      "name": "Retreats at Palazzo Antico",
-      "description": "A versatile retreat venue in Rhodes Medieval City for creative, wellness, and executive retreats.",
-      "amenityFeature": [
-        "Private Courtyard",
-        "Rooftop Terrace",
-        "Catering",
-        "Accommodation"
-      ]
+  <style>
+    .retreats-hero {
+      position: relative;
+      height: 70vh;
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
     }
+
+    .retreats-hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+    }
+
+    .retreats-hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .retreat-intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-12);
+      align-items: center;
+    }
+
+    .retreat-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-8);
+      margin-top: var(--space-12);
+    }
+
+    .retreat-feature-card {
+      background: var(--cream);
+      padding: var(--space-6);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--cream-dark);
+      text-align: center;
+    }
+
+    .retreat-feature-icon {
+      font-size: 3rem;
+      margin-bottom: var(--space-4);
+      display: inline-block;
+    }
+
+    .retreat-type-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      transition:
+        transform var(--transition-base),
+        box-shadow var(--transition-base);
+      height: 100%;
+    }
+
+    .retreat-type-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .retreat-type-image {
+      height: 250px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .retreat-type-content {
+      padding: var(--space-6);
+    }
+
+    .retreat-type-title {
+      font-size: var(--text-xl);
+      margin-bottom: var(--space-3);
+      font-family: var(--font-heading);
+    }
+
+    .past-retreat-highlight {
+      background-color: var(--stone-dark);
+      color: var(--white);
+      padding: var(--space-12) 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .past-retreat-highlight::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("images/scholars_study_street.webp") center/cover no-repeat;
+      opacity: 0.1;
+      z-index: 0;
+    }
+
+    .highlight-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 992px) {
+      .retreat-intro-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .retreat-features {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MeetingRoom",
+        "name": "Retreats at Palazzo Antico",
+        "description": "A versatile retreat venue in Rhodes Medieval City for creative, wellness, and executive retreats.",
+        "amenityFeature": [
+          "Private Courtyard",
+          "Rooftop Terrace",
+          "Catering",
+          "Accommodation"
+        ]
+      }
     </script>
 </head>
 
 <body>
-
-    <!-- Navigation -->
-    <nav class="nav scrolled">
-        <div class="container nav-inner">
-            <a href="index.html" class="nav-logo">PALAZZO ANTICO</a>
-            <ul class="nav-links">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="rooms.html" class="nav-link">Rooms</a></li>
-                <li><a href="experience.html" class="nav-link">Experience</a></li>
-                <li><a href="retreats.html" class="nav-link active">Retreats</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-overlay"></div>
-    <div class="mobile-menu">
-        <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
-        <ul class="mobile-nav-links">
-            <li><a href="index.html" class="mobile-nav-link">Home</a></li>
-            <li><a href="rooms.html" class="mobile-nav-link">Rooms</a></li>
-            <li><a href="experience.html" class="mobile-nav-link">Experience</a></li>
-            <li><a href="retreats.html" class="mobile-nav-link">Retreats</a></li>
-            <li><a href="about.html" class="mobile-nav-link">About</a></li>
-            <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
-        </ul>
+  <!-- Navigation -->
+  <nav class="nav scrolled">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">PALAZZO ANTICO</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="rooms.html" class="nav-link">Rooms</a></li>
+        <li><a href="experience.html" class="nav-link">Experience</a></li>
+        <li><a href="retreats.html" class="nav-link active">Retreats</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
+  </nav>
 
-    <!-- Page Hero -->
-    <section class="retreats-hero">
-        <div class="retreats-hero-bg">
-            <img src="images/hero_courtyard.webp" alt="Palazzo Antico courtyard setting for retreats" width="1024"
-                height="1024">
-            <div class="hero-overlay"></div>
+  <!-- Mobile Menu -->
+  <div class="mobile-overlay"></div>
+  <div class="mobile-menu">
+    <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="rooms.html" class="mobile-nav-link">Rooms</a></li>
+      <li>
+        <a href="experience.html" class="mobile-nav-link">Experience</a>
+      </li>
+      <li><a href="retreats.html" class="mobile-nav-link">Retreats</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="retreats-hero">
+    <div class="retreats-hero-bg">
+      <img src="images/hero_courtyard.webp" alt="Palazzo Antico courtyard setting for retreats" width="1024"
+        height="1024" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-subtitle">Gather, Create, Connect</p>
+      <h1 class="hero-title">Retreats at Palazzo Antico</h1>
+      <p class="hero-description">
+        A sanctuary for creative minds and leadership teams in the heart of
+        history
+      </p>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <section class="section-lg">
+    <div class="container">
+      <div class="retreat-intro-grid">
+        <div class="fade-in-left">
+          <p class="welcome-eyebrow">The Venue</p>
+          <h2 class="welcome-title">
+            Inspiring Spaces for Transformative Experiences
+          </h2>
+          <p class="welcome-text">
+            Escape the ordinary and immerse your group in the timeless
+            atmosphere of Medieval Rhodes. Palazzo Antico offers a unique
+            blend of privacy, history, and luxury, making it an ideal backdrop
+            for focused work, creative expression, or holistic wellness.
+          </p>
+          <p class="welcome-text">
+            Whether you are an artist hosting a workshop, a company seeking a
+            strategic offsite, or a wellness instructor leading a restoration
+            journey, our palazzo adapts to your vision.
+          </p>
         </div>
-        <div class="hero-content">
-            <p class="hero-subtitle">Gather, Create, Connect</p>
-            <h1 class="hero-title">Retreats at Palazzo Antico</h1>
-            <p class="hero-description">A sanctuary for creative minds and leadership teams in the heart of history</p>
+        <div class="fade-in-right">
+          <img src="images/experience_terrace.webp" alt="Rooftop terrace view" style="
+                border-radius: var(--radius-lg);
+                width: 100%;
+                box-shadow: var(--shadow-lg);
+              " />
         </div>
-    </section>
+      </div>
 
-    <!-- Introduction -->
-    <section class="section-lg">
-        <div class="container">
-            <div class="retreat-intro-grid">
-                <div class="fade-in-left">
-                    <p class="welcome-eyebrow">The Venue</p>
-                    <h2 class="welcome-title">Inspiring Spaces for Transformative Experiences</h2>
-                    <p class="welcome-text">
-                        Escape the ordinary and immerse your group in the timeless atmosphere of Medieval Rhodes.
-                        Palazzo Antico offers a unique blend of privacy, history, and luxury, making it an ideal
-                        backdrop for focused work, creative expression, or holistic wellness.
-                    </p>
-                    <p class="welcome-text">
-                        Whether you are an artist hosting a workshop, a company seeking a strategic offsite, or a
-                        wellness
-                        instructor leading a restoration journey, our palazzo adapts to your vision.
-                    </p>
-                </div>
-                <div class="fade-in-right">
-                    <img src="images/experience_terrace.webp" alt="Rooftop terrace view"
-                        style="border-radius: var(--radius-lg); width: 100%; box-shadow: var(--shadow-lg);">
-                </div>
-            </div>
-
-            <div class="retreat-features">
-                <div class="retreat-feature-card fade-in">
-                    <span class="retreat-feature-icon">🏛️</span>
-                    <h3 class="experience-item-title">Historic Atmosphere</h3>
-                    <p class="experience-item-text">500-year-old architecture that sparks creativity and conversation.
-                    </p>
-                </div>
-                <div class="retreat-feature-card fade-in">
-                    <span class="retreat-feature-icon">👨‍🍳</span>
-                    <h3 class="experience-item-title">Tailored Catering</h3>
-                    <p class="experience-item-text">Custom menus by Chef Rocco, from energizing breakfasts to gala
-                        dinners.</p>
-                </div>
-                <div class="retreat-feature-card fade-in">
-                    <span class="retreat-feature-icon">🛌</span>
-                    <h3 class="experience-item-title">Luxury Accommodation</h3>
-                    <p class="experience-item-text"><a href="rooms.html" style="color: var(--terracotta);">5 boutique
-                            suites</a> to host your core team or facilitators in comfort.
-                    </p>
-                </div>
-            </div>
+      <div class="retreat-features">
+        <div class="retreat-feature-card fade-in">
+          <span class="retreat-feature-icon">🏛️</span>
+          <h3 class="experience-item-title">Historic Atmosphere</h3>
+          <p class="experience-item-text">
+            500-year-old architecture that sparks creativity and conversation.
+          </p>
         </div>
-    </section>
-
-    <!-- Retreat Types -->
-    <section class="section-lg" style="background-color: var(--cream-light);">
-        <div class="container">
-            <div class="section-header fade-in">
-                <p class="section-eyebrow">Possibilities</p>
-                <h2 class="section-title">Curated Retreat Experiences</h2>
-                <p class="section-description">We specialize in hosting diverse groups, providing the logistical support
-                    you need to focus on your content.</p>
-            </div>
-
-            <div class="experience-grid">
-                <div class="retreat-type-card fade-in">
-                    <img src="images/scholars_study_desk.webp" alt="Art supplies on a desk" class="retreat-type-image">
-                    <div class="retreat-type-content">
-                        <h3 class="retreat-type-title">Creative Arts</h3>
-                        <p class="welcome-text">
-                            **Painting & Photography**: Capture the light of the Aegean and the textures of the Old
-                            Town.
-                            Our private courtyard and rooftop terrace offer perfect plein air settings, while the
-                            library provides quiet for writing workshops.
-                        </p>
-                        <p class="welcome-text" style="font-size: var(--text-sm); color: var(--terracotta);">
-                            <em>Featured: "Rhodes Light & Color" Painting Series</em>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="retreat-type-card fade-in">
-                    <img src="images/tower_suite_terrace.webp" alt="Yoga mat on terrace" class="retreat-type-image">
-                    <div class="retreat-type-content">
-                        <h3 class="retreat-type-title">Wellness & Yoga</h3>
-                        <p class="welcome-text">
-                            **Restore & Reconnect**: Sunrise yoga sessions facing the harbor, meditation in our silent
-                            courtyard,
-                            and trips to our <a href="experience.html" style="color: var(--terracotta);">Hammam Spa</a>.
-                            A sanctuary of peace amidst the medieval vibrancy.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="retreat-type-card fade-in">
-                    <img src="images/knights_suite_sitting.webp" alt="Meeting setup in suite"
-                        class="retreat-type-image">
-                    <div class="retreat-type-content">
-                        <h3 class="retreat-type-title">Corporate & Leadership</h3>
-                        <p class="welcome-text">
-                            **Strategy & Bonding**: Disconnect from the office to reconnect with your vision.
-                            Intimate meeting spaces, high-speed Wi-Fi, and team-building activities like cooking classes
-                            or history tours.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <div class="retreat-feature-card fade-in">
+          <span class="retreat-feature-icon">👨‍🍳</span>
+          <h3 class="experience-item-title">Tailored Catering</h3>
+          <p class="experience-item-text">
+            Custom menus by Chef Rocco, from energizing breakfasts to gala
+            dinners.
+          </p>
         </div>
-    </section>
-
-    <!-- Past Success / Testimonial -->
-    <section class="past-retreat-highlight">
-        <div class="container highlight-content">
-            <div class="section-header fade-in" style="margin-bottom: var(--space-8);">
-                <p class="section-eyebrow" style="color: var(--gold);">Success Story</p>
-                <h2 class="section-title" style="color: var(--white);">"A Painter's Dream"</h2>
-            </div>
-            <div style="max-width: 800px; margin: 0 auto; text-align: center;" class="fade-in">
-                <p
-                    style="font-size: var(--text-xl); line-height: 1.8; margin-bottom: var(--space-6); font-style: italic;">
-                    "We hosted our annual watercolor retreat at Palazzo Antico, and it was magical. The light in the
-                    courtyard is unmatched,
-                    and Chef Rocco's lunches kept us inspired all day. The team handled every detail, allowing us to
-                    focus purely on our art."
-                </p>
-                <p style="font-size: var(--text-lg); font-weight: bold; color: var(--gold);">— Elena K., Art Workshop
-                    Leader</p>
-            </div>
+        <div class="retreat-feature-card fade-in">
+          <span class="retreat-feature-icon">🛌</span>
+          <h3 class="experience-item-title">Luxury Accommodation</h3>
+          <p class="experience-item-text">
+            <a href="rooms.html" style="color: var(--terracotta)">5 boutique suites</a>
+            to host your core team or facilitators in comfort.
+          </p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Inquiry / Packages -->
-    <section class="section-lg">
-        <div class="container container-narrow text-center">
-            <div class="section-header fade-in">
-                <p class="section-eyebrow">Plan Your Event</p>
-                <h2 class="section-title">Hosting Options</h2>
-            </div>
+  <!-- Upcoming Retreats -->
+  <section class="section-lg" id="upcoming">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-eyebrow">2026 Season</p>
+        <h2 class="section-title">Upcoming Creative Retreats</h2>
+        <p class="section-description">
+          Join a community of artists and makers for an immersive experience in the heart of Rhodes.
+        </p>
+      </div>
 
+      <div class="experience-grid">
+        <!-- Painting Retreat -->
+        <div class="retreat-type-card fade-in">
+          <div style="position: relative;">
+            <img src="images/experience_oldtown.webp" alt="Painting the Old Town" class="retreat-type-image" />
             <div
-                style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); text-align: left; margin-bottom: var(--space-12);">
-                <div style="background: var(--cream); padding: var(--space-8); border-radius: var(--radius-lg);"
-                    class="fade-in-left">
-                    <h3
-                        style="font-family: var(--font-heading); font-size: var(--text-xl); margin-bottom: var(--space-4);">
-                        Full Buyout</h3>
-                    <p style="margin-bottom: var(--space-4); color: var(--stone-warm);">Exclusive use of the entire
-                        Palazzo.</p>
-                    <ul style="list-style: none; color: var(--stone-warm);">
-                        <li style="margin-bottom: var(--space-2);">✓ All 5 Suites (Up to 12 guests)</li>
-                        <li style="margin-bottom: var(--space-2);">✓ Private access to all common areas</li>
-                        <li style="margin-bottom: var(--space-2);">✓ Dedicated staff & concierge</li>
-                        <li style="margin-bottom: var(--space-2);">✓ Customized catering plan</li>
-                    </ul>
-                </div>
-                <div style="background: var(--cream); padding: var(--space-8); border-radius: var(--radius-lg);"
-                    class="fade-in-right">
-                    <h3
-                        style="font-family: var(--font-heading); font-size: var(--text-xl); margin-bottom: var(--space-4);">
-                        Day Retreats / Small Groups</h3>
-                    <p style="margin-bottom: var(--space-4); color: var(--stone-warm);">Use of specific spaces for daily
-                        workshops.</p>
-                    <ul style="list-style: none; color: var(--stone-warm);">
-                        <li style="margin-bottom: var(--space-2);">✓ Reserved Courtyard or Terrace time</li>
-                        <li style="margin-bottom: var(--space-2);">✓ Lunch & Coffee breaks included</li>
-                        <li style="margin-bottom: var(--space-2);">✓ Equipment setup assistance</li>
-                        <li style="margin-bottom: var(--space-2);">✓ Accommodation add-ons available</li>
-                    </ul>
-                </div>
+              style="position: absolute; top: 1rem; right: 1rem; background: var(--terracotta); color: white; padding: 0.5rem 1rem; border-radius: var(--radius-sm); font-size: var(--text-xs); font-weight: 500;">
+              May 12-19, 2026
             </div>
-
-            <a href="contact.html" class="btn btn-primary fade-in">Inquire About Availability</a>
+          </div>
+          <div class="retreat-type-content">
+            <h3 class="retreat-type-title">The Venetian Palette</h3>
+            <p class="welcome-text" style="font-size: var(--text-sm); margin-bottom: var(--space-4);">
+              A 7-day watercolor and oil painting intensive. Capture the dramatic interplay of light and shadow on
+              500-year-old stone arches and hidden courtyards. Includes daily plein air sessions and critique in the
+              library.
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-family: var(--font-heading); color: var(--terracotta);">€2,450 / All-Inclusive</span>
+              <a href="contact.html?retreat=venetian-palette"
+                style="text-decoration: underline; font-size: var(--text-sm);">Join Waitlist</a>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h3 class="footer-logo">PALAZZO ANTICO</h3>
-                    <p class="footer-tagline">Where history meets hospitality</p>
-                    <p class="footer-description">A luxury boutique hotel in a restored 15th-century Venetian palazzo.
-                    </p>
-                </div>
-                <div class="footer-links-group">
-                    <h4 class="footer-title">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="rooms.html" class="footer-link">Our Rooms</a></li>
-                        <li><a href="experience.html" class="footer-link">Experience</a></li>
-                        <li><a href="retreats.html" class="footer-link">Retreats</a></li>
-                        <li><a href="chef-rocco.html" class="footer-link">Chef Rocco</a></li>
-                        <li><a href="contact.html" class="footer-link">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links-group">
-                    <h4 class="footer-title">Retreats</h4>
-                    <ul class="footer-links">
-                        <li><a href="retreats.html" class="footer-link">Creative Arts</a></li>
-                        <li><a href="retreats.html" class="footer-link">Wellness</a></li>
-                        <li><a href="retreats.html" class="footer-link">Corporate</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4 class="footer-title">Contact</h4>
-                    <div class="footer-contact-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                            <circle cx="12" cy="10" r="3" />
-                        </svg>
-                        <span>15 Ippoton Street<br>Old Town, Rhodes 85100</span>
-                    </div>
-                    <div class="footer-contact-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2" />
-                        </svg>
-                        <span>+30 22410 12345</span>
-                    </div>
-                </div>
+        <!-- Embroidery Retreat -->
+        <div class="retreat-type-card fade-in">
+          <div style="position: relative;">
+            <img src="images/retreat_embroidery.webp" alt="Traditional Embroidery Workshop"
+              class="retreat-type-image" />
+            <div
+              style="position: absolute; top: 1rem; right: 1rem; background: var(--terracotta); color: white; padding: 0.5rem 1rem; border-radius: var(--radius-sm); font-size: var(--text-xs); font-weight: 500;">
+              June 4-9, 2026
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Palazzo Antico. All rights reserved.</p>
+          </div>
+          <div class="retreat-type-content">
+            <h3 class="retreat-type-title">Threads of Rhodes</h3>
+            <p class="welcome-text" style="font-size: var(--text-sm); margin-bottom: var(--space-4);">
+              Led by master artisans, this retreat explores traditional Rhodian and Byzantine embroidery patterns. Learn
+              the delicate "spitha" stitch while enjoying the meditative silence of our private courtyard.
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-family: var(--font-heading); color: var(--terracotta);">€1,850 / All-Inclusive</span>
+              <a href="contact.html?retreat=threads-rhodes"
+                style="text-decoration: underline; font-size: var(--text-sm);">Register Now</a>
             </div>
+          </div>
         </div>
-    </footer>
 
-    <a href="contact.html" class="book-btn-floating">Book Now</a>
-    <script src="js/main.js" defer></script>
+        <!-- Modern Stitch -->
+        <div class="retreat-type-card fade-in">
+          <div style="position: relative;">
+            <img src="images/scholars_study_desk.webp" alt="Contemporary Art Design" class="retreat-type-image" />
+            <div
+              style="position: absolute; top: 1rem; right: 1rem; background: var(--gold); color: var(--stone-dark); padding: 0.5rem 1rem; border-radius: var(--radius-sm); font-size: var(--text-xs); font-weight: 500;">
+              September 2026
+            </div>
+          </div>
+          <div class="retreat-type-content">
+            <h3 class="retreat-type-title">Modern Textures</h3>
+            <p class="welcome-text" style="font-size: var(--text-sm); margin-bottom: var(--space-4);">
+              A contemporary approach to fiber arts. Combine traditional Rhodes textures with modern abstract design. A
+              sanctuary for established artists looking to push their creative boundaries in a historic setting.
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-family: var(--font-heading); color: var(--terracotta);">Applications Open Jan 1</span>
+              <a href="contact.html" style="text-decoration: underline; font-size: var(--text-sm);">Enquire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner With Us -->
+  <section class="section-lg"
+    style="background-color: var(--stone-dark); color: var(--white); margin: var(--space-12) 0; border-radius: var(--radius-xl); overflow: hidden;">
+    <div class="container" style="padding: var(--space-16) var(--space-8);">
+      <div class="retreat-intro-grid">
+        <div class="fade-in-left">
+          <p class="welcome-eyebrow" style="color: var(--gold);">Collaborate</p>
+          <h2 class="welcome-title" style="color: var(--white);">Host Your Own Retreat</h2>
+          <p class="welcome-text" style="color: rgba(255,255,255,0.8);">
+            Are you an artist, instructor, or facilitator looking for the perfect sanctuary for your community? We are
+            always looking for new opportunities to host inspiring programs at Palazzo Antico.
+          </p>
+          <p class="welcome-text" style="color: rgba(255,255,255,0.8);">
+            We provide the logistical backbone—accommodation, world-class catering, and curated local
+            experiences—allowing you to focus entirely on your teaching and your guests.
+          </p>
+          <ul style="list-style: none; margin: var(--space-8) 0; color: rgba(255,255,255,0.9);">
+            <li style="margin-bottom: var(--space-3);">✓ Flexible studio and workshop spaces</li>
+            <li style="margin-bottom: var(--space-3);">✓ Marketing support through our channels</li>
+            <li style="margin-bottom: var(--space-3);">✓ Full logistics & concierge management</li>
+            <li style="margin-bottom: var(--space-3);">✓ Custom culinary programs for your group</li>
+          </ul>
+          <a href="contact.html?subject=Host+a+Retreat" class="btn btn-gold">Facilitator Inquiry</a>
+        </div>
+        <div class="fade-in-right"
+          style="position: relative; height: 100%; min-height: 400px; border-radius: var(--radius-lg); overflow: hidden;">
+          <img src="images/scholars_study_library.webp" alt="Library and creative space"
+            style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6;" />
+          <div
+            style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; padding: var(--space-8);">
+            <div
+              style="background: rgba(0,0,0,0.4); backdrop-filter: blur(4px); padding: var(--space-8); border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.2);">
+              <h4 style="font-family: var(--font-heading); font-size: var(--text-2xl); margin-bottom: var(--space-2);">
+                Open for 2027</h4>
+              <p style="font-size: var(--text-sm); font-style: italic;">Now accepting proposals for our next season</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Retreat Types (Broadened) -->
+  <section class="section-lg" style="background-color: var(--cream-light)">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-eyebrow">Possibilities</p>
+        <h2 class="section-title">Diverse Retreat Domains</h2>
+        <p class="section-description">
+          Beyond the arts, we offer the logistics and atmosphere to support a range of transformative gatherings.
+        </p>
+      </div>
+
+      <div class="experience-grid">
+        <div class="retreat-type-card fade-in">
+          <img src="images/scholars_study_desk.webp" alt="Art supplies on a desk" class="retreat-type-image" />
+          <div class="retreat-type-content">
+            <h3 class="retreat-type-title">Creative Arts</h3>
+            <p class="welcome-text">
+              **Painting & Photography**: Capture the light of the Aegean and
+              the textures of the Old Town. Our private courtyard and rooftop
+              terrace offer perfect plein air settings, while the library
+              provides quiet for writing workshops.
+            </p>
+            <p class="welcome-text" style="font-size: var(--text-sm); color: var(--terracotta)">
+              <em>Featured: "Rhodes Light & Color" Painting Series</em>
+            </p>
+          </div>
+        </div>
+
+        <div class="retreat-type-card fade-in">
+          <img src="images/tower_suite_terrace.webp" alt="Yoga mat on terrace" class="retreat-type-image" />
+          <div class="retreat-type-content">
+            <h3 class="retreat-type-title">Wellness & Yoga</h3>
+            <p class="welcome-text">
+              **Restore & Reconnect**: Sunrise yoga sessions facing the
+              harbor, meditation in our silent courtyard, and trips to our
+              <a href="experience.html" style="color: var(--terracotta)">Hammam Spa</a>. A sanctuary of peace amidst the
+              medieval vibrancy.
+            </p>
+          </div>
+        </div>
+
+        <div class="retreat-type-card fade-in">
+          <img src="images/knights_suite_sitting.webp" alt="Meeting setup in suite" class="retreat-type-image" />
+          <div class="retreat-type-content">
+            <h3 class="retreat-type-title">Corporate & Leadership</h3>
+            <p class="welcome-text">
+              **Strategy & Bonding**: Disconnect from the office to reconnect
+              with your vision. Intimate meeting spaces, high-speed Wi-Fi, and
+              team-building activities like cooking classes or history tours.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Past Success / Testimonial -->
+  <section class="past-retreat-highlight">
+    <div class="container highlight-content">
+      <div class="section-header fade-in" style="margin-bottom: var(--space-8)">
+        <p class="section-eyebrow" style="color: var(--gold)">
+          Success Story
+        </p>
+        <h2 class="section-title" style="color: var(--white)">
+          "A Painter's Dream"
+        </h2>
+      </div>
+      <div style="max-width: 800px; margin: 0 auto; text-align: center" class="fade-in">
+        <p style="
+              font-size: var(--text-xl);
+              line-height: 1.8;
+              margin-bottom: var(--space-6);
+              font-style: italic;
+            ">
+          "We hosted our annual watercolor retreat at Palazzo Antico, and it
+          was magical. The light in the courtyard is unmatched, and Chef
+          Rocco's lunches kept us inspired all day. The team handled every
+          detail, allowing us to focus purely on our art."
+        </p>
+        <p style="
+              font-size: var(--text-lg);
+              font-weight: bold;
+              color: var(--gold);
+            ">
+          — Elena K., Art Workshop Leader
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inquiry / Packages -->
+  <section class="section-lg">
+    <div class="container container-narrow text-center">
+      <div class="section-header fade-in">
+        <p class="section-eyebrow">Plan Your Event</p>
+        <h2 class="section-title">Hosting Options</h2>
+      </div>
+
+      <div style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-8);
+            text-align: left;
+            margin-bottom: var(--space-12);
+          ">
+        <div style="
+              background: var(--cream);
+              padding: var(--space-8);
+              border-radius: var(--radius-lg);
+            " class="fade-in-left">
+          <h3 style="
+                font-family: var(--font-heading);
+                font-size: var(--text-xl);
+                margin-bottom: var(--space-4);
+              ">
+            Full Buyout
+          </h3>
+          <p style="margin-bottom: var(--space-4); color: var(--stone-warm)">
+            Exclusive use of the entire Palazzo.
+          </p>
+          <ul style="list-style: none; color: var(--stone-warm)">
+            <li style="margin-bottom: var(--space-2)">
+              ✓ All 5 Suites (Up to 12 guests)
+            </li>
+            <li style="margin-bottom: var(--space-2)">
+              ✓ Private access to all common areas
+            </li>
+            <li style="margin-bottom: var(--space-2)">
+              ✓ Dedicated staff & concierge
+            </li>
+            <li style="margin-bottom: var(--space-2)">
+              ✓ Customized catering plan
+            </li>
+          </ul>
+        </div>
+        <div style="
+              background: var(--cream);
+              padding: var(--space-8);
+              border-radius: var(--radius-lg);
+            " class="fade-in-right">
+          <h3 style="
+                font-family: var(--font-heading);
+                font-size: var(--text-xl);
+                margin-bottom: var(--space-4);
+              ">
+            Day Retreats / Small Groups
+          </h3>
+          <p style="margin-bottom: var(--space-4); color: var(--stone-warm)">
+            Use of specific spaces for daily workshops.
+          </p>
+          <ul style="list-style: none; color: var(--stone-warm)">
+            <li style="margin-bottom: var(--space-2)">
+              ✓ Reserved Courtyard or Terrace time
+            </li>
+            <li style="margin-bottom: var(--space-2)">
+              ✓ Lunch & Coffee breaks included
+            </li>
+            <li style="margin-bottom: var(--space-2)">
+              ✓ Equipment setup assistance
+            </li>
+            <li style="margin-bottom: var(--space-2)">
+              ✓ Accommodation add-ons available
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <a href="contact.html" class="btn btn-primary fade-in">Inquire About Availability</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3 class="footer-logo">PALAZZO ANTICO</h3>
+          <p class="footer-tagline">Where history meets hospitality</p>
+          <p class="footer-description">
+            A luxury boutique hotel in a restored 15th-century Venetian
+            palazzo.
+          </p>
+        </div>
+        <div class="footer-links-group">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="rooms.html" class="footer-link">Our Rooms</a></li>
+            <li>
+              <a href="experience.html" class="footer-link">Experience</a>
+            </li>
+            <li><a href="retreats.html" class="footer-link">Retreats</a></li>
+            <li>
+              <a href="chef-rocco.html" class="footer-link">Chef Rocco</a>
+            </li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4 class="footer-title">Retreats</h4>
+          <ul class="footer-links">
+            <li>
+              <a href="retreats.html" class="footer-link">Creative Arts</a>
+            </li>
+            <li><a href="retreats.html" class="footer-link">Wellness</a></li>
+            <li><a href="retreats.html" class="footer-link">Corporate</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4 class="footer-title">Contact</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span>15 Ippoton Street<br />Old Town, Rhodes 85100</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2" />
+            </svg>
+            <span>+30 22410 12345</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Palazzo Antico. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="contact.html" class="book-btn-floating">Book Now</a>
+  <script src="js/main.js" defer></script>
 </body>
 
 </html>

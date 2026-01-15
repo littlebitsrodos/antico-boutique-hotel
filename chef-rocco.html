@@ -1,546 +1,615 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Meet Chef Rocco, Executive Chef at Palazzo Antico. Discover his culinary philosophy, signature dishes, cooking classes, and private dining experiences in Rhodes.">
-    <meta name="keywords"
-        content="Chef Rocco, Palazzo Antico restaurant, Rhodes fine dining, Mediterranean cuisine, cooking classes, private chef">
-    <meta name="author" content="Palazzo Antico">
-    <meta name="robots" content="index, follow">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Meet Chef Rocco, Executive Chef at Palazzo Antico. Discover his culinary philosophy, signature dishes, cooking classes, and private dining experiences in Rhodes." />
+  <meta name="keywords"
+    content="Chef Rocco, Palazzo Antico restaurant, Rhodes fine dining, Mediterranean cuisine, cooking classes, private chef" />
+  <meta name="author" content="Palazzo Antico" />
+  <meta name="robots" content="index, follow" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://palazzoantico.gr/chef-rocco.html">
-    <meta property="og:title" content="Chef Rocco | Palazzo Antico">
-    <meta property="og:description"
-        content="Experience the culinary artistry of Chef Rocco. Mediterranean cuisine with a contemporary twist.">
-    <meta property="og:image" content="https://palazzoantico.gr/images/experience_restaurant.webp">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://palazzoantico.gr/chef-rocco.html" />
+  <meta property="og:title" content="Chef Rocco | Palazzo Antico" />
+  <meta property="og:description"
+    content="Experience the culinary artistry of Chef Rocco. Mediterranean cuisine with a contemporary twist." />
+  <meta property="og:image" content="https://palazzoantico.gr/images/experience_restaurant.webp" />
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
 
-    <link rel="canonical" href="https://palazzoantico.gr/chef-rocco.html">
+  <link rel="canonical" href="https://palazzoantico.gr/chef-rocco.html" />
 
-    <!-- Preload critical assets -->
-    <link rel="preload" href="images/experience_restaurant.webp" as="image" fetchpriority="high">
-    <link rel="preload" href="css/style.css" as="style">
+  <!-- Preload critical assets -->
+  <link rel="preload" href="images/experience_restaurant.webp" as="image" fetchpriority="high" />
+  <link rel="preload" href="css/style.css" as="style" />
 
-    <title>Chef Rocco | Palazzo Antico - Culinary Excellence in Rhodes</title>
+  <title>Chef Rocco | Palazzo Antico - Culinary Excellence in Rhodes</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 
-    <style>
-        .chef-hero {
-            position: relative;
-            height: 70vh;
-            min-height: 500px;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        .chef-hero-bg {
-            position: absolute;
-            inset: 0;
-            z-index: -1;
-        }
-
-        .chef-hero-bg img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .chef-intro {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: var(--space-16);
-            align-items: center;
-        }
-
-        .chef-avatar {
-            width: 100%;
-            max-width: 400px;
-            aspect-ratio: 1;
-            border-radius: var(--radius-lg);
-            background: linear-gradient(135deg, var(--terracotta) 0%, var(--stone-warm) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 8rem;
-            box-shadow: var(--shadow-xl);
-        }
-
-        .chef-quote {
-            font-family: var(--font-accent);
-            font-size: var(--text-2xl);
-            font-style: italic;
-            color: var(--stone-warm);
-            border-left: 4px solid var(--gold);
-            padding-left: var(--space-6);
-            margin: var(--space-8) 0;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--space-8);
-        }
-
-        .service-card {
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-            transition: transform var(--transition-base), box-shadow var(--transition-base);
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .service-icon {
-            height: 180px;
-            background: linear-gradient(135deg, var(--terracotta) 0%, var(--gold) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-        }
-
-        .service-content {
-            padding: var(--space-6);
-        }
-
-        .service-title {
-            font-size: var(--text-xl);
-            margin-bottom: var(--space-3);
-        }
-
-        .service-description {
-            color: var(--stone-warm);
-            font-size: var(--text-sm);
-            margin-bottom: var(--space-4);
-            line-height: 1.7;
-        }
-
-        .service-price {
-            font-family: var(--font-heading);
-            font-size: var(--text-lg);
-            color: var(--terracotta);
-        }
-
-        .menu-section {
-            background: var(--cream);
-        }
-
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--space-12);
-        }
-
-        .menu-category h3 {
-            font-size: var(--text-2xl);
-            margin-bottom: var(--space-6);
-            padding-bottom: var(--space-3);
-            border-bottom: 2px solid var(--gold);
-        }
-
-        .menu-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            padding: var(--space-4) 0;
-            border-bottom: 1px solid var(--cream-light);
-        }
-
-        .menu-item:last-child {
-            border-bottom: none;
-        }
-
-        .menu-item-name {
-            font-size: var(--text-lg);
-            font-weight: 500;
-            margin-bottom: var(--space-1);
-        }
-
-        .menu-item-description {
-            font-size: var(--text-sm);
-            color: var(--stone-warm);
-            font-style: italic;
-        }
-
-        .menu-item-price {
-            font-family: var(--font-heading);
-            font-size: var(--text-lg);
-            color: var(--terracotta);
-            white-space: nowrap;
-            margin-left: var(--space-4);
-        }
-
-        @media (max-width: 992px) {
-            .chef-intro {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .chef-avatar {
-                margin: 0 auto;
-            }
-
-            .chef-quote {
-                border-left: none;
-                border-top: 4px solid var(--gold);
-                padding-left: 0;
-                padding-top: var(--space-6);
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .menu-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Chef Rocco",
-      "jobTitle": "Executive Chef",
-      "worksFor": {
-        "@type": "Hotel",
-        "name": "Palazzo Antico"
-      },
-      "description": "Executive Chef at Palazzo Antico, specializing in Mediterranean cuisine with contemporary Rhodian influences."
+  <style>
+    .chef-hero {
+      position: relative;
+      height: 70vh;
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
     }
+
+    .chef-hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+    }
+
+    .chef-hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .chef-intro {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: var(--space-16);
+      align-items: center;
+    }
+
+    .chef-avatar {
+      width: 100%;
+      max-width: 400px;
+      aspect-ratio: 4/5;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+    }
+
+    .chef-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .chef-quote {
+      font-family: var(--font-accent);
+      font-size: var(--text-2xl);
+      font-style: italic;
+      color: var(--stone-warm);
+      border-left: 4px solid var(--gold);
+      padding-left: var(--space-6);
+      margin: var(--space-8) 0;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-8);
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      transition:
+        transform var(--transition-base),
+        box-shadow var(--transition-base);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .service-image {
+      height: 220px;
+      overflow: hidden;
+    }
+
+    .service-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-base);
+    }
+
+    .service-card:hover .service-image img {
+      transform: scale(1.05);
+    }
+
+    .service-content {
+      padding: var(--space-6);
+    }
+
+    .service-title {
+      font-size: var(--text-xl);
+      margin-bottom: var(--space-3);
+    }
+
+    .service-description {
+      color: var(--stone-warm);
+      font-size: var(--text-sm);
+      margin-bottom: var(--space-4);
+      line-height: 1.7;
+    }
+
+    .service-price {
+      font-family: var(--font-heading);
+      font-size: var(--text-lg);
+      color: var(--terracotta);
+    }
+
+    .menu-section {
+      background: var(--cream);
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-12);
+    }
+
+    .menu-category h3 {
+      font-size: var(--text-2xl);
+      margin-bottom: var(--space-6);
+      padding-bottom: var(--space-3);
+      border-bottom: 2px solid var(--gold);
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: var(--space-4) 0;
+      border-bottom: 1px solid var(--cream-light);
+    }
+
+    .menu-item:last-child {
+      border-bottom: none;
+    }
+
+    .menu-item-name {
+      font-size: var(--text-lg);
+      font-weight: 500;
+      margin-bottom: var(--space-1);
+    }
+
+    .menu-item-description {
+      font-size: var(--text-sm);
+      color: var(--stone-warm);
+      font-style: italic;
+    }
+
+    .menu-item-price {
+      font-family: var(--font-heading);
+      font-size: var(--text-lg);
+      color: var(--terracotta);
+      white-space: nowrap;
+      margin-left: var(--space-4);
+    }
+
+    @media (max-width: 992px) {
+      .chef-intro {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .chef-avatar {
+        margin: 0 auto;
+      }
+
+      .chef-quote {
+        border-left: none;
+        border-top: 4px solid var(--gold);
+        padding-left: 0;
+        padding-top: var(--space-6);
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Chef Rocco",
+        "jobTitle": "Executive Chef",
+        "worksFor": {
+          "@type": "Hotel",
+          "name": "Palazzo Antico"
+        },
+        "description": "Executive Chef at Palazzo Antico, specializing in Mediterranean cuisine with contemporary Rhodian influences."
+      }
     </script>
 </head>
 
 <body>
-
-    <!-- Navigation -->
-    <nav class="nav scrolled">
-        <div class="container nav-inner">
-            <a href="index.html" class="nav-logo">PALAZZO ANTICO</a>
-            <ul class="nav-links">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="rooms.html" class="nav-link">Rooms</a></li>
-                <li><a href="experience.html" class="nav-link">Experience</a></li>
-                <li><a href="retreats.html" class="nav-link">Retreats</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-overlay"></div>
-    <div class="mobile-menu">
-        <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
-        <ul class="mobile-nav-links">
-            <li><a href="index.html" class="mobile-nav-link">Home</a></li>
-            <li><a href="rooms.html" class="mobile-nav-link">Rooms</a></li>
-            <li><a href="experience.html" class="mobile-nav-link">Experience</a></li>
-            <li><a href="retreats.html" class="mobile-nav-link">Retreats</a></li>
-            <li><a href="about.html" class="mobile-nav-link">About</a></li>
-            <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
-        </ul>
+  <!-- Navigation -->
+  <nav class="nav scrolled">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">PALAZZO ANTICO</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="rooms.html" class="nav-link">Rooms</a></li>
+        <li><a href="experience.html" class="nav-link">Experience</a></li>
+        <li><a href="retreats.html" class="nav-link">Retreats</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
+  </nav>
 
-    <!-- Chef Hero -->
-    <section class="chef-hero">
-        <div class="chef-hero-bg">
-            <img src="images/experience_restaurant.webp" alt="Palazzo Antico restaurant" width="1024" height="1024">
-            <div class="hero-overlay"></div>
+  <!-- Mobile Menu -->
+  <div class="mobile-overlay"></div>
+  <div class="mobile-menu">
+    <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="rooms.html" class="mobile-nav-link">Rooms</a></li>
+      <li>
+        <a href="experience.html" class="mobile-nav-link">Experience</a>
+      </li>
+      <li><a href="retreats.html" class="mobile-nav-link">Retreats</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Chef Hero -->
+  <section class="chef-hero">
+    <div class="chef-hero-bg">
+      <img src="images/experience_restaurant.webp" alt="Palazzo Antico restaurant" width="1024" height="1024" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="container hero-content">
+      <p class="hero-subtitle">Culinary Artistry</p>
+      <h1 class="hero-title">Chef Rocco</h1>
+      <p class="hero-description">
+        Where tradition meets innovation in every dish
+      </p>
+    </div>
+  </section>
+
+  <!-- Chef Introduction -->
+  <section class="welcome section-lg">
+    <div class="container">
+      <div class="chef-intro">
+        <div class="chef-avatar fade-in-left">
+          <img src="images/chef_rocco_portrait.webp" alt="Chef Rocco - Executive Chef at Palazzo Antico" width="800"
+            height="1000">
         </div>
-        <div class="container hero-content">
-            <p class="hero-subtitle">Culinary Artistry</p>
-            <h1 class="hero-title">Chef Rocco</h1>
-            <p class="hero-description">Where tradition meets innovation in every dish</p>
+        <div class="fade-in-right">
+          <p class="welcome-eyebrow">Executive Chef</p>
+          <h2 class="welcome-title">
+            A Passion for Mediterranean Excellence
+          </h2>
+          <p class="welcome-text">
+            Chef Rocco brings over 20 years of culinary expertise to Palazzo
+            Antico. Born in Southern Italy and trained in the finest kitchens
+            of Rome, Paris, and Athens, he has dedicated his career to
+            celebrating Mediterranean flavors with contemporary artistry.
+          </p>
+          <p class="welcome-text">
+            His philosophy is simple: source the finest local ingredients,
+            honor traditional techniques, and add a touch of creative
+            innovation. Each dish tells a story of Rhodes—its sun-drenched
+            olive groves, crystal-clear waters, and rich cultural heritage.
+          </p>
+          <blockquote class="chef-quote">
+            "Cooking is not just about feeding people. It's about creating
+            moments, memories, and connections that linger long after the last
+            bite."
+          </blockquote>
+          <div class="welcome-features">
+            <div class="welcome-feature">
+              <div class="welcome-feature-icon">🏆</div>
+              <span>Award-Winning Chef</span>
+            </div>
+            <div class="welcome-feature">
+              <div class="welcome-feature-icon">🌿</div>
+              <span>Farm-to-Table Pioneer</span>
+            </div>
+            <div class="welcome-feature">
+              <div class="welcome-feature-icon">📚</div>
+              <span>Cookbook Author</span>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Chef Introduction -->
-    <section class="welcome section-lg">
-        <div class="container">
-            <div class="chef-intro">
-                <div class="chef-avatar fade-in-left">
-                    👨‍🍳
-                </div>
-                <div class="fade-in-right">
-                    <p class="welcome-eyebrow">Executive Chef</p>
-                    <h2 class="welcome-title">A Passion for Mediterranean Excellence</h2>
-                    <p class="welcome-text">
-                        Chef Rocco brings over 20 years of culinary expertise to Palazzo Antico. Born in Southern Italy
-                        and trained in the finest kitchens of Rome, Paris, and Athens, he has dedicated his career to
-                        celebrating Mediterranean flavors with contemporary artistry.
-                    </p>
-                    <p class="welcome-text">
-                        His philosophy is simple: source the finest local ingredients, honor traditional techniques,
-                        and add a touch of creative innovation. Each dish tells a story of Rhodes—its sun-drenched
-                        olive groves, crystal-clear waters, and rich cultural heritage.
-                    </p>
-                    <blockquote class="chef-quote">
-                        "Cooking is not just about feeding people. It's about creating moments, memories,
-                        and connections that linger long after the last bite."
-                    </blockquote>
-                    <div class="welcome-features">
-                        <div class="welcome-feature">
-                            <div class="welcome-feature-icon">🏆</div>
-                            <span>Award-Winning Chef</span>
-                        </div>
-                        <div class="welcome-feature">
-                            <div class="welcome-feature-icon">🌿</div>
-                            <span>Farm-to-Table Pioneer</span>
-                        </div>
-                        <div class="welcome-feature">
-                            <div class="welcome-feature-icon">📚</div>
-                            <span>Cookbook Author</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- Culinary Services -->
+  <section class="section-lg" style="background-color: var(--cream-light)">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-eyebrow">Experiences</p>
+        <h2 class="section-title">Chef Rocco's Services</h2>
+        <p class="section-description">
+          Unique culinary experiences crafted by Chef Rocco for discerning
+          guests.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card fade-in">
+          <div class="service-image">
+            <img src="images/chef_rocco_private_dining.webp" alt="Private Dining Experience" width="600" height="400">
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Private Dining</h3>
+            <p class="service-description">
+              An intimate 7-course tasting menu served in our private dining
+              room or on the rooftop terrace. Chef Rocco personally crafts
+              each course and joins guests for wine pairing explanations.
+            </p>
+            <p class="service-price">From €150 per person</p>
+          </div>
         </div>
-    </section>
 
-    <!-- Culinary Services -->
-    <section class="section-lg" style="background-color: var(--cream-light);">
-        <div class="container">
-            <div class="section-header fade-in">
-                <p class="section-eyebrow">Experiences</p>
-                <h2 class="section-title">Chef Rocco's Services</h2>
-                <p class="section-description">Unique culinary experiences crafted by Chef Rocco for discerning guests.
-                </p>
-            </div>
-
-            <div class="services-grid">
-                <div class="service-card fade-in">
-                    <div class="service-icon">🍽️</div>
-                    <div class="service-content">
-                        <h3 class="service-title">Private Dining</h3>
-                        <p class="service-description">
-                            An intimate 7-course tasting menu served in our private dining room or on the rooftop
-                            terrace. Chef Rocco personally crafts each course and joins guests for wine pairing
-                            explanations.
-                        </p>
-                        <p class="service-price">From €150 per person</p>
-                    </div>
-                </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-icon">👨‍🍳</div>
-                    <div class="service-content">
-                        <h3 class="service-title">Cooking Classes</h3>
-                        <p class="service-description">
-                            Learn the secrets of Mediterranean cuisine in a hands-on 3-hour class. Visit the local
-                            market with Chef Rocco, then prepare a complete meal in our professional kitchen.
-                        </p>
-                        <p class="service-price">€120 per person</p>
-                    </div>
-                </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-icon">🏠</div>
-                    <div class="service-content">
-                        <h3 class="service-title">In-Suite Dining</h3>
-                        <p class="service-description">
-                            Chef Rocco brings the restaurant experience to your suite. Perfect for romantic celebrations
-                            or private moments, with a customized menu based on your preferences.
-                        </p>
-                        <p class="service-price">From €200 for two</p>
-                    </div>
-                </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-icon">🍷</div>
-                    <div class="service-content">
-                        <h3 class="service-title">Wine & Meze Pairing</h3>
-                        <p class="service-description">
-                            Discover Rhodes' wine heritage with a curated selection of local wines paired with
-                            Chef Rocco's signature meze. Held on the terrace at sunset.
-                        </p>
-                        <p class="service-price">€85 per person</p>
-                    </div>
-                </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-icon">🌅</div>
-                    <div class="service-content">
-                        <h3 class="service-title">Sunrise Breakfast</h3>
-                        <p class="service-description">
-                            Wake up to an extraordinary Mediterranean breakfast served on the rooftop as the sun
-                            rises over the Aegean. Fresh pastries, local cheeses, and seasonal fruits.
-                        </p>
-                        <p class="service-price">€45 per person</p>
-                    </div>
-                </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-icon">🎉</div>
-                    <div class="service-content">
-                        <h3 class="service-title">Private Events</h3>
-                        <p class="service-description">
-                            Host an unforgettable event with a fully customized menu. From intimate proposals
-                            to <a href="retreats.html"
-                                style="color: var(--terracotta); text-decoration: underline;">corporate retreats</a>,
-                            Chef Rocco creates culinary experiences for groups of 2-20.
-                        </p>
-                        <p class="service-price">Custom pricing</p>
-                    </div>
-                </div>
-            </div>
+        <div class="service-card fade-in">
+          <div class="service-image">
+            <img src="images/chef_rocco_cooking_class.webp" alt="Cooking Classes with Chef Rocco" width="600"
+              height="400">
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Cooking Classes</h3>
+            <p class="service-description">
+              Learn the secrets of Mediterranean cuisine in a hands-on 3-hour
+              class. Visit the local market with Chef Rocco, then prepare a
+              complete meal in our professional kitchen.
+            </p>
+            <p class="service-price">€120 per person</p>
+          </div>
         </div>
-    </section>
 
-    <!-- Sample Menu -->
-    <section class="menu-section section-lg">
-        <div class="container">
-            <div class="section-header fade-in">
-                <p class="section-eyebrow">Seasonal Highlights</p>
-                <h2 class="section-title">Signature Dishes</h2>
-                <p class="section-description">A selection from our current tasting menu, celebrating the flavors of
-                    Rhodes.</p>
-            </div>
-
-            <div class="menu-grid">
-                <div class="menu-category fade-in-left">
-                    <h3>Starters</h3>
-                    <div class="menu-item">
-                        <div>
-                            <p class="menu-item-name">Aegean Octopus Carpaccio</p>
-                            <p class="menu-item-description">Local octopus, citrus vinaigrette, capers, fresh herbs</p>
-                        </div>
-                        <span class="menu-item-price">€24</span>
-                    </div>
-                    <div class="menu-item">
-                        <div>
-                            <p class="menu-item-name">Heirloom Tomato Tartare</p>
-                            <p class="menu-item-description">Rhodes tomatoes, burrata, basil oil, aged balsamic</p>
-                        </div>
-                        <span class="menu-item-price">€18</span>
-                    </div>
-                    <div class="menu-item">
-                        <div>
-                            <p class="menu-item-name">Smoked Aubergine Meze</p>
-                            <p class="menu-item-description">Fire-roasted eggplant, tahini, pomegranate, za'atar</p>
-                        </div>
-                        <span class="menu-item-price">€16</span>
-                    </div>
-                </div>
-
-                <div class="menu-category fade-in-right">
-                    <h3>Mains</h3>
-                    <div class="menu-item">
-                        <div>
-                            <p class="menu-item-name">Lamb Kleftiko</p>
-                            <p class="menu-item-description">12-hour slow-roasted lamb, lemon potatoes, wild greens</p>
-                        </div>
-                        <span class="menu-item-price">€38</span>
-                    </div>
-                    <div class="menu-item">
-                        <div>
-                            <p class="menu-item-name">Day-Boat Sea Bream</p>
-                            <p class="menu-item-description">Whole fish, fennel, olives, cherry tomatoes, orzo</p>
-                        </div>
-                        <span class="menu-item-price">€42</span>
-                    </div>
-                    <div class="menu-item">
-                        <div>
-                            <p class="menu-item-name">Wild Mushroom Risotto</p>
-                            <p class="menu-item-description">Carnaroli rice, foraged mushrooms, truffle, parmesan</p>
-                        </div>
-                        <span class="menu-item-price">€32</span>
-                    </div>
-                </div>
-            </div>
+        <div class="service-card fade-in">
+          <div class="service-image">
+            <img src="images/experience_restaurant.webp" alt="In-Suite Dining" width="600" height="400">
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">In-Suite Dining</h3>
+            <p class="service-description">
+              Chef Rocco brings the restaurant experience to your suite.
+              Perfect for romantic celebrations or private moments, with a
+              customized menu based on your preferences.
+            </p>
+            <p class="service-price">From €200 for two</p>
+          </div>
         </div>
-    </section>
 
-    <!-- CTA -->
-    <section class="experience"
-        style="background-image: url('images/experience_terrace.webp'); padding: var(--space-20) 0;">
-        <div class="experience-overlay"></div>
-        <div class="container experience-content">
-            <h2 class="experience-title">Reserve Your Culinary Experience</h2>
-            <p class="experience-text">Contact us to book a private dining experience, cooking class, or special event
-                with Chef Rocco.</p>
-            <a href="contact.html" class="btn btn-gold">Make a Reservation</a>
+        <div class="service-card fade-in">
+          <div class="service-image">
+            <img src="images/chef_rocco_wine.webp" alt="Wine and Meze Pairing" width="600" height="400">
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Wine & Meze Pairing</h3>
+            <p class="service-description">
+              Discover Rhodes' wine heritage with a curated selection of local
+              wines paired with Chef Rocco's signature meze. Held on the
+              terrace at sunset.
+            </p>
+            <p class="service-price">€85 per person</p>
+          </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h3 class="footer-logo">PALAZZO ANTICO</h3>
-                    <p class="footer-tagline">Where history meets hospitality</p>
-                    <p class="footer-description">A luxury boutique hotel in a restored 15th-century Venetian palazzo.
-                    </p>
-                </div>
-                <div class="footer-links-group">
-                    <h4 class="footer-title">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="rooms.html" class="footer-link">Our Rooms</a></li>
-                        <li><a href="experience.html" class="footer-link">Experience</a></li>
-                        <li><a href="retreats.html" class="footer-link">Retreats</a></li>
-                        <li><a href="chef-rocco.html" class="footer-link">Chef Rocco</a></li>
-                        <li><a href="contact.html" class="footer-link">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links-group">
-                    <h4 class="footer-title">Dining</h4>
-                    <ul class="footer-links">
-                        <li><a href="chef-rocco.html#services" class="footer-link">Private Dining</a></li>
-                        <li><a href="chef-rocco.html#services" class="footer-link">Cooking Classes</a></li>
-                        <li><a href="chef-rocco.html#menu" class="footer-link">Sample Menu</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4 class="footer-title">Contact</h4>
-                    <div class="footer-contact-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                            <circle cx="12" cy="10" r="3" />
-                        </svg>
-                        <span>15 Ippoton Street<br>Old Town, Rhodes 85100</span>
-                    </div>
-                    <div class="footer-contact-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07" />
-                        </svg>
-                        <span>+30 22410 12345</span>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Palazzo Antico. All rights reserved.</p>
-            </div>
+        <div class="service-card fade-in">
+          <div class="service-image">
+            <img src="images/chef_rocco_breakfast.webp" alt="Sunrise Breakfast on the Terrace" width="600" height="400">
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Sunrise Breakfast</h3>
+            <p class="service-description">
+              Wake up to an extraordinary Mediterranean breakfast served on
+              the rooftop as the sun rises over the Aegean. Fresh pastries,
+              local cheeses, and seasonal fruits.
+            </p>
+            <p class="service-price">€45 per person</p>
+          </div>
         </div>
-    </footer>
 
-    <a href="contact.html" class="book-btn-floating">Book Now</a>
-    <script src="js/main.js" defer></script>
+        <div class="service-card fade-in">
+          <div class="service-image">
+            <img src="images/chef_rocco_events.webp" alt="Private Events at Palazzo Antico" width="600" height="400">
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Private Events</h3>
+            <p class="service-description">
+              Host an unforgettable event with a fully customized menu. From
+              intimate proposals to
+              <a href="retreats.html" style="color: var(--terracotta); text-decoration: underline">corporate
+                retreats</a>, Chef Rocco creates culinary experiences for groups of 2-20.
+            </p>
+            <p class="service-price">Custom pricing</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sample Menu -->
+  <section class="menu-section section-lg">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-eyebrow">Seasonal Highlights</p>
+        <h2 class="section-title">Signature Dishes</h2>
+        <p class="section-description">
+          A selection from our current tasting menu, celebrating the flavors
+          of Rhodes.
+        </p>
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-category fade-in-left">
+          <h3>Starters</h3>
+          <div class="menu-item">
+            <div>
+              <p class="menu-item-name">Aegean Octopus Carpaccio</p>
+              <p class="menu-item-description">
+                Local octopus, citrus vinaigrette, capers, fresh herbs
+              </p>
+            </div>
+            <span class="menu-item-price">€24</span>
+          </div>
+          <div class="menu-item">
+            <div>
+              <p class="menu-item-name">Heirloom Tomato Tartare</p>
+              <p class="menu-item-description">
+                Rhodes tomatoes, burrata, basil oil, aged balsamic
+              </p>
+            </div>
+            <span class="menu-item-price">€18</span>
+          </div>
+          <div class="menu-item">
+            <div>
+              <p class="menu-item-name">Smoked Aubergine Meze</p>
+              <p class="menu-item-description">
+                Fire-roasted eggplant, tahini, pomegranate, za'atar
+              </p>
+            </div>
+            <span class="menu-item-price">€16</span>
+          </div>
+        </div>
+
+        <div class="menu-category fade-in-right">
+          <h3>Mains</h3>
+          <div class="menu-item">
+            <div>
+              <p class="menu-item-name">Lamb Kleftiko</p>
+              <p class="menu-item-description">
+                12-hour slow-roasted lamb, lemon potatoes, wild greens
+              </p>
+            </div>
+            <span class="menu-item-price">€38</span>
+          </div>
+          <div class="menu-item">
+            <div>
+              <p class="menu-item-name">Day-Boat Sea Bream</p>
+              <p class="menu-item-description">
+                Whole fish, fennel, olives, cherry tomatoes, orzo
+              </p>
+            </div>
+            <span class="menu-item-price">€42</span>
+          </div>
+          <div class="menu-item">
+            <div>
+              <p class="menu-item-name">Wild Mushroom Risotto</p>
+              <p class="menu-item-description">
+                Carnaroli rice, foraged mushrooms, truffle, parmesan
+              </p>
+            </div>
+            <span class="menu-item-price">€32</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="experience" style="
+        background-image: url(&quot;images/experience_terrace.webp&quot;);
+        padding: var(--space-20) 0;
+      ">
+    <div class="experience-overlay"></div>
+    <div class="container experience-content">
+      <h2 class="experience-title">Reserve Your Culinary Experience</h2>
+      <p class="experience-text">
+        Contact us to book a private dining experience, cooking class, or
+        special event with Chef Rocco.
+      </p>
+      <a href="contact.html" class="btn btn-gold">Make a Reservation</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3 class="footer-logo">PALAZZO ANTICO</h3>
+          <p class="footer-tagline">Where history meets hospitality</p>
+          <p class="footer-description">
+            A luxury boutique hotel in a restored 15th-century Venetian
+            palazzo.
+          </p>
+        </div>
+        <div class="footer-links-group">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="rooms.html" class="footer-link">Our Rooms</a></li>
+            <li>
+              <a href="experience.html" class="footer-link">Experience</a>
+            </li>
+            <li><a href="retreats.html" class="footer-link">Retreats</a></li>
+            <li>
+              <a href="chef-rocco.html" class="footer-link">Chef Rocco</a>
+            </li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4 class="footer-title">Dining</h4>
+          <ul class="footer-links">
+            <li>
+              <a href="chef-rocco.html#services" class="footer-link">Private Dining</a>
+            </li>
+            <li>
+              <a href="chef-rocco.html#services" class="footer-link">Cooking Classes</a>
+            </li>
+            <li>
+              <a href="chef-rocco.html#menu" class="footer-link">Sample Menu</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4 class="footer-title">Contact</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span>15 Ippoton Street<br />Old Town, Rhodes 85100</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07" />
+            </svg>
+            <span>+30 22410 12345</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Palazzo Antico. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="contact.html" class="book-btn-floating">Book Now</a>
+  <script src="js/main.js" defer></script>
 </body>
 
 </html>
