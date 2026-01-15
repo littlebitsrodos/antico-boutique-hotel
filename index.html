@@ -27,6 +27,14 @@
     content="Experience history and modern comfort in a restored 15th-century Venetian palazzo." />
   <meta name="twitter:image" content="https://palazzoantico.gr/images/hero_courtyard.webp" />
 
+  <!-- PWA Configuration -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#c9a84c" />
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Palazzo Antico" />
+
   <link rel="canonical" href="https://palazzoantico.gr/" />
   <title>Palazzo Antico | Boutique Hotel in Medieval Rhodes</title>
 
@@ -732,14 +740,14 @@
       <div class="experience-grid">
         <div class="experience-item fade-in">
           <div class="experience-icon">🏛️</div>
-          <h4 class="experience-item-title">Old Town Walks</h4>
+          <h3 class="experience-item-title">Old Town Walks</h3>
           <p class="experience-item-text">
             Guided tours through 2,400 years of history
           </p>
         </div>
         <div class="experience-item fade-in">
           <div class="experience-icon">🍽️</div>
-          <h4 class="experience-item-title">Mediterranean Cuisine</h4>
+          <h3 class="experience-item-title">Mediterranean Cuisine</h3>
           <p class="experience-item-text">
             Farm-to-table dining by
             <a href="chef-rocco.html" style="color: var(--terracotta)">Chef Rocco</a>
@@ -747,14 +755,14 @@
         </div>
         <div class="experience-item fade-in">
           <div class="experience-icon">💆</div>
-          <h4 class="experience-item-title">Hammam & Spa</h4>
+          <h3 class="experience-item-title">Hammam & Spa</h3>
           <p class="experience-item-text">
             Traditional Turkish bath experience
           </p>
         </div>
         <div class="experience-item fade-in">
           <div class="experience-icon">🌅</div>
-          <h4 class="experience-item-title">Rooftop Terrace</h4>
+          <h3 class="experience-item-title">Rooftop Terrace</h3>
           <p class="experience-item-text">Sunset views over the Aegean Sea</p>
         </div>
       </div>
@@ -912,6 +920,17 @@
 
   <!-- JavaScript -->
   <script src="js/main.js" defer></script>
+
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('SW registered:', reg.scope))
+          .catch(err => console.log('SW registration failed:', err));
+      });
+    }
+  </script>
 </body>
 
 </html>
