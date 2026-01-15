@@ -95,6 +95,8 @@
       transition:
         transform var(--transition-base),
         box-shadow var(--transition-base);
+      display: flex;
+      flex-direction: column;
       height: 100%;
     }
 
@@ -107,16 +109,24 @@
       height: 250px;
       width: 100%;
       object-fit: cover;
+      flex-shrink: 0;
     }
 
     .retreat-type-content {
       padding: var(--space-6);
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
     }
 
     .retreat-type-title {
       font-size: var(--text-xl);
       margin-bottom: var(--space-3);
       font-family: var(--font-heading);
+    }
+
+    .retreat-type-content .welcome-text {
+      flex-grow: 1;
     }
 
     .past-retreat-highlight {
@@ -428,7 +438,7 @@
           <div class="retreat-type-content">
             <h3 class="retreat-type-title">Creative Arts</h3>
             <p class="welcome-text">
-              **Painting & Photography**: Capture the light of the Aegean and
+              <span style="font-weight: 600;">Painting & Photography</span>: Capture the light of the Aegean and
               the textures of the Old Town. Our private courtyard and rooftop
               terrace offer perfect plein air settings, while the library
               provides quiet for writing workshops.
@@ -444,7 +454,7 @@
           <div class="retreat-type-content">
             <h3 class="retreat-type-title">Wellness & Yoga</h3>
             <p class="welcome-text">
-              **Restore & Reconnect**: Sunrise yoga sessions facing the
+              <span style="font-weight: 600;">Restore & Reconnect</span>: Sunrise yoga sessions facing the
               harbor, meditation in our silent courtyard, and trips to our
               <a href="experience.html" style="color: var(--terracotta)">Hammam Spa</a>. A sanctuary of peace amidst the
               medieval vibrancy.
@@ -457,7 +467,7 @@
           <div class="retreat-type-content">
             <h3 class="retreat-type-title">Corporate & Leadership</h3>
             <p class="welcome-text">
-              **Strategy & Bonding**: Disconnect from the office to reconnect
+              <span style="font-weight: 600;">Strategy & Bonding</span>: Disconnect from the office to reconnect
               with your vision. Intimate meeting spaces, high-speed Wi-Fi, and
               team-building activities like cooking classes or history tours.
             </p>

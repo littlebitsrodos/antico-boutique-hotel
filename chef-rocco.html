@@ -105,6 +105,9 @@
       transition:
         transform var(--transition-base),
         box-shadow var(--transition-base);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
 
     .service-card:hover {
@@ -115,6 +118,7 @@
     .service-image {
       height: 220px;
       overflow: hidden;
+      flex-shrink: 0;
     }
 
     .service-image img {
@@ -130,6 +134,9 @@
 
     .service-content {
       padding: var(--space-6);
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
     }
 
     .service-title {
@@ -142,12 +149,16 @@
       font-size: var(--text-sm);
       margin-bottom: var(--space-4);
       line-height: 1.7;
+      flex-grow: 1;
     }
 
     .service-price {
       font-family: var(--font-heading);
       font-size: var(--text-lg);
       color: var(--terracotta);
+      margin-top: auto;
+      padding-top: var(--space-4);
+      border-top: 1px solid var(--cream-light);
     }
 
     .menu-section {
@@ -324,7 +335,7 @@
             moments, memories, and connections that linger long after the last
             bite."
           </blockquote>
-          <div class="welcome-features">
+          <div class="welcome-features" style="justify-content: center;">
             <div class="welcome-feature">
               <div class="welcome-feature-icon">🏆</div>
               <span>Award-Winning Chef</span>
