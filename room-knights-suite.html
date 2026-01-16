@@ -50,7 +50,7 @@
       as="image"
       fetchpriority="high"
     />
-    <link rel="preload" href="css/style.css" as="style" />
+    <link rel="preload" href="css/style.min.css" as="style" />
 
     <title>
       The Knight's Suite | Palazzo Antico - Luxury Boutique Hotel Rhodes
@@ -59,10 +59,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      />
+    </noscript>
+    <link rel="stylesheet" href="css/style.min.css" />
     <link rel="stylesheet" href="css/room-detail.css" />
 
     <!-- Structured Data - Hotel Room -->
@@ -661,12 +674,16 @@
       >Book Now</a
     >
     <script src="js/main.js" defer></script>
-    <script>
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker.register("./sw.js");
-        });
-      }
-    </script>
-  </body>
+    
+  
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then(reg => console.log('SW registered'))
+          .catch(err => console.log('SW error', err));
+      });
+    }
+  </script>
+</body>
 </html>

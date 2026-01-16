@@ -31,9 +31,9 @@
     <meta name="twitter:card" content="summary_large_image" />
 
     <!-- PWA Configuration -->
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="./manifest.json" />
     <meta name="theme-color" content="#c9a84c" />
-    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta
       name="apple-mobile-web-app-status-bar-style"
@@ -49,7 +49,7 @@
       as="image"
       fetchpriority="high"
     />
-    <link rel="preload" href="css/style.css" as="style" />
+    <link rel="preload" href="css/style.min.css" as="style" />
 
     <title>
       Rooms & Suites | Palazzo Antico - Luxury Boutique Hotel Rhodes
@@ -58,10 +58,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      />
+    </noscript>
+    <link rel="stylesheet" href="css/style.min.css" />
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -672,12 +685,16 @@
 
     <a href="contact.html" class="book-btn-floating">Book Now</a>
     <script src="js/main.js" defer></script>
-    <script>
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker.register("./sw.js");
-        });
-      }
-    </script>
-  </body>
+    
+  
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then(reg => console.log('SW registered'))
+          .catch(err => console.log('SW error', err));
+      });
+    }
+  </script>
+</body>
 </html>

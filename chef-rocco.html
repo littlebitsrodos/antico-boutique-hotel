@@ -14,10 +14,16 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+    media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" />
+  </noscript>
+  <link rel="stylesheet" href="css/style.min.css" />
 
   <style>
     /* ==========================================================================
@@ -225,60 +231,72 @@
     .partnership-cards {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: var(--space-6);
-      margin-bottom: var(--space-10);
+      gap: var(--space-4);
+      margin-bottom: var(--space-8);
     }
 
     .partner-card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: var(--space-6);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: var(--space-5);
       border-radius: var(--radius-md);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .partner-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+      transform: translateY(-5px);
     }
 
     .partner-card h4 {
       color: var(--gold);
       font-family: var(--font-heading);
       font-size: var(--text-lg);
-      margin-bottom: var(--space-3);
+      margin-bottom: var(--space-2);
     }
 
     .partner-card p {
       font-size: var(--text-sm);
       color: rgba(255, 255, 255, 0.7);
-      line-height: 1.6;
+      line-height: 1.5;
     }
 
     .partnership-image {
       position: relative;
+      padding-right: 40px;
+      /* Space for the badge overlap */
     }
 
     .partnership-image img {
       width: 100%;
       border-radius: var(--radius-lg);
-      filter: sepia(20%);
+      box-shadow: var(--shadow-2xl);
     }
 
     .availability-badge {
       position: absolute;
-      bottom: -20px;
-      left: -20px;
+      bottom: 40px;
+      right: 0;
       background: var(--white);
       padding: var(--space-6) var(--space-8);
       border-radius: var(--radius-md);
-      box-shadow: var(--shadow-xl);
-      max-width: 250px;
+      box-shadow: var(--shadow-2xl);
+      max-width: 280px;
+      border-top: 4px solid var(--gold);
+      transform: translateX(20px);
     }
 
     .availability-badge h4 {
       color: var(--stone-dark);
       font-family: var(--font-heading);
+      font-size: var(--text-xl);
       margin-bottom: var(--space-2);
     }
 
     .availability-badge p {
       color: var(--stone-warm);
       font-size: var(--text-sm);
+      line-height: 1.6;
     }
 
     /* Experiences Bento Grid */
@@ -473,8 +491,8 @@
     <div class="chef-hero-content fade-in">
       <p class="chef-hero-eyebrow">Aria di Rodi's Culinary Heart</p>
       <h1 class="chef-hero-title">
-        Authentic Greek.<br />
-        Italian Soul.
+        Authentic Italian.<br />
+        Greek Soul.
       </h1>
       <p class="chef-hero-subtitle">
         "I believe food should be honest. Whether it is a simple breakfast
@@ -500,16 +518,17 @@
           <img src="images/chef_rocco_portrait.webp" alt="Chef Rocco Chierici" width="800" height="1000" />
         </div>
         <div class="origin-content fade-in-right">
-          <h2 class="origin-title">Welcome to my kitchen.</h2>
+          <h2 class="origin-title">Welcome to my home.</h2>
           <p class="origin-text">
-            I am Rocco. I grew up in Italy, where food is not just eating—it is how we say "I love you,"
-            or "welcome home." When I came to Rhodes, I fell in love again. The sea here... it smells different.
-            The herbs in the mountains have a wildness that I adore.
+            I am Rocco. I grew up right here, in the heart of Rhodes' medieval town. This palazzo was not always a
+            hotel;
+            it was the house where I ran through the corridors with my sisters, Marta and Miriam.
+            The smell of my mother's cooking in this courtyard is what made me a chef.
           </p>
           <p class="origin-text">
-            At <strong>Aria di Rodi</strong>, my philosophy is simple. I take the best from my Italian training
-            and marry it with these incredible Rhodian ingredients. I don't want to impress you with
-            complexity. I want to comfort you with flavor.
+            At <strong>Aria di Rodi</strong>, my philosophy is a bridge. I carry my Italian heritage in my techniques,
+            but my ingredients are born from this Rhodian soil. I don't want to impress you with
+            complexity. I want to welcome you to our family table.
           </p>
           <p class="origin-text">
             My kitchen door is always open. Whether you want to talk about the catch of the day or just taste
@@ -554,10 +573,10 @@
         </div>
 
         <div class="partnership-image fade-in">
-          <img src="images/chef_rocco_cooking_class.webp" alt="Chef Rocco Hosting" />
+          <img src="images/chef_rocco_cooking_class.webp" alt="Chef Rocco sharing a meal with guests" />
           <div class="availability-badge">
-            <h4>Summer Availability</h4>
-            <p>The high season is busy. Let's start the conversation now to guarantee quality for your dates.</p>
+            <h4>Summer 2026</h4>
+            <p>High season availability is limited. Contact me today to secure your dates and coordinate menus.</p>
           </div>
         </div>
       </div>
@@ -687,6 +706,18 @@
   </a>
 
   <script src="js/main.js" defer></script>
+
+  
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then(reg => console.log('SW registered'))
+          .catch(err => console.log('SW error', err));
+      });
+    }
+  </script>
 </body>
 
 </html>
