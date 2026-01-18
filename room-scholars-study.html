@@ -58,7 +58,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
       media="print"
-      onload="this.media='all'"
+      onload="this.media = 'all'"
     />
     <noscript>
       <link
@@ -69,40 +69,97 @@
     <link rel="stylesheet" href="css/style.min.css" />
 
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "HotelRoom",
-        "name": "The Scholar's Study",
-        "description": "A haven for the curious mind with curated library, vintage writing desk, and views of medieval streets.",
-        "occupancy": { "@type": "QuantitativeValue", "maxValue": 2 },
-        "bed": {
-          "@type": "BedDetails",
-          "typeOfBed": "Queen",
-          "numberOfBeds": 1
-        },
-        "floorSize": {
-          "@type": "QuantitativeValue",
-          "value": 32,
-          "unitCode": "MTK"
-        },
-        "amenityFeature": [
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Curated Library"
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "HotelRoom",
+          "@id": "https://palazzoantico.gr/room-scholars-study.html",
+          "name": "The Scholar's Study",
+          "description": "A haven for the curious mind with curated library, vintage writing desk, and views of medieval streets.",
+          "image": [
+            "https://palazzoantico.gr/images/room_scholars_study.webp",
+            "https://palazzoantico.gr/images/scholars_study_desk.webp",
+            "https://palazzoantico.gr/images/scholars_study_library.webp",
+            "https://palazzoantico.gr/images/scholars_study_street.webp"
+          ],
+          "url": "https://palazzoantico.gr/room-scholars-study.html",
+          "occupancy": { "@type": "QuantitativeValue", "value": 2 },
+          "bed": {
+            "@type": "BedDetails",
+            "typeOfBed": "Queen",
+            "numberOfBeds": 1
           },
-          { "@type": "LocationFeatureSpecification", "name": "Writing Desk" },
-          { "@type": "LocationFeatureSpecification", "name": "Reading Chair" }
-        ],
-        "offers": {
-          "@type": "Offer",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": 200,
-            "priceCurrency": "EUR",
-            "unitText": "night"
+          "floorSize": {
+            "@type": "QuantitativeValue",
+            "value": 32,
+            "unitCode": "MTK"
+          },
+          "amenityFeature": [
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Curated Library",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Writing Desk",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Reading Chair",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Street View",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Free WiFi",
+              "value": true
+            }
+          ],
+          "containedInPlace": {
+            "@id": "https://palazzoantico.gr/#hotel"
+          },
+          "offers": {
+            "@type": "Offer",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": 200,
+              "priceCurrency": "EUR",
+              "unitCode": "DAY"
+            },
+            "availability": "https://schema.org/LimitedAvailability"
           }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://palazzoantico.gr/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Rooms",
+              "item": "https://palazzoantico.gr/rooms.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "The Scholar's Study",
+              "item": "https://palazzoantico.gr/room-scholars-study.html"
+            }
+          ]
         }
-      }
+      ]
     </script>
 
     <style>
@@ -460,6 +517,41 @@
     </nav>
 
     <main>
+      <!-- Breadcrumb Navigation -->
+      <nav
+        aria-label="Breadcrumb"
+        class="container breadcrumb"
+        style="padding-top: var(--space-24); padding-bottom: var(--space-4)"
+      >
+        <ol
+          style="
+            list-style: none;
+            display: flex;
+            gap: var(--space-2);
+            font-size: var(--text-sm);
+            color: var(--stone-warm);
+          "
+        >
+          <li>
+            <a href="index.html" style="text-decoration: none; color: inherit"
+              >Home</a
+            >
+          </li>
+          <li><span style="color: var(--terracotta)">/</span></li>
+          <li>
+            <a href="rooms.html" style="text-decoration: none; color: inherit"
+              >Rooms</a
+            >
+          </li>
+          <li><span style="color: var(--terracotta)">/</span></li>
+          <li
+            aria-current="page"
+            style="font-weight: 500; color: var(--stone-dark)"
+          >
+            The Scholar's Study
+          </li>
+        </ol>
+      </nav>
       <section class="room-hero">
         <div class="hero-bg">
           <img
@@ -1028,16 +1120,16 @@
     </footer>
     <a href="contact.html" class="book-btn-floating">Book Now</a>
     <script src="js/main.js" defer></script>
-    
-  
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js')
-          .then(reg => console.log('SW registered'))
-          .catch(err => console.log('SW error', err));
-      });
-    }
-  </script>
-</body>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("./sw.js")
+            .then((reg) => console.log("SW registered"))
+            .catch((err) => console.log("SW error", err));
+        });
+      }
+    </script>
+  </body>
 </html>

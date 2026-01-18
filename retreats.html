@@ -1,572 +1,589 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Residencies & Retreats | Palazzo Antico Rhodes</title>
+    <meta
+      name="description"
+      content="Immersive creative residencies and wellness retreats in medieval Rhodes. Host your own program or join our curated painting, embroidery, and writing workshops at Palazzo Antico Boutique Hotel."
+    />
+    <link rel="canonical" href="https://palazzoantico.gr/retreats.html" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Residencies & Retreats | Palazzo Antico Rhodes</title>
-  <meta name="description"
-    content="Immersive creative residencies and wellness retreats in medieval Rhodes. Host your own program or join our curated painting, embroidery, and writing workshops at Palazzo Antico Boutique Hotel." />
-  <link rel="canonical" href="https://palazzoantico.gr/retreats.html" />
+    <!-- Preload hero image -->
+    <link
+      rel="preload"
+      href="images/hero_courtyard.webp"
+      as="image"
+      fetchpriority="high"
+    />
 
-  <!-- Preload hero image -->
-  <link rel="preload" href="images/hero_courtyard.webp" as="image" fetchpriority="high" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      />
+    </noscript>
+    <link rel="stylesheet" href="css/style.min.css" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
-    media="print" onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" />
-  </noscript>
-  <link rel="stylesheet" href="css/style.min.css" />
-
-  <style>
-    /* ==========================================================================
+    <style>
+      /* ==========================================================================
          RETREATS PAGE - IMMERSIVE DESIGN
          ========================================================================== */
 
-    /* Hero Section */
-    .retreat-hero {
-      position: relative;
-      height: 100vh;
-      min-height: 700px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      background: var(--stone-dark);
-    }
+      /* Hero Section */
+      .retreat-hero {
+        position: relative;
+        height: 100vh;
+        min-height: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background: var(--stone-dark);
+      }
 
-    .retreat-hero-bg {
-      position: absolute;
-      inset: 0;
-    }
+      .retreat-hero-bg {
+        position: absolute;
+        inset: 0;
+      }
 
-    .retreat-hero-bg img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.6;
-    }
+      .retreat-hero-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.6;
+      }
 
-    .retreat-hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom,
+      .retreat-hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
           rgba(44, 40, 37, 0.2) 0%,
           rgba(44, 40, 37, 0.5) 50%,
-          rgba(44, 40, 37, 0.95) 100%);
-    }
-
-    .retreat-hero-content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      max-width: 900px;
-      padding: 0 var(--space-8);
-    }
-
-    .retreat-hero-eyebrow {
-      font-family: var(--font-accent);
-      font-size: var(--text-lg);
-      color: var(--gold);
-      font-style: italic;
-      letter-spacing: 0.2em;
-      margin-bottom: var(--space-4);
-    }
-
-    .retreat-hero-title {
-      font-family: var(--font-heading);
-      font-size: clamp(3rem, 6vw, 5rem);
-      color: var(--white);
-      line-height: 1.1;
-      margin-bottom: var(--space-6);
-    }
-
-    .retreat-hero-subtitle {
-      font-size: var(--text-xl);
-      color: var(--cream);
-      max-width: 600px;
-      margin: 0 auto var(--space-10);
-      line-height: 1.7;
-    }
-
-    .retreat-hero-scroll {
-      position: absolute;
-      bottom: var(--space-12);
-      left: 50%;
-      transform: translateX(-50%);
-      color: var(--cream);
-      font-size: var(--text-xs);
-      text-transform: uppercase;
-      letter-spacing: 0.3em;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: var(--space-2);
-      animation: float 3s ease-in-out infinite;
-    }
-
-    @keyframes float {
-
-      0%,
-      100% {
-        transform: translateX(-50%) translateY(0);
+          rgba(44, 40, 37, 0.95) 100%
+        );
       }
 
-      50% {
-        transform: translateX(-50%) translateY(-10px);
+      .retreat-hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        max-width: 900px;
+        padding: 0 var(--space-8);
       }
-    }
 
-    /* Horizontal Scroll Venue Section */
-    .venue-section {
-      padding: var(--space-20) 0;
-      background: var(--cream-light);
-      overflow: hidden;
-    }
+      .retreat-hero-eyebrow {
+        font-family: var(--font-accent);
+        font-size: var(--text-lg);
+        color: var(--gold);
+        font-style: italic;
+        letter-spacing: 0.2em;
+        margin-bottom: var(--space-4);
+      }
 
-    .venue-scroll-container {
-      display: flex;
-      gap: var(--space-8);
-      padding: var(--space-12) var(--space-8);
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-    }
+      .retreat-hero-title {
+        font-family: var(--font-heading);
+        font-size: clamp(3rem, 6vw, 5rem);
+        color: var(--white);
+        line-height: 1.1;
+        margin-bottom: var(--space-6);
+      }
 
-    .venue-scroll-container::-webkit-scrollbar {
-      display: none;
-    }
+      .retreat-hero-subtitle {
+        font-size: var(--text-xl);
+        color: var(--cream);
+        max-width: 600px;
+        margin: 0 auto var(--space-10);
+        line-height: 1.7;
+      }
 
-    .venue-card {
-      flex-shrink: 0;
-      width: 400px;
-      height: 550px;
-      position: relative;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      scroll-snap-align: center;
-    }
+      .retreat-hero-scroll {
+        position: absolute;
+        bottom: var(--space-12);
+        left: 50%;
+        transform: translateX(-50%);
+        color: var(--cream);
+        font-size: var(--text-xs);
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-2);
+        animation: float 3s ease-in-out infinite;
+      }
 
-    .venue-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.8s ease;
-    }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateX(-50%) translateY(0);
+        }
 
-    .venue-card:hover img {
-      transform: scale(1.1);
-    }
+        50% {
+          transform: translateX(-50%) translateY(-10px);
+        }
+      }
 
-    .venue-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top,
+      /* Horizontal Scroll Venue Section */
+      .venue-section {
+        padding: var(--space-20) 0;
+        background: var(--cream-light);
+        overflow: hidden;
+      }
+
+      .venue-scroll-container {
+        display: flex;
+        gap: var(--space-8);
+        padding: var(--space-12) var(--space-8);
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+
+      .venue-scroll-container::-webkit-scrollbar {
+        display: none;
+      }
+
+      .venue-card {
+        flex-shrink: 0;
+        width: 400px;
+        height: 550px;
+        position: relative;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        scroll-snap-align: center;
+      }
+
+      .venue-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s ease;
+      }
+
+      .venue-card:hover img {
+        transform: scale(1.1);
+      }
+
+      .venue-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
           rgba(44, 40, 37, 0.95) 0%,
           rgba(44, 40, 37, 0.3) 40%,
-          transparent 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: var(--space-8);
-    }
+          transparent 100%
+        );
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: var(--space-8);
+      }
 
-    .venue-title {
-      font-family: var(--font-heading);
-      font-size: var(--text-2xl);
-      color: var(--white);
-      margin-bottom: var(--space-2);
-    }
+      .venue-title {
+        font-family: var(--font-heading);
+        font-size: var(--text-2xl);
+        color: var(--white);
+        margin-bottom: var(--space-2);
+      }
 
-    .venue-activities {
-      font-size: var(--text-sm);
-      color: var(--gold);
-      font-style: italic;
-    }
+      .venue-activities {
+        font-size: var(--text-sm);
+        color: var(--gold);
+        font-style: italic;
+      }
 
-    /* Retreat Collection Section */
-    .collection-section {
-      padding: var(--space-32) 0;
-      background: var(--white);
-    }
+      /* Retreat Collection Section */
+      .collection-section {
+        padding: var(--space-32) 0;
+        background: var(--white);
+      }
 
-    .retreat-card-large {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 0;
-      background: var(--cream-light);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      margin-bottom: var(--space-12);
-      box-shadow: var(--shadow-xl);
-    }
-
-    .retreat-card-large:nth-child(even) {
-      direction: rtl;
-    }
-
-    .retreat-card-large:nth-child(even)>* {
-      direction: ltr;
-    }
-
-    .retreat-card-image {
-      height: 100%;
-      min-height: 500px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .retreat-card-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.8s ease;
-    }
-
-    .retreat-card-large:hover .retreat-card-image img {
-      transform: scale(1.05);
-    }
-
-    .retreat-badge {
-      position: absolute;
-      top: var(--space-6);
-      left: var(--space-6);
-      background: var(--terracotta);
-      color: var(--white);
-      padding: var(--space-2) var(--space-4);
-      font-size: var(--text-xs);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      border-radius: var(--radius-sm);
-    }
-
-    .retreat-card-content {
-      padding: var(--space-12);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .retreat-type {
-      font-family: var(--font-accent);
-      font-size: var(--text-lg);
-      color: var(--gold);
-      font-style: italic;
-      margin-bottom: var(--space-3);
-    }
-
-    .retreat-name {
-      font-family: var(--font-heading);
-      font-size: clamp(1.8rem, 3vw, 2.5rem);
-      color: var(--stone-dark);
-      margin-bottom: var(--space-4);
-      line-height: 1.2;
-    }
-
-    .retreat-meta {
-      display: flex;
-      gap: var(--space-6);
-      margin-bottom: var(--space-6);
-      font-size: var(--text-sm);
-      color: var(--stone-warm);
-    }
-
-    .retreat-meta-item {
-      display: flex;
-      align-items: center;
-      gap: var(--space-2);
-    }
-
-    .retreat-description {
-      font-size: var(--text-base);
-      line-height: 1.8;
-      color: var(--stone-warm);
-      margin-bottom: var(--space-8);
-    }
-
-    .retreat-highlights {
-      display: flex;
-      gap: var(--space-4);
-      flex-wrap: wrap;
-      margin-bottom: var(--space-8);
-    }
-
-    .retreat-highlight {
-      background: var(--white);
-      padding: var(--space-2) var(--space-4);
-      font-size: var(--text-xs);
-      color: var(--stone-dark);
-      border: 1px solid var(--cream-dark);
-      border-radius: var(--radius-full);
-    }
-
-    .retreat-cta {
-      display: inline-flex;
-      align-self: flex-start;
-    }
-
-    /* Partner Section */
-    .partner-section {
-      position: relative;
-      padding: var(--space-32) 0;
-      background: var(--stone-dark);
-      color: var(--white);
-      overflow: hidden;
-    }
-
-    .partner-watermark {
-      position: absolute;
-      font-size: clamp(10rem, 25vw, 30rem);
-      font-family: var(--font-heading);
-      color: rgba(255, 255, 255, 0.03);
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      white-space: nowrap;
-      font-weight: 700;
-    }
-
-    .partner-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-16);
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .partner-content h2 {
-      font-family: var(--font-heading);
-      font-size: clamp(2rem, 4vw, 3rem);
-      color: var(--white);
-      margin-bottom: var(--space-6);
-    }
-
-    .partner-content p {
-      font-size: var(--text-lg);
-      line-height: 1.8;
-      color: rgba(255, 255, 255, 0.8);
-      margin-bottom: var(--space-8);
-    }
-
-    .partner-benefits {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-6);
-      margin-bottom: var(--space-10);
-    }
-
-    .partner-benefit {
-      display: flex;
-      align-items: center;
-      gap: var(--space-3);
-      font-size: var(--text-base);
-      color: rgba(255, 255, 255, 0.9);
-    }
-
-    .partner-benefit-icon {
-      font-size: 1.5rem;
-    }
-
-    .partner-image {
-      position: relative;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      aspect-ratio: 4/3;
-    }
-
-    .partner-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .partner-image-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .partner-image-text {
-      background: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(4px);
-      padding: var(--space-6) var(--space-8);
-      border-radius: var(--radius-lg);
-      text-align: center;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .partner-image-text h4 {
-      font-family: var(--font-heading);
-      font-size: var(--text-2xl);
-      margin-bottom: var(--space-2);
-    }
-
-    .partner-image-text p {
-      font-size: var(--text-sm);
-      font-style: italic;
-      margin: 0;
-    }
-
-    /* What's Included Section */
-    .included-section {
-      padding: var(--space-20) 0;
-      background: var(--cream-light);
-    }
-
-    .included-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: var(--space-8);
-    }
-
-    .included-item {
-      text-align: center;
-      padding: var(--space-8);
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--cream-dark);
-      transition: all 0.3s ease;
-    }
-
-    .included-item:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-lg);
-      border-color: var(--gold-light);
-    }
-
-    .included-icon {
-      font-size: 2.5rem;
-      margin-bottom: var(--space-4);
-    }
-
-    .included-title {
-      font-weight: 600;
-      color: var(--stone-dark);
-      margin-bottom: var(--space-2);
-    }
-
-    .included-desc {
-      font-size: var(--text-sm);
-      color: var(--stone-warm);
-    }
-
-    /* FAQ Section */
-    .faq-section {
-      padding: var(--space-20) 0;
-      background: var(--white);
-    }
-
-    .faq-container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .faq-item {
-      border-bottom: 1px solid var(--cream-dark);
-    }
-
-    .faq-question {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: var(--space-6) 0;
-      background: none;
-      border: none;
-      cursor: pointer;
-      text-align: left;
-      font-family: var(--font-heading);
-      font-size: var(--text-lg);
-      color: var(--stone-dark);
-      transition: color 0.3s ease;
-    }
-
-    .faq-question:hover {
-      color: var(--terracotta);
-    }
-
-    .faq-icon {
-      font-size: var(--text-2xl);
-      transition: transform 0.3s ease;
-    }
-
-    .faq-item.active .faq-icon {
-      transform: rotate(45deg);
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition:
-        max-height 0.4s ease,
-        padding 0.4s ease;
-    }
-
-    .faq-item.active .faq-answer {
-      max-height: 300px;
-      padding-bottom: var(--space-6);
-    }
-
-    .faq-answer p {
-      color: var(--stone-warm);
-      line-height: 1.8;
-    }
-
-    /* Responsive */
-    @media (max-width: 992px) {
       .retreat-card-large {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 0;
+        background: var(--cream-light);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        margin-bottom: var(--space-12);
+        box-shadow: var(--shadow-xl);
       }
 
       .retreat-card-large:nth-child(even) {
+        direction: rtl;
+      }
+
+      .retreat-card-large:nth-child(even) > * {
         direction: ltr;
       }
 
       .retreat-card-image {
-        min-height: 350px;
+        height: 100%;
+        min-height: 500px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .retreat-card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s ease;
+      }
+
+      .retreat-card-large:hover .retreat-card-image img {
+        transform: scale(1.05);
+      }
+
+      .retreat-badge {
+        position: absolute;
+        top: var(--space-6);
+        left: var(--space-6);
+        background: var(--terracotta);
+        color: var(--white);
+        padding: var(--space-2) var(--space-4);
+        font-size: var(--text-xs);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        border-radius: var(--radius-sm);
+      }
+
+      .retreat-card-content {
+        padding: var(--space-12);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .retreat-type {
+        font-family: var(--font-accent);
+        font-size: var(--text-lg);
+        color: var(--gold);
+        font-style: italic;
+        margin-bottom: var(--space-3);
+      }
+
+      .retreat-name {
+        font-family: var(--font-heading);
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+        color: var(--stone-dark);
+        margin-bottom: var(--space-4);
+        line-height: 1.2;
+      }
+
+      .retreat-meta {
+        display: flex;
+        gap: var(--space-6);
+        margin-bottom: var(--space-6);
+        font-size: var(--text-sm);
+        color: var(--stone-warm);
+      }
+
+      .retreat-meta-item {
+        display: flex;
+        align-items: center;
+        gap: var(--space-2);
+      }
+
+      .retreat-description {
+        font-size: var(--text-base);
+        line-height: 1.8;
+        color: var(--stone-warm);
+        margin-bottom: var(--space-8);
+      }
+
+      .retreat-highlights {
+        display: flex;
+        gap: var(--space-4);
+        flex-wrap: wrap;
+        margin-bottom: var(--space-8);
+      }
+
+      .retreat-highlight {
+        background: var(--white);
+        padding: var(--space-2) var(--space-4);
+        font-size: var(--text-xs);
+        color: var(--stone-dark);
+        border: 1px solid var(--cream-dark);
+        border-radius: var(--radius-full);
+      }
+
+      .retreat-cta {
+        display: inline-flex;
+        align-self: flex-start;
+      }
+
+      /* Partner Section */
+      .partner-section {
+        position: relative;
+        padding: var(--space-32) 0;
+        background: var(--stone-dark);
+        color: var(--white);
+        overflow: hidden;
+      }
+
+      .partner-watermark {
+        position: absolute;
+        font-size: clamp(10rem, 25vw, 30rem);
+        font-family: var(--font-heading);
+        color: rgba(255, 255, 255, 0.03);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        white-space: nowrap;
+        font-weight: 700;
       }
 
       .partner-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-12);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-16);
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .partner-content h2 {
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 4vw, 3rem);
+        color: var(--white);
+        margin-bottom: var(--space-6);
+      }
+
+      .partner-content p {
+        font-size: var(--text-lg);
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: var(--space-8);
+      }
+
+      .partner-benefits {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-6);
+        margin-bottom: var(--space-10);
+      }
+
+      .partner-benefit {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+        font-size: var(--text-base);
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .partner-benefit-icon {
+        font-size: 1.5rem;
       }
 
       .partner-image {
-        order: -1;
+        position: relative;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        aspect-ratio: 4/3;
+      }
+
+      .partner-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .partner-image-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .partner-image-text {
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(4px);
+        padding: var(--space-6) var(--space-8);
+        border-radius: var(--radius-lg);
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .partner-image-text h4 {
+        font-family: var(--font-heading);
+        font-size: var(--text-2xl);
+        margin-bottom: var(--space-2);
+      }
+
+      .partner-image-text p {
+        font-size: var(--text-sm);
+        font-style: italic;
+        margin: 0;
+      }
+
+      /* What's Included Section */
+      .included-section {
+        padding: var(--space-20) 0;
+        background: var(--cream-light);
       }
 
       .included-grid {
-        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: var(--space-8);
       }
 
-      .venue-card {
-        width: 320px;
-        height: 450px;
+      .included-item {
+        text-align: center;
+        padding: var(--space-8);
+        background: var(--white);
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--cream-dark);
+        transition: all 0.3s ease;
       }
-    }
 
-    @media (max-width: 576px) {
-      .included-grid {
-        grid-template-columns: 1fr;
+      .included-item:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--gold-light);
       }
-    }
-  </style>
 
-  <!-- Schema.org Structured Data -->
-  <script type="application/ld+json">
+      .included-icon {
+        font-size: 2.5rem;
+        margin-bottom: var(--space-4);
+      }
+
+      .included-title {
+        font-weight: 600;
+        color: var(--stone-dark);
+        margin-bottom: var(--space-2);
+      }
+
+      .included-desc {
+        font-size: var(--text-sm);
+        color: var(--stone-warm);
+      }
+
+      /* FAQ Section */
+      .faq-section {
+        padding: var(--space-20) 0;
+        background: var(--white);
+      }
+
+      .faq-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .faq-item {
+        border-bottom: 1px solid var(--cream-dark);
+      }
+
+      .faq-question {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--space-6) 0;
+        background: none;
+        border: none;
+        cursor: pointer;
+        text-align: left;
+        font-family: var(--font-heading);
+        font-size: var(--text-lg);
+        color: var(--stone-dark);
+        transition: color 0.3s ease;
+      }
+
+      .faq-question:hover {
+        color: var(--terracotta);
+      }
+
+      .faq-icon {
+        font-size: var(--text-2xl);
+        transition: transform 0.3s ease;
+      }
+
+      .faq-item.active .faq-icon {
+        transform: rotate(45deg);
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.4s ease,
+          padding 0.4s ease;
+      }
+
+      .faq-item.active .faq-answer {
+        max-height: 300px;
+        padding-bottom: var(--space-6);
+      }
+
+      .faq-answer p {
+        color: var(--stone-warm);
+        line-height: 1.8;
+      }
+
+      /* Responsive */
+      @media (max-width: 992px) {
+        .retreat-card-large {
+          grid-template-columns: 1fr;
+        }
+
+        .retreat-card-large:nth-child(even) {
+          direction: ltr;
+        }
+
+        .retreat-card-image {
+          min-height: 350px;
+        }
+
+        .partner-grid {
+          grid-template-columns: 1fr;
+          gap: var(--space-12);
+        }
+
+        .partner-image {
+          order: -1;
+        }
+
+        .included-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .venue-card {
+          width: 320px;
+          height: 450px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .included-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Event",
@@ -587,545 +604,624 @@
         }
       }
     </script>
-</head>
+  </head>
 
-<body>
-  <!-- Navigation -->
-  <nav class="nav">
-    <div class="container nav-inner">
-      <a href="index.html" class="nav-logo">PALAZZO ANTICO</a>
-      <ul class="nav-links">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="rooms.html" class="nav-link">Rooms</a></li>
-        <li><a href="experience.html" class="nav-link">Experience</a></li>
-        <li><a href="retreats.html" class="nav-link active">Retreats</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
+  <body>
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="container nav-inner">
+        <a href="index.html" class="nav-logo">PALAZZO ANTICO</a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="rooms.html" class="nav-link">Rooms</a></li>
+          <li><a href="experience.html" class="nav-link">Experience</a></li>
+          <li><a href="retreats.html" class="nav-link active">Retreats</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-overlay"></div>
+    <div class="mobile-menu">
+      <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="rooms.html" class="mobile-nav-link">Rooms</a></li>
+        <li>
+          <a href="experience.html" class="mobile-nav-link">Experience</a>
+        </li>
+        <li>
+          <a href="retreats.html" class="mobile-nav-link active">Retreats</a>
+        </li>
+        <li><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </div>
-  </nav>
 
-  <!-- Mobile Menu -->
-  <div class="mobile-overlay"></div>
-  <div class="mobile-menu">
-    <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
-    <ul class="mobile-nav-links">
-      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
-      <li><a href="rooms.html" class="mobile-nav-link">Rooms</a></li>
-      <li>
-        <a href="experience.html" class="mobile-nav-link">Experience</a>
-      </li>
-      <li>
-        <a href="retreats.html" class="mobile-nav-link active">Retreats</a>
-      </li>
-      <li><a href="about.html" class="mobile-nav-link">About</a></li>
-      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
-    </ul>
-  </div>
-
-  <!-- Immersive Hero -->
-  <section class="retreat-hero">
-    <div class="retreat-hero-bg">
-      <img src="images/hero_courtyard.webp" alt="Palazzo Antico Courtyard" width="1920" height="1080"
-        fetchpriority="high" srcset="
+    <!-- Immersive Hero -->
+    <section class="retreat-hero">
+      <div class="retreat-hero-bg">
+        <img
+          src="images/hero_courtyard.webp"
+          alt="Palazzo Antico Courtyard"
+          width="1920"
+          height="1080"
+          fetchpriority="high"
+          srcset="
             images/hero_courtyard_400.webp   400w,
             images/hero_courtyard_800.webp   800w,
             images/hero_courtyard_1200.webp 1200w,
             images/hero_courtyard.webp      1920w
-          " sizes="100vw" />
-      <div class="retreat-hero-overlay"></div>
-    </div>
-    <div class="retreat-hero-content fade-in">
-      <p class="retreat-hero-eyebrow">Where Creation Breathes</p>
-      <h1 class="retreat-hero-title">Residencies & Retreats</h1>
-      <p class="retreat-hero-subtitle">
-        An exclusive sanctuary for artists, thinkers, and seekers. Where 500
-        years of history fuels modern creativity.
-      </p>
-      <a href="#retreats" class="btn btn-gold">Explore Programs</a>
-    </div>
-    <div class="retreat-hero-scroll">
-      <span>Discover</span>
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M12 5v14M5 12l7 7 7-7" />
-      </svg>
-    </div>
-  </section>
-
-  <!-- Horizontal Scroll Venues -->
-  <section class="venue-section">
-    <div class="container">
-      <div class="section-header fade-in">
-        <p class="section-eyebrow">The Sanctuary</p>
-        <h2 class="section-title">Spaces That Inspire</h2>
-        <p class="section-description">
-          From sun-drenched courtyards to candlelit cellars, every corner of
-          Palazzo Antico invites creation
-        </p>
+          "
+          sizes="100vw"
+        />
+        <div class="retreat-hero-overlay"></div>
       </div>
-    </div>
-    <div class="venue-scroll-container">
-      <div class="venue-card fade-in">
-        <img src="images/hero_courtyard.webp" alt="The Courtyard" srcset="
+      <div class="retreat-hero-content fade-in">
+        <p class="retreat-hero-eyebrow">Where Creation Breathes</p>
+        <h1 class="retreat-hero-title">Residencies & Retreats</h1>
+        <p class="retreat-hero-subtitle">
+          An exclusive sanctuary for artists, thinkers, and seekers. Where 500
+          years of history fuels modern creativity.
+        </p>
+        <a href="#retreats" class="btn btn-gold">Explore Programs</a>
+      </div>
+      <div class="retreat-hero-scroll">
+        <span>Discover</span>
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M12 5v14M5 12l7 7 7-7" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- Horizontal Scroll Venues -->
+    <section class="venue-section">
+      <div class="container">
+        <div class="section-header fade-in">
+          <p class="section-eyebrow">The Sanctuary</p>
+          <h2 class="section-title">Spaces That Inspire</h2>
+          <p class="section-description">
+            From sun-drenched courtyards to candlelit cellars, every corner of
+            Palazzo Antico invites creation
+          </p>
+        </div>
+      </div>
+      <div class="venue-scroll-container">
+        <div class="venue-card fade-in">
+          <img
+            src="images/hero_courtyard.webp"
+            alt="The Courtyard"
+            srcset="
               images/hero_courtyard_400.webp   400w,
               images/hero_courtyard_800.webp   800w,
               images/hero_courtyard_1200.webp 1200w,
               images/hero_courtyard.webp      1920w
-            " sizes="(max-width: 768px) 100vw, 50vw" />
-        <div class="venue-overlay">
-          <h3 class="venue-title">The Courtyard</h3>
-          <p class="venue-activities">
-            Plein Air Painting • Morning Yoga • Evening Gatherings
-          </p>
+            "
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+          <div class="venue-overlay">
+            <h3 class="venue-title">The Courtyard</h3>
+            <p class="venue-activities">
+              Plein Air Painting • Morning Yoga • Evening Gatherings
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="venue-card fade-in">
-        <div class="venue-overlay">
-          <h3 class="venue-title">The Library</h3>
-          <p class="venue-activities">
-            Writing Residencies • Quiet Reflection • Research
-          </p>
+        <div class="venue-card fade-in">
+          <div class="venue-overlay">
+            <h3 class="venue-title">The Library</h3>
+            <p class="venue-activities">
+              Writing Residencies • Quiet Reflection • Research
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="venue-card fade-in">
-        <img src="images/experience_terrace.webp" alt="The Rooftop" srcset="
+        <div class="venue-card fade-in">
+          <img
+            src="images/experience_terrace.webp"
+            alt="The Rooftop"
+            srcset="
               images/experience_terrace_400.webp   400w,
               images/experience_terrace_800.webp   800w,
               images/experience_terrace_1200.webp 1200w,
               images/experience_terrace.webp      1920w
-            " sizes="(max-width: 768px) 100vw, 50vw" />
-        <div class="venue-overlay">
-          <h3 class="venue-title">The Rooftop</h3>
-          <p class="venue-activities">
-            Sunrise Meditation • Sunset Sessions • Star Gazing
-          </p>
+            "
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+          <div class="venue-overlay">
+            <h3 class="venue-title">The Rooftop</h3>
+            <p class="venue-activities">
+              Sunrise Meditation • Sunset Sessions • Star Gazing
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="venue-card fade-in">
-        <img src="images/experience_restaurant.webp" alt="The Cellar" srcset="
+        <div class="venue-card fade-in">
+          <img
+            src="images/experience_restaurant.webp"
+            alt="The Cellar"
+            srcset="
               images/experience_restaurant_400.webp   400w,
               images/experience_restaurant_800.webp   800w,
               images/experience_restaurant_1200.webp 1200w,
               images/experience_restaurant.webp      1920w
-            " sizes="(max-width: 768px) 100vw, 50vw" />
-        <div class="venue-overlay">
-          <h3 class="venue-title">The Cellar</h3>
-          <p class="venue-activities">
-            Intimate Workshops • Wine Tastings • Private Dinners
-          </p>
+            "
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+          <div class="venue-overlay">
+            <h3 class="venue-title">The Cellar</h3>
+            <p class="venue-activities">
+              Intimate Workshops • Wine Tastings • Private Dinners
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="venue-card fade-in">
-        <img src="images/scholars_study_desk.webp" alt="The Atelier" srcset="
+        <div class="venue-card fade-in">
+          <img
+            src="images/scholars_study_desk.webp"
+            alt="The Atelier"
+            srcset="
               images/scholars_study_desk_400.webp   400w,
               images/scholars_study_desk_800.webp   800w,
               images/scholars_study_desk_1200.webp 1200w,
               images/scholars_study_desk.webp      1920w
-            " sizes="(max-width: 768px) 100vw, 50vw" />
-        <div class="venue-overlay">
-          <h3 class="venue-title">The Atelier</h3>
-          <p class="venue-activities">
-            Textile Arts • Art Classes • Creative Sessions
-          </p>
+            "
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+          <div class="venue-overlay">
+            <h3 class="venue-title">The Atelier</h3>
+            <p class="venue-activities">
+              Textile Arts • Art Classes • Creative Sessions
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 2026 Retreat Collection -->
-  <section class="collection-section" id="retreats">
-    <div class="container">
-      <div class="section-header fade-in">
-        <p class="section-eyebrow">The 2026 Collection</p>
-        <h2 class="section-title">Curated Residencies</h2>
-        <p class="section-description">
-          Limited-capacity immersive programs led by world-class facilitators
-        </p>
-      </div>
+    <!-- 2026 Retreat Collection -->
+    <section class="collection-section" id="retreats">
+      <div class="container">
+        <div class="section-header fade-in">
+          <p class="section-eyebrow">The 2026 Collection</p>
+          <h2 class="section-title">Curated Residencies</h2>
+          <p class="section-description">
+            Limited-capacity immersive programs led by world-class facilitators
+          </p>
+        </div>
 
-      <!-- Venetian Palette -->
-      <div class="retreat-card-large fade-in">
-        <div class="retreat-card-image">
-          <img src="images/experience_oldtown.webp" alt="Painting the Old Town" srcset="
+        <!-- Venetian Palette -->
+        <div class="retreat-card-large fade-in">
+          <div class="retreat-card-image">
+            <img
+              src="images/experience_oldtown.webp"
+              alt="Painting the Old Town"
+              srcset="
                 images/experience_oldtown_400.webp   400w,
                 images/experience_oldtown_800.webp   800w,
                 images/experience_oldtown_1200.webp 1200w,
                 images/experience_oldtown.webp      1920w
-              " sizes="(max-width: 768px) 100vw, 50vw" />
-          <span class="retreat-badge">Limited Spaces</span>
-        </div>
-        <div class="retreat-card-content">
-          <p class="retreat-type">Creative Arts</p>
-          <h3 class="retreat-name">The Venetian Palette</h3>
-          <div class="retreat-meta">
-            <span class="retreat-meta-item">📅 May 12–19, 2026</span>
-            <span class="retreat-meta-item">👥 8 Participants</span>
+              "
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <span class="retreat-badge">Limited Spaces</span>
           </div>
-          <p class="retreat-description">
-            An immersive oil painting residency exploring the chiaroscuro of
-            the Medieval Old Town. Capture the interplay of Aegean light on
-            500-year-old stone under the guidance of contemporary master Elena
-            Moretti.
-          </p>
-          <div class="retreat-highlights">
-            <span class="retreat-highlight">Daily Plein Air Sessions</span>
-            <span class="retreat-highlight">Private Site Access</span>
-            <span class="retreat-highlight">Materials Included</span>
-            <span class="retreat-highlight">Exhibition</span>
+          <div class="retreat-card-content">
+            <p class="retreat-type">Creative Arts</p>
+            <h3 class="retreat-name">The Venetian Palette</h3>
+            <div class="retreat-meta">
+              <span class="retreat-meta-item">📅 May 12–19, 2026</span>
+              <span class="retreat-meta-item">👥 8 Participants</span>
+            </div>
+            <p class="retreat-description">
+              An immersive oil painting residency exploring the chiaroscuro of
+              the Medieval Old Town. Capture the interplay of Aegean light on
+              500-year-old stone under the guidance of contemporary master Elena
+              Moretti.
+            </p>
+            <div class="retreat-highlights">
+              <span class="retreat-highlight">Daily Plein Air Sessions</span>
+              <span class="retreat-highlight">Private Site Access</span>
+              <span class="retreat-highlight">Materials Included</span>
+              <span class="retreat-highlight">Exhibition</span>
+            </div>
+            <a
+              href="contact.html?retreat=painting"
+              class="btn btn-primary retreat-cta"
+              >Apply for Residency</a
+            >
           </div>
-          <a href="contact.html?retreat=painting" class="btn btn-primary retreat-cta">Apply for Residency</a>
         </div>
-      </div>
 
-      <!-- Threads of Rhodes -->
-      <div class="retreat-card-large fade-in">
-        <div class="retreat-card-image">
-          <img src="images/retreat_embroidery.webp" alt="Embroidery Workshop" srcset="
+        <!-- Threads of Rhodes -->
+        <div class="retreat-card-large fade-in">
+          <div class="retreat-card-image">
+            <img
+              src="images/retreat_embroidery.webp"
+              alt="Embroidery Workshop"
+              srcset="
                 images/retreat_embroidery_400.webp   400w,
                 images/retreat_embroidery_800.webp   800w,
                 images/retreat_embroidery_1200.webp 1200w,
                 images/retreat_embroidery.webp      1920w
-              " sizes="(max-width: 768px) 100vw, 50vw" />
-          <span class="retreat-badge">4 Spaces Left</span>
+              "
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <span class="retreat-badge">4 Spaces Left</span>
+          </div>
+          <div class="retreat-card-content">
+            <p class="retreat-type">Fiber Arts</p>
+            <h3 class="retreat-name">Threads of Rhodes</h3>
+            <div class="retreat-meta">
+              <span class="retreat-meta-item">📅 Sept 4–11, 2026</span>
+              <span class="retreat-meta-item">👥 6 Participants</span>
+            </div>
+            <p class="retreat-description">
+              Rediscover the ancient Rhodian cross-stitch and intricate patterns
+              of the Dodecanese. A tactile journey through silk, linen, and
+              history with master embroiderer Maria Kosta, culminating in a
+              courtyard exhibition.
+            </p>
+            <div class="retreat-highlights">
+              <span class="retreat-highlight">Traditional Techniques</span>
+              <span class="retreat-highlight">Natural Dyes</span>
+              <span class="retreat-highlight">Artisan Visits</span>
+              <span class="retreat-highlight">All Levels</span>
+            </div>
+            <a
+              href="contact.html?retreat=embroidery"
+              class="btn btn-primary retreat-cta"
+              >Apply for Residency</a
+            >
+          </div>
         </div>
-        <div class="retreat-card-content">
-          <p class="retreat-type">Fiber Arts</p>
-          <h3 class="retreat-name">Threads of Rhodes</h3>
-          <div class="retreat-meta">
-            <span class="retreat-meta-item">📅 Sept 4–11, 2026</span>
-            <span class="retreat-meta-item">👥 6 Participants</span>
+
+        <!-- Ink & Stone -->
+        <div class="retreat-card-large fade-in">
+          <div class="retreat-card-image">
+            <img
+              src="images/retreat_writing.webp"
+              alt="Inspirational Writing Nook"
+            />
           </div>
-          <p class="retreat-description">
-            Rediscover the ancient Rhodian cross-stitch and intricate patterns
-            of the Dodecanese. A tactile journey through silk, linen, and
-            history with master embroiderer Maria Kosta, culminating in a
-            courtyard exhibition.
-          </p>
-          <div class="retreat-highlights">
-            <span class="retreat-highlight">Traditional Techniques</span>
-            <span class="retreat-highlight">Natural Dyes</span>
-            <span class="retreat-highlight">Artisan Visits</span>
-            <span class="retreat-highlight">All Levels</span>
+          <div class="retreat-card-content">
+            <p class="retreat-type">Literary Arts</p>
+            <h3 class="retreat-name">Ink & Stone</h3>
+            <div class="retreat-meta">
+              <span class="retreat-meta-item">📅 Oct 6–13, 2026</span>
+              <span class="retreat-meta-item">👥 5 Participants</span>
+            </div>
+            <p class="retreat-description">
+              A week of focused writing in the Scholar's Study, overlooking
+              medieval streets that inspired countless stories. Daily workshops,
+              evening readings, and uninterrupted time to find your voice.
+            </p>
+            <div class="retreat-highlights">
+              <span class="retreat-highlight">Private Writing Space</span>
+              <span class="retreat-highlight">Daily Workshops</span>
+              <span class="retreat-highlight">One-on-One Feedback</span>
+              <span class="retreat-highlight">Evening Readings</span>
+            </div>
+            <a
+              href="contact.html?retreat=writing"
+              class="btn btn-primary retreat-cta"
+              >Apply for Residency</a
+            >
           </div>
-          <a href="contact.html?retreat=embroidery" class="btn btn-primary retreat-cta">Apply for Residency</a>
+        </div>
+
+        <!-- Stillness Practice -->
+        <div class="retreat-card-large fade-in">
+          <div class="retreat-card-image">
+            <img
+              src="images/retreat_yoga_meditation.webp"
+              alt="Yoga on the Rooftop at Sunrise"
+            />
+          </div>
+          <div class="retreat-card-content">
+            <p class="retreat-type">Wellness</p>
+            <h3 class="retreat-name">Stillness Practice</h3>
+            <div class="retreat-meta">
+              <span class="retreat-meta-item">📅 Year-Round (5 nights)</span>
+              <span class="retreat-meta-item">👥 4 Participants</span>
+            </div>
+            <p class="retreat-description">
+              Sunrise yoga on the rooftop, meditation in the courtyard, and
+              traditional hammam rituals. A deeply personal journey to stillness
+              in one of Europe's most atmospheric settings.
+            </p>
+            <div class="retreat-highlights">
+              <span class="retreat-highlight">Sunrise Sessions</span>
+              <span class="retreat-highlight">Hammam Experience</span>
+              <span class="retreat-highlight">Plant-Based Menu</span>
+              <span class="retreat-highlight">Flexible Dates</span>
+            </div>
+            <a
+              href="contact.html?retreat=wellness"
+              class="btn btn-primary retreat-cta"
+              >Enquire Now</a
+            >
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- Ink & Stone -->
-      <div class="retreat-card-large fade-in">
-        <div class="retreat-card-image">
-          <img src="images/scholars_study_desk.webp" alt="Writing Retreat" srcset="
-                images/scholars_study_desk_400.webp   400w,
-                images/scholars_study_desk_800.webp   800w,
-                images/scholars_study_desk_1200.webp 1200w,
-                images/scholars_study_desk.webp      1920w
-              " sizes="(max-width: 768px) 100vw, 50vw" />
-        </div>
-        <div class="retreat-card-content">
-          <p class="retreat-type">Literary Arts</p>
-          <h3 class="retreat-name">Ink & Stone</h3>
-          <div class="retreat-meta">
-            <span class="retreat-meta-item">📅 Oct 6–13, 2026</span>
-            <span class="retreat-meta-item">👥 5 Participants</span>
+    <!-- Partner Section -->
+    <section class="partner-section">
+      <div class="partner-watermark">CURATE</div>
+      <div class="container">
+        <div class="partner-grid">
+          <div class="partner-content fade-in-left">
+            <p class="section-eyebrow" style="color: var(--gold)">
+              Host Your Vision
+            </p>
+            <h2>Collaborate With Us</h2>
+            <p>
+              Are you a facilitator, educator, or creative visionary? Palazzo
+              Antico offers a turnkey residency environment—from logistics to
+              gourmet catering by Chef Rocco—leaving you free to focus on your
+              participants' journey.
+            </p>
+            <div class="partner-benefits">
+              <div class="partner-benefit">
+                <span class="partner-benefit-icon">🏛️</span>
+                <span>Exclusive Venues</span>
+              </div>
+              <div class="partner-benefit">
+                <span class="partner-benefit-icon">🍽️</span>
+                <span>Full Board Catering</span>
+              </div>
+              <div class="partner-benefit">
+                <span class="partner-benefit-icon">📢</span>
+                <span>Marketing Support</span>
+              </div>
+              <div class="partner-benefit">
+                <span class="partner-benefit-icon">✈️</span>
+                <span>Logistics Handled</span>
+              </div>
+              <div class="partner-benefit">
+                <span class="partner-benefit-icon">💰</span>
+                <span>Flexible Terms</span>
+              </div>
+              <div class="partner-benefit">
+                <span class="partner-benefit-icon">🤝</span>
+                <span>Dedicated Concierge</span>
+              </div>
+            </div>
+            <a href="contact.html?mode=partner" class="btn btn-gold"
+              >Request Facilitator Kit</a
+            >
           </div>
-          <p class="retreat-description">
-            A week of focused writing in the Scholar's Study, overlooking
-            medieval streets that inspired countless stories. Daily workshops,
-            evening readings, and uninterrupted time to find your voice.
-          </p>
-          <div class="retreat-highlights">
-            <span class="retreat-highlight">Private Writing Space</span>
-            <span class="retreat-highlight">Daily Workshops</span>
-            <span class="retreat-highlight">One-on-One Feedback</span>
-            <span class="retreat-highlight">Evening Readings</span>
-          </div>
-          <a href="contact.html?retreat=writing" class="btn btn-primary retreat-cta">Apply for Residency</a>
-        </div>
-      </div>
-
-      <!-- Stillness Practice -->
-      <div class="retreat-card-large fade-in">
-        <div class="retreat-card-image">
-          <img src="images/tower_suite_terrace.webp" alt="Yoga and Meditation" srcset="
-                images/tower_suite_terrace_400.webp   400w,
-                images/tower_suite_terrace_800.webp   800w,
-                images/tower_suite_terrace_1200.webp 1200w,
-                images/tower_suite_terrace.webp      1920w
-              " sizes="(max-width: 768px) 100vw, 50vw" />
-        </div>
-        <div class="retreat-card-content">
-          <p class="retreat-type">Wellness</p>
-          <h3 class="retreat-name">Stillness Practice</h3>
-          <div class="retreat-meta">
-            <span class="retreat-meta-item">📅 Year-Round (5 nights)</span>
-            <span class="retreat-meta-item">👥 4 Participants</span>
-          </div>
-          <p class="retreat-description">
-            Sunrise yoga on the rooftop, meditation in the courtyard, and
-            traditional hammam rituals. A deeply personal journey to stillness
-            in one of Europe's most atmospheric settings.
-          </p>
-          <div class="retreat-highlights">
-            <span class="retreat-highlight">Sunrise Sessions</span>
-            <span class="retreat-highlight">Hammam Experience</span>
-            <span class="retreat-highlight">Plant-Based Menu</span>
-            <span class="retreat-highlight">Flexible Dates</span>
-          </div>
-          <a href="contact.html?retreat=wellness" class="btn btn-primary retreat-cta">Enquire Now</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Partner Section -->
-  <section class="partner-section">
-    <div class="partner-watermark">CURATE</div>
-    <div class="container">
-      <div class="partner-grid">
-        <div class="partner-content fade-in-left">
-          <p class="section-eyebrow" style="color: var(--gold)">
-            Host Your Vision
-          </p>
-          <h2>Collaborate With Us</h2>
-          <p>
-            Are you a facilitator, educator, or creative visionary? Palazzo
-            Antico offers a turnkey residency environment—from logistics to
-            gourmet catering by Chef Rocco—leaving you free to focus on your
-            participants' journey.
-          </p>
-          <div class="partner-benefits">
-            <div class="partner-benefit">
-              <span class="partner-benefit-icon">🏛️</span>
-              <span>Exclusive Venues</span>
-            </div>
-            <div class="partner-benefit">
-              <span class="partner-benefit-icon">🍽️</span>
-              <span>Full Board Catering</span>
-            </div>
-            <div class="partner-benefit">
-              <span class="partner-benefit-icon">📢</span>
-              <span>Marketing Support</span>
-            </div>
-            <div class="partner-benefit">
-              <span class="partner-benefit-icon">✈️</span>
-              <span>Logistics Handled</span>
-            </div>
-            <div class="partner-benefit">
-              <span class="partner-benefit-icon">💰</span>
-              <span>Flexible Terms</span>
-            </div>
-            <div class="partner-benefit">
-              <span class="partner-benefit-icon">🤝</span>
-              <span>Dedicated Concierge</span>
-            </div>
-          </div>
-          <a href="contact.html?mode=partner" class="btn btn-gold">Request Facilitator Kit</a>
-        </div>
-        <div class="partner-image fade-in-right">
-          <img src="images/scholars_study_library.webp" alt="Creative Space" srcset="
+          <div class="partner-image fade-in-right">
+            <img
+              src="images/scholars_study_library.webp"
+              alt="Creative Space"
+              srcset="
                 images/scholars_study_library_400.webp   400w,
                 images/scholars_study_library_800.webp   800w,
                 images/scholars_study_library_1200.webp 1200w,
                 images/scholars_study_library.webp      1920w
-              " sizes="(max-width: 768px) 100vw, 50vw" />
-          <div class="partner-image-overlay">
-            <div class="partner-image-text">
-              <h3>Now Booking 2027</h3>
-              <p>Accepting proposals for next season</p>
+              "
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <div class="partner-image-overlay">
+              <div class="partner-image-text">
+                <h3>Now Booking 2027</h3>
+                <p>Accepting proposals for next season</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- What's Included -->
-  <section class="included-section">
-    <div class="container">
-      <div class="section-header fade-in">
-        <p class="section-eyebrow">All-Inclusive</p>
-        <h2 class="section-title">What's Included</h2>
+    <!-- What's Included -->
+    <section class="included-section">
+      <div class="container">
+        <div class="section-header fade-in">
+          <p class="section-eyebrow">All-Inclusive</p>
+          <h2 class="section-title">What's Included</h2>
+        </div>
+        <div class="included-grid">
+          <div class="included-item fade-in">
+            <div class="included-icon">🛏️</div>
+            <p class="included-title">Boutique Accommodation</p>
+            <p class="included-desc">Private suite in the palazzo</p>
+          </div>
+          <div class="included-item fade-in">
+            <div class="included-icon">🍽️</div>
+            <p class="included-title">Gourmet Meals</p>
+            <p class="included-desc">Full board by Chef Rocco</p>
+          </div>
+          <div class="included-item fade-in">
+            <div class="included-icon">🎨</div>
+            <p class="included-title">Materials & Equipment</p>
+            <p class="included-desc">Professional-grade supplies</p>
+          </div>
+          <div class="included-item fade-in">
+            <div class="included-icon">🚐</div>
+            <p class="included-title">Airport Transfer</p>
+            <p class="included-desc">Private pickup & dropoff</p>
+          </div>
+          <div class="included-item fade-in">
+            <div class="included-icon">🗺️</div>
+            <p class="included-title">Local Excursions</p>
+            <p class="included-desc">Curated cultural experiences</p>
+          </div>
+        </div>
       </div>
-      <div class="included-grid">
-        <div class="included-item fade-in">
-          <div class="included-icon">🛏️</div>
-          <p class="included-title">Boutique Accommodation</p>
-          <p class="included-desc">Private suite in the palazzo</p>
-        </div>
-        <div class="included-item fade-in">
-          <div class="included-icon">🍽️</div>
-          <p class="included-title">Gourmet Meals</p>
-          <p class="included-desc">Full board by Chef Rocco</p>
-        </div>
-        <div class="included-item fade-in">
-          <div class="included-icon">🎨</div>
-          <p class="included-title">Materials & Equipment</p>
-          <p class="included-desc">Professional-grade supplies</p>
-        </div>
-        <div class="included-item fade-in">
-          <div class="included-icon">🚐</div>
-          <p class="included-title">Airport Transfer</p>
-          <p class="included-desc">Private pickup & dropoff</p>
-        </div>
-        <div class="included-item fade-in">
-          <div class="included-icon">🗺️</div>
-          <p class="included-title">Local Excursions</p>
-          <p class="included-desc">Curated cultural experiences</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FAQ Section -->
-  <section class="faq-section">
-    <div class="container">
-      <div class="section-header fade-in">
-        <p class="section-eyebrow">Questions</p>
-        <h2 class="section-title">Frequently Asked</h2>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header fade-in">
+          <p class="section-eyebrow">Questions</p>
+          <h2 class="section-title">Frequently Asked</h2>
+        </div>
+        <div class="faq-container">
+          <div class="faq-item">
+            <button
+              class="faq-question"
+              onclick="this.parentElement.classList.toggle('active')"
+            >
+              <span>What skill level is required for retreats?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Our retreats welcome all levels unless otherwise specified.
+                Facilitators tailor instruction to each participant's
+                experience, from curious beginners to seasoned practitioners.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button
+              class="faq-question"
+              onclick="this.parentElement.classList.toggle('active')"
+            >
+              <span>Can I bring a non-participating partner?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes! Partners are welcome to stay and enjoy the palazzo, meals,
+                and local experiences while you attend sessions. Contact us for
+                companion rates.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button
+              class="faq-question"
+              onclick="this.parentElement.classList.toggle('active')"
+            >
+              <span>What is your cancellation policy?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Full refund if cancelled 60+ days before arrival, 50% refund for
+                30–60 days, and credit toward future retreats for cancellations
+                under 30 days. We understand life happens.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button
+              class="faq-question"
+              onclick="this.parentElement.classList.toggle('active')"
+            >
+              <span>How do I get to Palazzo Antico?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Fly into Rhodes International Airport (RHO). We provide
+                complimentary private transfer to the medieval old town. The
+                journey takes approximately 20 minutes.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="faq-container">
-        <div class="faq-item">
-          <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-            <span>What skill level is required for retreats?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              Our retreats welcome all levels unless otherwise specified.
-              Facilitators tailor instruction to each participant's
-              experience, from curious beginners to seasoned practitioners.
+    </section>
+
+    <!-- CTA Section -->
+    <section
+      class="section-lg"
+      style="background: var(--cream); text-align: center"
+    >
+      <div class="container container-narrow">
+        <p class="section-eyebrow">Ready to Create?</p>
+        <h2 class="section-title">Begin Your Journey</h2>
+        <p class="section-description" style="margin-bottom: var(--space-10)">
+          Applications are reviewed personally. Tell us about yourself and which
+          residency calls to you.
+        </p>
+        <a href="contact.html" class="btn btn-primary">Apply Now</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3 class="footer-logo">PALAZZO ANTICO</h3>
+            <p class="footer-tagline">Where history meets hospitality</p>
+            <p class="footer-description">
+              A luxury boutique hotel in a restored 15th-century Venetian
+              palazzo.
             </p>
           </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-            <span>Can I bring a non-participating partner?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              Yes! Partners are welcome to stay and enjoy the palazzo, meals,
-              and local experiences while you attend sessions. Contact us for
-              companion rates.
-            </p>
+          <div class="footer-links-group">
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="rooms.html" class="footer-link">Our Rooms</a></li>
+              <li>
+                <a href="experience.html" class="footer-link">Experience</a>
+              </li>
+              <li>
+                <a href="retreats.html" class="footer-link active">Retreats</a>
+              </li>
+              <li>
+                <a href="chef-rocco.html" class="footer-link">Chef Rocco</a>
+              </li>
+              <li><a href="contact.html" class="footer-link">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-group">
+            <h4 class="footer-title">Programs</h4>
+            <ul class="footer-links">
+              <li><a href="#retreats" class="footer-link">Creative Arts</a></li>
+              <li><a href="#retreats" class="footer-link">Writing</a></li>
+              <li><a href="#retreats" class="footer-link">Wellness</a></li>
+              <li>
+                <a href="contact.html?mode=partner" class="footer-link"
+                  >Partner With Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4 class="footer-title">Contact</h4>
+            <div class="footer-contact-item">
+              <span>15 Ippoton Street, Old Town, Rhodes 85100</span>
+            </div>
+            <div class="footer-contact-item">
+              <span>+30 22410 12345</span>
+            </div>
           </div>
         </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-            <span>What is your cancellation policy?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              Full refund if cancelled 60+ days before arrival, 50% refund for
-              30–60 days, and credit toward future retreats for cancellations
-              under 30 days. We understand life happens.
-            </p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-            <span>How do I get to Palazzo Antico?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
-              Fly into Rhodes International Airport (RHO). We provide
-              complimentary private transfer to the medieval old town. The
-              journey takes approximately 20 minutes.
-            </p>
-          </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Palazzo Antico. All rights reserved.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- CTA Section -->
-  <section class="section-lg" style="background: var(--cream); text-align: center">
-    <div class="container container-narrow">
-      <p class="section-eyebrow">Ready to Create?</p>
-      <h2 class="section-title">Begin Your Journey</h2>
-      <p class="section-description" style="margin-bottom: var(--space-10)">
-        Applications are reviewed personally. Tell us about yourself and which
-        residency calls to you.
-      </p>
-      <a href="contact.html" class="btn btn-primary">Apply Now</a>
-    </div>
-  </section>
+    <a href="contact.html" class="book-btn-floating">Book Now</a>
+    <script src="js/main.js" defer></script>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <h3 class="footer-logo">PALAZZO ANTICO</h3>
-          <p class="footer-tagline">Where history meets hospitality</p>
-          <p class="footer-description">
-            A luxury boutique hotel in a restored 15th-century Venetian
-            palazzo.
-          </p>
-        </div>
-        <div class="footer-links-group">
-          <h4 class="footer-title">Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="rooms.html" class="footer-link">Our Rooms</a></li>
-            <li>
-              <a href="experience.html" class="footer-link">Experience</a>
-            </li>
-            <li>
-              <a href="retreats.html" class="footer-link active">Retreats</a>
-            </li>
-            <li>
-              <a href="chef-rocco.html" class="footer-link">Chef Rocco</a>
-            </li>
-            <li><a href="contact.html" class="footer-link">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-links-group">
-          <h4 class="footer-title">Programs</h4>
-          <ul class="footer-links">
-            <li><a href="#retreats" class="footer-link">Creative Arts</a></li>
-            <li><a href="#retreats" class="footer-link">Writing</a></li>
-            <li><a href="#retreats" class="footer-link">Wellness</a></li>
-            <li>
-              <a href="contact.html?mode=partner" class="footer-link">Partner With Us</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h4 class="footer-title">Contact</h4>
-          <div class="footer-contact-item">
-            <span>15 Ippoton Street, Old Town, Rhodes 85100</span>
-          </div>
-          <div class="footer-contact-item">
-            <span>+30 22410 12345</span>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Palazzo Antico. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <a href="contact.html" class="book-btn-floating">Book Now</a>
-  <script src="js/main.js" defer></script>
-  
-
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js')
-          .then(reg => console.log('SW registered'))
-          .catch(err => console.log('SW error', err));
-      });
-    }
-  </script>
-</body>
-
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("./sw.js")
+            .then((reg) => console.log("SW registered"))
+            .catch((err) => console.log("SW error", err));
+        });
+      }
+    </script>
+  </body>
 </html>

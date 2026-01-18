@@ -58,7 +58,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
       media="print"
-      onload="this.media='all'"
+      onload="this.media = 'all'"
     />
     <noscript>
       <link
@@ -70,32 +70,98 @@
     <link rel="stylesheet" href="css/room-detail.css" />
 
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "HotelRoom",
-        "name": "The Venetian Room",
-        "description": "Elegant accommodation with terracotta floors, vaulted ceilings, and a private balcony overlooking medieval rooftops.",
-        "occupancy": { "@type": "QuantitativeValue", "maxValue": 2 },
-        "bed": {
-          "@type": "BedDetails",
-          "typeOfBed": "Queen",
-          "numberOfBeds": 1
-        },
-        "floorSize": {
-          "@type": "QuantitativeValue",
-          "value": 35,
-          "unitCode": "MTK"
-        },
-        "offers": {
-          "@type": "Offer",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": 220,
-            "priceCurrency": "EUR",
-            "unitText": "night"
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "HotelRoom",
+          "@id": "https://palazzoantico.gr/room-venetian.html",
+          "name": "The Venetian Room",
+          "description": "Elegant accommodation with terracotta floors, vaulted ceilings, and a private balcony overlooking medieval rooftops.",
+          "image": [
+            "https://palazzoantico.gr/images/room_venetian.webp",
+            "https://palazzoantico.gr/images/venetian_bathroom.webp",
+            "https://palazzoantico.gr/images/venetian_balcony.webp",
+            "https://palazzoantico.gr/images/venetian_ceiling.webp",
+            "https://palazzoantico.gr/images/venetian_window.webp"
+          ],
+          "url": "https://palazzoantico.gr/room-venetian.html",
+          "occupancy": { "@type": "QuantitativeValue", "value": 2 },
+          "bed": {
+            "@type": "BedDetails",
+            "typeOfBed": "Queen",
+            "numberOfBeds": 1
+          },
+          "floorSize": {
+            "@type": "QuantitativeValue",
+            "value": 35,
+            "unitCode": "MTK"
+          },
+          "amenityFeature": [
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Private Balcony",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Vaulted Ceilings",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Ensuite Bathroom",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Climate Control",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Free WiFi",
+              "value": true
+            }
+          ],
+          "containedInPlace": {
+            "@id": "https://palazzoantico.gr/#hotel"
+          },
+          "offers": {
+            "@type": "Offer",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": 220,
+              "priceCurrency": "EUR",
+              "unitCode": "DAY"
+            },
+            "availability": "https://schema.org/LimitedAvailability"
           }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://palazzoantico.gr/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Rooms",
+              "item": "https://palazzoantico.gr/rooms.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "The Venetian Room",
+              "item": "https://palazzoantico.gr/room-venetian.html"
+            }
+          ]
         }
-      }
+      ]
     </script>
 
     <style>
@@ -457,6 +523,41 @@
     </nav>
 
     <main>
+      <!-- Breadcrumb Navigation -->
+      <nav
+        aria-label="Breadcrumb"
+        class="container breadcrumb"
+        style="padding-top: var(--space-24); padding-bottom: var(--space-4)"
+      >
+        <ol
+          style="
+            list-style: none;
+            display: flex;
+            gap: var(--space-2);
+            font-size: var(--text-sm);
+            color: var(--stone-warm);
+          "
+        >
+          <li>
+            <a href="index.html" style="text-decoration: none; color: inherit"
+              >Home</a
+            >
+          </li>
+          <li><span style="color: var(--terracotta)">/</span></li>
+          <li>
+            <a href="rooms.html" style="text-decoration: none; color: inherit"
+              >Rooms</a
+            >
+          </li>
+          <li><span style="color: var(--terracotta)">/</span></li>
+          <li
+            aria-current="page"
+            style="font-weight: 500; color: var(--stone-dark)"
+          >
+            The Venetian Room
+          </li>
+        </ol>
+      </nav>
       <!-- Room Gallery Grid (Bento Style) -->
       <section class="room-gallery-section" aria-label="Room gallery">
         <div class="container-fluid">
@@ -939,16 +1040,16 @@
     </footer>
     <a href="contact.html" class="book-btn-floating">Book Now</a>
     <script src="js/main.js" defer></script>
-    
-  
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js')
-          .then(reg => console.log('SW registered'))
-          .catch(err => console.log('SW error', err));
-      });
-    }
-  </script>
-</body>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("./sw.js")
+            .then((reg) => console.log("SW registered"))
+            .catch((err) => console.log("SW error", err));
+        });
+      }
+    </script>
+  </body>
 </html>

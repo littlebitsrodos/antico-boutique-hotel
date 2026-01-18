@@ -1,49 +1,70 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact Palazzo Antico to book your stay, ask questions, or arrange special experiences in medieval Rhodes. Phone, email, and booking form available."
+    />
+    <meta
+      name="keywords"
+      content="contact Palazzo Antico, book hotel Rhodes, Rhodes hotel reservation, boutique hotel booking"
+    />
+    <meta name="author" content="Palazzo Antico" />
+    <meta name="robots" content="index, follow" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Contact Palazzo Antico to book your stay, ask questions, or arrange special experiences in medieval Rhodes. Phone, email, and booking form available." />
-  <meta name="keywords"
-    content="contact Palazzo Antico, book hotel Rhodes, Rhodes hotel reservation, boutique hotel booking" />
-  <meta name="author" content="Palazzo Antico" />
-  <meta name="robots" content="index, follow" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://palazzoantico.gr/contact.html" />
+    <meta property="og:title" content="Contact Us | Palazzo Antico" />
+    <meta
+      property="og:description"
+      content="Book your stay or contact us for inquiries. Located at 15 Ippoton Street in Rhodes' medieval old town."
+    />
+    <meta
+      property="og:image"
+      content="https://palazzoantico.gr/images/hero_courtyard.webp"
+    />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://palazzoantico.gr/contact.html" />
-  <meta property="og:title" content="Contact Us | Palazzo Antico" />
-  <meta property="og:description"
-    content="Book your stay or contact us for inquiries. Located at 15 Ippoton Street in Rhodes' medieval old town." />
-  <meta property="og:image" content="https://palazzoantico.gr/images/hero_courtyard.webp" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://palazzoantico.gr/contact.html" />
+    <!-- Preload critical assets -->
+    <link
+      rel="preload"
+      href="images/hero_courtyard.webp"
+      as="image"
+      fetchpriority="high"
+    />
+    <link rel="preload" href="css/style.min.css" as="style" />
 
-  <link rel="canonical" href="https://palazzoantico.gr/contact.html" />
-  <!-- Preload critical assets -->
-  <link rel="preload" href="images/hero_courtyard.webp" as="image" fetchpriority="high" />
-  <link rel="preload" href="css/style.min.css" as="style" />
+    <title>Contact | Palazzo Antico - Luxury Boutique Hotel Rhodes</title>
 
-  <title>Contact | Palazzo Antico - Luxury Boutique Hotel Rhodes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      />
+    </noscript>
+    <link rel="stylesheet" href="css/style.min.css" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
-    media="print" onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" />
-  </noscript>
-  <link rel="stylesheet" href="css/style.min.css" />
-
-  <!-- Schema.org Structured Data -->
-  <script type="application/ld+json">
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "ContactPage",
@@ -66,412 +87,527 @@
       }
     </script>
 
-  <style>
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-12);
-    }
-
-    .contact-info {
-      padding: var(--space-10);
-      background: var(--cream);
-      border-radius: var(--radius-md);
-    }
-
-    .contact-form-wrapper {
-      padding: var(--space-10);
-      background: var(--white);
-      border-radius: var(--radius-md);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-4);
-    }
-
-    .form-success {
-      text-align: center;
-      padding: var(--space-12);
-    }
-
-    .form-success p {
-      font-size: var(--text-lg);
-      color: var(--olive);
-    }
-
-    @media (max-width: 992px) {
+    <style>
       .contact-grid {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-12);
+      }
+
+      .contact-info {
+        padding: var(--space-10);
+        background: var(--cream);
+        border-radius: var(--radius-md);
+      }
+
+      .contact-form-wrapper {
+        padding: var(--space-10);
+        background: var(--white);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-lg);
       }
 
       .form-row {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-4);
       }
-    }
-  </style>
-</head>
 
-<body>
-  <!-- Navigation -->
-  <nav class="nav scrolled">
-    <div class="container nav-inner">
-      <a href="index.html" class="nav-logo">PALAZZO ANTICO</a>
-      <ul class="nav-links">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="rooms.html" class="nav-link">Rooms</a></li>
-        <li><a href="experience.html" class="nav-link">Experience</a></li>
-        <li><a href="retreats.html" class="nav-link">Retreats</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      .form-success {
+        text-align: center;
+        padding: var(--space-12);
+      }
+
+      .form-success p {
+        font-size: var(--text-lg);
+        color: var(--olive);
+      }
+
+      @media (max-width: 992px) {
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .form-row {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="nav scrolled">
+      <div class="container nav-inner">
+        <a href="index.html" class="nav-logo">PALAZZO ANTICO</a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="rooms.html" class="nav-link">Rooms</a></li>
+          <li><a href="experience.html" class="nav-link">Experience</a></li>
+          <li><a href="retreats.html" class="nav-link">Retreats</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-overlay"></div>
+    <div class="mobile-menu">
+      <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="rooms.html" class="mobile-nav-link">Rooms</a></li>
+        <li>
+          <a href="experience.html" class="mobile-nav-link">Experience</a>
+        </li>
+        <li><a href="retreats.html" class="mobile-nav-link">Retreats</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </div>
-  </nav>
 
-  <!-- Mobile Menu -->
-  <div class="mobile-overlay"></div>
-  <div class="mobile-menu">
-    <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
-    <ul class="mobile-nav-links">
-      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
-      <li><a href="rooms.html" class="mobile-nav-link">Rooms</a></li>
-      <li>
-        <a href="experience.html" class="mobile-nav-link">Experience</a>
-      </li>
-      <li><a href="retreats.html" class="mobile-nav-link">Retreats</a></li>
-      <li><a href="about.html" class="mobile-nav-link">About</a></li>
-      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
-    </ul>
-  </div>
-
-  <!-- Page Hero -->
-  <section class="page-hero" style="height: 50vh; min-height: 350px">
-    <div class="hero-bg">
-      <img src="images/hero_courtyard.webp" alt="Palazzo Antico courtyard" width="1024" height="1024"
-        fetchpriority="high" srcset="
+    <!-- Page Hero -->
+    <section class="page-hero" style="height: 50vh; min-height: 350px">
+      <div class="hero-bg">
+        <img
+          src="images/hero_courtyard.webp"
+          alt="Palazzo Antico courtyard"
+          width="1024"
+          height="1024"
+          fetchpriority="high"
+          srcset="
             images/hero_courtyard_400.webp   400w,
             images/hero_courtyard_800.webp   800w,
             images/hero_courtyard_1200.webp 1200w,
             images/hero_courtyard.webp      1920w
-          " sizes="100vw" />
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="hero-content">
-      <p class="hero-subtitle">Get in Touch</p>
-      <h1 class="hero-title">Contact Us</h1>
-      <p class="hero-description">We'd love to hear from you</p>
-    </div>
-  </section>
+          "
+          sizes="100vw"
+        />
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <p class="hero-subtitle">Get in Touch</p>
+        <h1 class="hero-title">Contact Us</h1>
+        <p class="hero-description">We'd love to hear from you</p>
+      </div>
+    </section>
 
-  <!-- Contact Section -->
-  <section class="section-lg">
-    <div class="container">
-      <div class="contact-grid">
-        <!-- Contact Info -->
-        <div class="contact-info fade-in">
-          <p class="welcome-eyebrow">Reach Us</p>
-          <h2 class="welcome-title" style="margin-bottom: var(--space-8)">
-            Let's Connect
-          </h2>
+    <!-- Contact Section -->
+    <section class="section-lg">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Contact Info -->
+          <div class="contact-info fade-in">
+            <p class="welcome-eyebrow">Reach Us</p>
+            <h2 class="welcome-title" style="margin-bottom: var(--space-8)">
+              Let's Connect
+            </h2>
 
-          <div style="margin-bottom: var(--space-8)">
-            <h4 style="
+            <div style="margin-bottom: var(--space-8)">
+              <h4
+                style="
                   font-size: var(--text-lg);
                   margin-bottom: var(--space-3);
                   color: var(--stone-dark);
-                ">
-              📍 Address
-            </h4>
-            <p style="color: var(--stone-warm); line-height: 1.8">
-              15 Ippoton Street (Street of the Knights)<br />
-              Old Town, Rhodes 85100<br />
-              Greece
+                "
+              >
+                📍 Address
+              </h4>
+              <p style="color: var(--stone-warm); line-height: 1.8">
+                15 Ippoton Street (Street of the Knights)<br />
+                Old Town, Rhodes 85100<br />
+                Greece
+              </p>
+            </div>
+
+            <div style="margin-bottom: var(--space-8)">
+              <h4
+                style="
+                  font-size: var(--text-lg);
+                  margin-bottom: var(--space-3);
+                  color: var(--stone-dark);
+                "
+              >
+                📞 Phone
+              </h4>
+              <p style="color: var(--stone-warm)">
+                <a href="tel:+302241012345" style="color: var(--terracotta)"
+                  >+30 22410 12345</a
+                ><br />
+                <span style="font-size: var(--text-sm)"
+                  >Available 8am - 10pm local time</span
+                >
+              </p>
+            </div>
+
+            <div style="margin-bottom: var(--space-8)">
+              <h4
+                style="
+                  font-size: var(--text-lg);
+                  margin-bottom: var(--space-3);
+                  color: var(--stone-dark);
+                "
+              >
+                ✉️ Email
+              </h4>
+              <p style="color: var(--stone-warm)">
+                <a
+                  href="mailto:info@palazzoantico.gr"
+                  style="color: var(--terracotta)"
+                  >info@palazzoantico.gr</a
+                ><br />
+                <a
+                  href="mailto:reservations@palazzoantico.gr"
+                  style="color: var(--terracotta)"
+                  >reservations@palazzoantico.gr</a
+                >
+              </p>
+            </div>
+
+            <div style="margin-bottom: var(--space-8)">
+              <h4
+                style="
+                  font-size: var(--text-lg);
+                  margin-bottom: var(--space-3);
+                  color: var(--stone-dark);
+                "
+              >
+                🕐 Reception Hours
+              </h4>
+              <p style="color: var(--stone-warm)">
+                24/7 for guests<br />
+                Visitor inquiries: 9am - 8pm
+              </p>
+            </div>
+
+            <div>
+              <h4
+                style="
+                  font-size: var(--text-lg);
+                  margin-bottom: var(--space-3);
+                  color: var(--stone-dark);
+                "
+              >
+                Follow Us
+              </h4>
+              <div
+                class="footer-social"
+                style="justify-content: flex-start; margin-top: var(--space-3)"
+              >
+                <a
+                  href="#"
+                  class="footer-social-link"
+                  style="background: var(--terracotta)"
+                  aria-label="Facebook"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="footer-social-link"
+                  style="background: var(--terracotta)"
+                  aria-label="Instagram"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrapper fade-in">
+            <p class="welcome-eyebrow">Send a Message</p>
+            <h2 class="welcome-title" style="margin-bottom: var(--space-8)">
+              Book or Inquire
+            </h2>
+
+            <form id="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name" class="form-label">Full Name *</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-input"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label">Email Address *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-input"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="form-input"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="subject" class="form-label">Subject</label>
+                  <select id="subject" name="subject" class="form-input">
+                    <option value="">Select...</option>
+                    <option value="booking">Room Booking</option>
+                    <option value="dining">Dining Reservation</option>
+                    <option value="spa">Spa Appointment</option>
+                    <option value="event">Private Event</option>
+                    <option value="general">General Inquiry</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="checkin" class="form-label">Check-in Date</label>
+                  <input
+                    type="date"
+                    id="checkin"
+                    name="checkin"
+                    class="form-input"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="checkout" class="form-label"
+                    >Check-out Date</label
+                  >
+                  <input
+                    type="date"
+                    id="checkout"
+                    name="checkout"
+                    class="form-input"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Your Message *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-textarea"
+                  rows="5"
+                  required
+                  placeholder="Tell us about your travel plans, special requests, or any questions you have..."
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section" style="padding-top: 0">
+      <div class="container">
+        <div class="section-header fade-in">
+          <p class="section-eyebrow">Find Us</p>
+          <h2 class="section-title">In the Heart of Medieval Rhodes</h2>
+        </div>
+        <div
+          class="location-map fade-in"
+          style="height: 450px; border-radius: var(--radius-lg)"
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3226.2!2d28.226!3d36.445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDI2JzQyLjAiTiAyOMKwMTMnMzMuNiJF!5e0!3m2!1sen!2sgr!4v1699999999999!5m2!1sen!2sgr"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Palazzo Antico Location in Rhodes Old Town"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Getting Here -->
+    <section class="section-lg" style="background: var(--cream)">
+      <div class="container">
+        <div class="section-header fade-in">
+          <p class="section-eyebrow">Getting Here</p>
+          <h2 class="section-title">Travel Information</h2>
+        </div>
+        <div class="experience-grid" style="max-width: 1100px; margin: 0 auto">
+          <div
+            class="experience-item fade-in"
+            style="background: var(--white); border: none"
+          >
+            <div class="experience-icon" style="background: var(--terracotta)">
+              ✈️
+            </div>
+            <h3 class="experience-item-title" style="color: var(--stone-dark)">
+              By Air
+            </h3>
+            <p class="experience-item-text" style="color: var(--stone-warm)">
+              Rhodes International Airport (RHO) is 25 minutes by taxi. We can
+              arrange airport transfers.
             </p>
           </div>
-
-          <div style="margin-bottom: var(--space-8)">
-            <h4 style="
-                  font-size: var(--text-lg);
-                  margin-bottom: var(--space-3);
-                  color: var(--stone-dark);
-                ">
-              📞 Phone
-            </h4>
-            <p style="color: var(--stone-warm)">
-              <a href="tel:+302241012345" style="color: var(--terracotta)">+30 22410 12345</a><br />
-              <span style="font-size: var(--text-sm)">Available 8am - 10pm local time</span>
+          <div
+            class="experience-item fade-in"
+            style="background: var(--white); border: none"
+          >
+            <div class="experience-icon" style="background: var(--olive)">
+              ⛵
+            </div>
+            <h3 class="experience-item-title" style="color: var(--stone-dark)">
+              By Ferry
+            </h3>
+            <p class="experience-item-text" style="color: var(--stone-warm)">
+              Ferries arrive at the Commercial Port, a 10-minute walk to the Old
+              Town gates.
             </p>
           </div>
-
-          <div style="margin-bottom: var(--space-8)">
-            <h4 style="
-                  font-size: var(--text-lg);
-                  margin-bottom: var(--space-3);
-                  color: var(--stone-dark);
-                ">
-              ✉️ Email
-            </h4>
-            <p style="color: var(--stone-warm)">
-              <a href="mailto:info@palazzoantico.gr" style="color: var(--terracotta)">info@palazzoantico.gr</a><br />
-              <a href="mailto:reservations@palazzoantico.gr"
-                style="color: var(--terracotta)">reservations@palazzoantico.gr</a>
+          <div
+            class="experience-item fade-in"
+            style="background: var(--white); border: none"
+          >
+            <div class="experience-icon" style="background: var(--gold)">
+              🚗
+            </div>
+            <h3 class="experience-item-title" style="color: var(--stone-dark)">
+              Old Town Access
+            </h3>
+            <p class="experience-item-text" style="color: var(--stone-warm)">
+              Cars cannot enter the medieval town. We'll arrange luggage
+              transport from the gate.
             </p>
           </div>
-
-          <div style="margin-bottom: var(--space-8)">
-            <h4 style="
-                  font-size: var(--text-lg);
-                  margin-bottom: var(--space-3);
-                  color: var(--stone-dark);
-                ">
-              🕐 Reception Hours
-            </h4>
-            <p style="color: var(--stone-warm)">
-              24/7 for guests<br />
-              Visitor inquiries: 9am - 8pm
+          <div
+            class="experience-item fade-in"
+            style="background: var(--white); border: none"
+          >
+            <div class="experience-icon" style="background: var(--terracotta)">
+              🧳
+            </div>
+            <h3 class="experience-item-title" style="color: var(--stone-dark)">
+              Concierge
+            </h3>
+            <p class="experience-item-text" style="color: var(--stone-warm)">
+              Our concierge can arrange all transfers, tours, and local
+              experiences for your stay.
             </p>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div>
-            <h4 style="
-                  font-size: var(--text-lg);
-                  margin-bottom: var(--space-3);
-                  color: var(--stone-dark);
-                ">
-              Follow Us
-            </h4>
-            <div class="footer-social" style="justify-content: flex-start; margin-top: var(--space-3)">
-              <a href="#" class="footer-social-link" style="background: var(--terracotta)" aria-label="Facebook">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                </svg>
-              </a>
-              <a href="#" class="footer-social-link" style="background: var(--terracotta)" aria-label="Instagram">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z" />
-                </svg>
-              </a>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3 class="footer-logo">PALAZZO ANTICO</h3>
+            <p class="footer-tagline">Where history meets hospitality</p>
+            <p class="footer-description">
+              A luxury boutique hotel in a restored 15th-century Venetian
+              palazzo.
+            </p>
+          </div>
+          <div class="footer-links-group">
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="rooms.html" class="footer-link">Our Rooms</a></li>
+              <li>
+                <a href="experience.html" class="footer-link">Experience</a>
+              </li>
+              <li><a href="retreats.html" class="footer-link">Retreats</a></li>
+              <li>
+                <a href="chef-rocco.html" class="footer-link">Chef Rocco</a>
+              </li>
+              <li><a href="contact.html" class="footer-link">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-group">
+            <h4 class="footer-title">Explore</h4>
+            <ul class="footer-links">
+              <li><a href="#" class="footer-link">Old Town Guide</a></li>
+              <li><a href="#" class="footer-link">Dining</a></li>
+              <li><a href="#" class="footer-link">Spa & Wellness</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4 class="footer-title">Contact</h4>
+            <div class="footer-contact-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>15 Ippoton Street<br />Old Town, Rhodes 85100</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2" />
+              </svg>
+              <span>+30 22410 12345</span>
             </div>
           </div>
         </div>
-
-        <!-- Contact Form -->
-        <div class="contact-form-wrapper fade-in">
-          <p class="welcome-eyebrow">Send a Message</p>
-          <h2 class="welcome-title" style="margin-bottom: var(--space-8)">
-            Book or Inquire
-          </h2>
-
-          <form id="contact-form">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name" class="form-label">Full Name *</label>
-                <input type="text" id="name" name="name" class="form-input" required />
-              </div>
-              <div class="form-group">
-                <label for="email" class="form-label">Email Address *</label>
-                <input type="email" id="email" name="email" class="form-input" required />
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="phone" class="form-label">Phone Number</label>
-                <input type="tel" id="phone" name="phone" class="form-input" />
-              </div>
-              <div class="form-group">
-                <label for="subject" class="form-label">Subject</label>
-                <select id="subject" name="subject" class="form-input">
-                  <option value="">Select...</option>
-                  <option value="booking">Room Booking</option>
-                  <option value="dining">Dining Reservation</option>
-                  <option value="spa">Spa Appointment</option>
-                  <option value="event">Private Event</option>
-                  <option value="general">General Inquiry</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="checkin" class="form-label">Check-in Date</label>
-                <input type="date" id="checkin" name="checkin" class="form-input" />
-              </div>
-              <div class="form-group">
-                <label for="checkout" class="form-label">Check-out Date</label>
-                <input type="date" id="checkout" name="checkout" class="form-input" />
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="message" class="form-label">Your Message *</label>
-              <textarea id="message" name="message" class="form-textarea" rows="5" required
-                placeholder="Tell us about your travel plans, special requests, or any questions you have..."></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary" style="width: 100%">
-              Send Message
-            </button>
-          </form>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Palazzo Antico. All rights reserved.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- Map Section -->
-  <section class="section" style="padding-top: 0">
-    <div class="container">
-      <div class="section-header fade-in">
-        <p class="section-eyebrow">Find Us</p>
-        <h2 class="section-title">In the Heart of Medieval Rhodes</h2>
-      </div>
-      <div class="location-map fade-in" style="height: 450px; border-radius: var(--radius-lg)">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3226.2!2d28.226!3d36.445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDI2JzQyLjAiTiAyOMKwMTMnMzMuNiJF!5e0!3m2!1sen!2sgr!4v1699999999999!5m2!1sen!2sgr"
-          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          title="Palazzo Antico Location in Rhodes Old Town"></iframe>
-      </div>
-    </div>
-  </section>
+    <script src="js/main.js" defer></script>
 
-  <!-- Getting Here -->
-  <section class="section-lg" style="background: var(--cream)">
-    <div class="container">
-      <div class="section-header fade-in">
-        <p class="section-eyebrow">Getting Here</p>
-        <h2 class="section-title">Travel Information</h2>
-      </div>
-      <div class="experience-grid" style="max-width: 1100px; margin: 0 auto">
-        <div class="experience-item fade-in" style="background: var(--white); border: none">
-          <div class="experience-icon" style="background: var(--terracotta)">
-            ✈️
-          </div>
-          <h3 class="experience-item-title" style="color: var(--stone-dark)">
-            By Air
-          </h3>
-          <p class="experience-item-text" style="color: var(--stone-warm)">
-            Rhodes International Airport (RHO) is 25 minutes by taxi. We can
-            arrange airport transfers.
-          </p>
-        </div>
-        <div class="experience-item fade-in" style="background: var(--white); border: none">
-          <div class="experience-icon" style="background: var(--olive)">
-            ⛵
-          </div>
-          <h3 class="experience-item-title" style="color: var(--stone-dark)">
-            By Ferry
-          </h3>
-          <p class="experience-item-text" style="color: var(--stone-warm)">
-            Ferries arrive at the Commercial Port, a 10-minute walk to the Old
-            Town gates.
-          </p>
-        </div>
-        <div class="experience-item fade-in" style="background: var(--white); border: none">
-          <div class="experience-icon" style="background: var(--gold)">
-            🚗
-          </div>
-          <h3 class="experience-item-title" style="color: var(--stone-dark)">
-            Old Town Access
-          </h3>
-          <p class="experience-item-text" style="color: var(--stone-warm)">
-            Cars cannot enter the medieval town. We'll arrange luggage
-            transport from the gate.
-          </p>
-        </div>
-        <div class="experience-item fade-in" style="background: var(--white); border: none">
-          <div class="experience-icon" style="background: var(--terracotta)">
-            🧳
-          </div>
-          <h3 class="experience-item-title" style="color: var(--stone-dark)">
-            Concierge
-          </h3>
-          <p class="experience-item-text" style="color: var(--stone-warm)">
-            Our concierge can arrange all transfers, tours, and local
-            experiences for your stay.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <h3 class="footer-logo">PALAZZO ANTICO</h3>
-          <p class="footer-tagline">Where history meets hospitality</p>
-          <p class="footer-description">
-            A luxury boutique hotel in a restored 15th-century Venetian
-            palazzo.
-          </p>
-        </div>
-        <div class="footer-links-group">
-          <h4 class="footer-title">Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="rooms.html" class="footer-link">Our Rooms</a></li>
-            <li>
-              <a href="experience.html" class="footer-link">Experience</a>
-            </li>
-            <li><a href="retreats.html" class="footer-link">Retreats</a></li>
-            <li>
-              <a href="chef-rocco.html" class="footer-link">Chef Rocco</a>
-            </li>
-            <li><a href="contact.html" class="footer-link">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-links-group">
-          <h4 class="footer-title">Explore</h4>
-          <ul class="footer-links">
-            <li><a href="#" class="footer-link">Old Town Guide</a></li>
-            <li><a href="#" class="footer-link">Dining</a></li>
-            <li><a href="#" class="footer-link">Spa & Wellness</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h4 class="footer-title">Contact</h4>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg>
-            <span>15 Ippoton Street<br />Old Town, Rhodes 85100</span>
-          </div>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2" />
-            </svg>
-            <span>+30 22410 12345</span>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Palazzo Antico. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/main.js" defer></script>
-  
-
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js')
-          .then(reg => console.log('SW registered'))
-          .catch(err => console.log('SW error', err));
-      });
-    }
-  </script>
-</body>
-
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("./sw.js")
+            .then((reg) => console.log("SW registered"))
+            .catch((err) => console.log("SW error", err));
+        });
+      }
+    </script>
+  </body>
 </html>

@@ -1,1027 +1,1378 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Palazzo Antico - A luxury boutique hotel in the medieval old town of Rhodes. Experience history and modern comfort in a restored 15th-century Venetian palazzo."
+    />
+    <meta
+      name="keywords"
+      content="Rhodes boutique hotel, luxury hotel Greece, medieval old town, Venetian palazzo, Rhodes accommodation, UNESCO heritage hotel"
+    />
+    <meta name="author" content="Palazzo Antico" />
+    <meta name="robots" content="index, follow" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Palazzo Antico - A luxury boutique hotel in the medieval old town of Rhodes. Experience history and modern comfort in a restored 15th-century Venetian palazzo." />
-  <meta name="keywords"
-    content="Rhodes boutique hotel, luxury hotel Greece, medieval old town, Venetian palazzo, Rhodes accommodation, UNESCO heritage hotel" />
-  <meta name="author" content="Palazzo Antico" />
-  <meta name="robots" content="index, follow" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://palazzoantico.gr/" />
+    <meta
+      property="og:title"
+      content="Palazzo Antico | Luxury Boutique Hotel in Medieval Rhodes"
+    />
+    <meta
+      property="og:description"
+      content="Experience history and modern comfort in a restored 15th-century Venetian palazzo in Rhodes' UNESCO-listed old town."
+    />
+    <meta
+      property="og:image"
+      content="https://palazzoantico.gr/images/hero_courtyard.webp"
+    />
+    <meta property="og:site_name" content="Palazzo Antico" />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://palazzoantico.gr/" />
-  <meta property="og:title" content="Palazzo Antico | Luxury Boutique Hotel in Medieval Rhodes" />
-  <meta property="og:description"
-    content="Experience history and modern comfort in a restored 15th-century Venetian palazzo in Rhodes' UNESCO-listed old town." />
-  <meta property="og:image" content="https://palazzoantico.gr/images/hero_courtyard.webp" />
-  <meta property="og:site_name" content="Palazzo Antico" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Palazzo Antico | Luxury Boutique Hotel in Medieval Rhodes"
+    />
+    <meta
+      name="twitter:description"
+      content="Experience history and modern comfort in a restored 15th-century Venetian palazzo."
+    />
+    <meta
+      name="twitter:image"
+      content="https://palazzoantico.gr/images/hero_courtyard.webp"
+    />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Palazzo Antico | Luxury Boutique Hotel in Medieval Rhodes" />
-  <meta name="twitter:description"
-    content="Experience history and modern comfort in a restored 15th-century Venetian palazzo." />
-  <meta name="twitter:image" content="https://palazzoantico.gr/images/hero_courtyard.webp" />
+    <!-- PWA Configuration -->
+    <link rel="manifest" href="./manifest.json" />
+    <meta name="theme-color" content="#c9a84c" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="Palazzo Antico" />
 
-  <!-- PWA Configuration -->
-  <link rel="manifest" href="./manifest.json" />
-  <meta name="theme-color" content="#c9a84c" />
-  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="apple-mobile-web-app-title" content="Palazzo Antico" />
+    <link rel="canonical" href="https://palazzoantico.gr/" />
+    <title>Palazzo Antico | Boutique Hotel in Medieval Rhodes</title>
 
-  <link rel="canonical" href="https://palazzoantico.gr/" />
-  <title>Palazzo Antico | Boutique Hotel in Medieval Rhodes</title>
+    <!-- Preload critical assets -->
+    <link
+      rel="preload"
+      href="images/hero_courtyard.webp"
+      as="image"
+      fetchpriority="high"
+    />
 
-  <!-- Preload critical assets -->
-  <link rel="preload" href="images/hero_courtyard.webp" as="image" fetchpriority="high" />
+    <!-- Google Fonts Optimized (Only required weights) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400&family=Inter:wght@300;400;600&family=Playfair+Display:wght@500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400&family=Inter:wght@300;400;600&family=Playfair+Display:wght@500;600&display=swap"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400&family=Inter:wght@300;400;600&family=Playfair+Display:wght@500;600&display=swap"
+      />
+    </noscript>
 
-  <!-- Google Fonts Optimized (Only required weights) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400&family=Inter:wght@300;400;600&family=Playfair+Display:wght@500;600&display=swap" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400&family=Inter:wght@300;400;600&family=Playfair+Display:wght@500;600&display=swap"
-    media="print" onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400&family=Inter:wght@300;400;600&family=Playfair+Display:wght@500;600&display=swap" />
-  </noscript>
+    <!-- Critical CSS (Above the Fold) -->
+    <style>
+      :root {
+        --stone-dark: #2c2825;
+        --gold: #c9a84c;
+        --terracotta: #c4785a;
+        --white: #ffffff;
+        --cream: #f5f1eb;
+        --cream-light: #faf8f5;
+        --font-heading: "Playfair Display", serif;
+        --font-accent: "Cormorant Garamond", serif;
+        --font-body: "Inter", sans-serif;
+        --text-base: 1rem;
+        --text-sm: 0.875rem;
+        --text-lg: 1.125rem;
+        --text-xl: 1.25rem;
+        --text-6xl: 3.75rem;
+        --text-7xl: 4.5rem;
+        --space-4: 1rem;
+        --space-6: 1.5rem;
+        --space-8: 2rem;
+        --nav-height: 80px;
+        --transition-base: 300ms ease;
+      }
 
-  <!-- Critical CSS (Above the Fold) -->
-  <style>
-    :root {
-      --stone-dark: #2c2825;
-      --gold: #c9a84c;
-      --terracotta: #c4785a;
-      --white: #ffffff;
-      --cream: #f5f1eb;
-      --cream-light: #faf8f5;
-      --font-heading: "Playfair Display", serif;
-      --font-accent: "Cormorant Garamond", serif;
-      --font-body: "Inter", sans-serif;
-      --text-base: 1rem;
-      --text-sm: 0.875rem;
-      --text-lg: 1.125rem;
-      --text-xl: 1.25rem;
-      --text-6xl: 3.75rem;
-      --text-7xl: 4.5rem;
-      --space-4: 1rem;
-      --space-6: 1.5rem;
-      --space-8: 2rem;
-      --nav-height: 80px;
-      --transition-base: 300ms ease;
-    }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+      body {
+        font-family: var(--font-body);
+        font-size: var(--text-base);
+        color: var(--stone-dark);
+        background-color: var(--cream-light);
+        overflow-x: hidden;
+      }
 
-    body {
-      font-family: var(--font-body);
-      font-size: var(--text-base);
-      color: var(--stone-dark);
-      background-color: var(--cream-light);
-      overflow-x: hidden;
-    }
+      h1 {
+        font-family: var(--font-heading);
+        font-weight: 500;
+        font-size: var(--text-7xl);
+        color: var(--white);
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+      }
 
-    h1 {
-      font-family: var(--font-heading);
-      font-weight: 500;
-      font-size: var(--text-7xl);
-      color: var(--white);
-      line-height: 1.1;
-      margin-bottom: 1.5rem;
-    }
+      .container {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 var(--space-6);
+      }
 
-    .container {
-      width: 100%;
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 var(--space-6);
-    }
+      .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: var(--nav-height);
+        z-index: 1000;
+      }
 
-    .nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: var(--nav-height);
-      z-index: 1000;
-    }
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+      }
 
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 100%;
-    }
+      .nav-logo {
+        font-family: var(--font-heading);
+        font-size: var(--text-xl);
+        font-weight: 600;
+        color: var(--white);
+        letter-spacing: 0.05em;
+      }
 
-    .nav-logo {
-      font-family: var(--font-heading);
-      font-size: var(--text-xl);
-      font-weight: 600;
-      color: var(--white);
-      letter-spacing: 0.05em;
-    }
+      .nav-links {
+        display: flex;
+        gap: var(--space-8);
+      }
 
-    .nav-links {
-      display: flex;
-      gap: var(--space-8);
-    }
+      .nav-link {
+        font-size: var(--text-sm);
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--white);
+      }
 
-    .nav-link {
-      font-size: var(--text-sm);
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--white);
-    }
+      .hero {
+        position: relative;
+        height: 100vh;
+        min-height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background: var(--stone-dark);
+      }
 
-    .hero {
-      position: relative;
-      height: 100vh;
-      min-height: 600px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      background: var(--stone-dark);
-    }
+      .hero-slider {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+      }
 
-    .hero-slider {
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-    }
+      .slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+      }
 
-    .slide {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      transition: opacity 1.5s ease-in-out;
-    }
+      .slide.active {
+        opacity: 1;
+      }
 
-    .slide.active {
-      opacity: 1;
-    }
+      .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
 
-    .slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom,
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
           rgba(44, 40, 37, 0.3),
-          rgba(44, 40, 37, 0.7));
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      max-width: 900px;
-      padding: 0 var(--space-6);
-    }
-
-    .hero-subtitle {
-      font-family: var(--font-accent);
-      font-size: var(--text-xl);
-      font-style: italic;
-      color: var(--gold);
-      margin-bottom: var(--space-4);
-      letter-spacing: 0.2em;
-    }
-
-    .hero-description {
-      font-size: var(--text-lg);
-      color: var(--cream);
-      margin-bottom: var(--space-8);
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem 2rem;
-      font-size: var(--text-sm);
-      font-weight: 600;
-      text-transform: uppercase;
-      border-radius: 4px;
-    }
-
-    .btn-primary {
-      background-color: var(--terracotta);
-      color: var(--white);
-    }
-
-    .btn-secondary {
-      background-color: transparent;
-      color: var(--white);
-      border: 2px solid var(--white);
-    }
-
-    @keyframes bounce {
-
-      0%,
-      100% {
-        transform: translateX(-50%) translateY(0);
+          rgba(44, 40, 37, 0.7)
+        );
       }
 
-      50% {
-        transform: translateX(-50%) translateY(-10px);
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        max-width: 900px;
+        padding: 0 var(--space-6);
       }
-    }
 
-    .hero-scroll {
-      position: absolute;
-      bottom: var(--space-8);
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: var(--white);
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
-      animation: bounce 2s infinite;
-    }
-  </style>
+      .hero-subtitle {
+        font-family: var(--font-accent);
+        font-size: var(--text-xl);
+        font-style: italic;
+        color: var(--gold);
+        margin-bottom: var(--space-4);
+        letter-spacing: 0.2em;
+      }
 
-  <!-- Full Stylesheet (Async) -->
-  <link rel="stylesheet" href="css/style.min.css" media="print" onload="this.media = 'all'" />
-  <noscript>
-    <link rel="stylesheet" href="css/style.min.css" />
-  </noscript>
+      .hero-description {
+        font-size: var(--text-lg);
+        color: var(--cream);
+        margin-bottom: var(--space-8);
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-  <!-- Schema.org Structured Data -->
-  <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Hotel",
-        "name": "Palazzo Antico",
-        "description": "A luxury boutique hotel in a restored 15th-century Venetian palazzo, located in the heart of Rhodes' UNESCO-listed medieval old town.",
-        "url": "https://palazzoantico.gr",
-        "telephone": "+30-22410-12345",
-        "email": "info@palazzoantico.gr",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "15 Ippoton Street",
-          "addressLocality": "Rhodes Old Town",
-          "postalCode": "85100",
-          "addressCountry": "GR"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "36.4450",
-          "longitude": "28.2260"
-        },
-        "starRating": {
-          "@type": "Rating",
-          "ratingValue": "4"
-        },
-        "priceRange": "€€€",
-        "amenityFeature": [
-          { "@type": "LocationFeatureSpecification", "name": "Free WiFi" },
-          { "@type": "LocationFeatureSpecification", "name": "Restaurant" },
-          { "@type": "LocationFeatureSpecification", "name": "Spa" },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Rooftop Terrace"
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 2rem;
+        font-size: var(--text-sm);
+        font-weight: 600;
+        text-transform: uppercase;
+        border-radius: 4px;
+      }
+
+      .btn-primary {
+        background-color: var(--terracotta);
+        color: var(--white);
+      }
+
+      .btn-secondary {
+        background-color: transparent;
+        color: var(--white);
+        border: 2px solid var(--white);
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateX(-50%) translateY(0);
+        }
+
+        50% {
+          transform: translateX(-50%) translateY(-10px);
+        }
+      }
+
+      .hero-scroll {
+        position: absolute;
+        bottom: var(--space-8);
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--white);
+        font-size: 0.75rem;
+        letter-spacing: 0.2em;
+        animation: bounce 2s infinite;
+      }
+    </style>
+
+    <!-- Full Stylesheet (Async) -->
+    <link
+      rel="stylesheet"
+      href="css/style.min.css"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="css/style.min.css" />
+    </noscript>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "Hotel",
+          "@id": "https://palazzoantico.gr/#hotel",
+          "name": "Palazzo Antico",
+          "description": "A luxury boutique hotel in a restored 15th-century Venetian palazzo, located in the heart of Rhodes' UNESCO-listed medieval old town. Experience history and modern comfort.",
+          "url": "https://palazzoantico.gr",
+          "telephone": "+30-22410-12345",
+          "email": "info@palazzoantico.gr",
+          "image": [
+            "https://palazzoantico.gr/images/hero_courtyard.webp",
+            "https://palazzoantico.gr/images/room_tower_suite.webp",
+            "https://palazzoantico.gr/images/experience_restaurant.webp",
+            "https://palazzoantico.gr/images/experience_terrace.webp"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "15 Ippoton Street",
+            "addressLocality": "Rhodes Old Town",
+            "postalCode": "85100",
+            "addressCountry": "GR"
           },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Concierge Service"
-          }
-        ],
-        "checkinTime": "15:00",
-        "checkoutTime": "11:00"
-      }
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "36.4450",
+            "longitude": "28.2260"
+          },
+          "starRating": {
+            "@type": "Rating",
+            "ratingValue": "4"
+          },
+          "priceRange": "€180 - €350",
+          "checkinTime": "15:00",
+          "checkoutTime": "11:00",
+          "amenityFeature": [
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Free WiFi",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Restaurant",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Spa",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Rooftop Terrace",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Concierge Service",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Air Conditioning",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Historic Building",
+              "value": true
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://palazzoantico.gr/#website",
+          "url": "https://palazzoantico.gr/",
+          "name": "Palazzo Antico",
+          "publisher": {
+            "@id": "https://palazzoantico.gr/#hotel"
+          },
+          "inLanguage": "en-US"
+        }
+      ]
     </script>
-</head>
+  </head>
 
-<body>
-  <!-- Navigation -->
-  <nav class="nav">
-    <div class="container nav-inner">
-      <a href="index.html" class="nav-logo">PALAZZO ANTICO</a>
-      <ul class="nav-links">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="rooms.html" class="nav-link">Rooms</a></li>
-        <li><a href="experience.html" class="nav-link">Experience</a></li>
-        <li><a href="retreats.html" class="nav-link">Retreats</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
+  <body>
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="container nav-inner">
+        <a href="index.html" class="nav-logo">PALAZZO ANTICO</a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="rooms.html" class="nav-link">Rooms</a></li>
+          <li><a href="experience.html" class="nav-link">Experience</a></li>
+          <li><a href="retreats.html" class="nav-link">Retreats</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-overlay"></div>
+    <div class="mobile-menu">
+      <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="rooms.html" class="mobile-nav-link">Rooms</a></li>
+        <li>
+          <a href="experience.html" class="mobile-nav-link">Experience</a>
+        </li>
+        <li><a href="retreats.html" class="mobile-nav-link">Retreats</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </div>
-  </nav>
 
-  <!-- Mobile Menu -->
-  <div class="mobile-overlay"></div>
-  <div class="mobile-menu">
-    <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
-    <ul class="mobile-nav-links">
-      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
-      <li><a href="rooms.html" class="mobile-nav-link">Rooms</a></li>
-      <li>
-        <a href="experience.html" class="mobile-nav-link">Experience</a>
-      </li>
-      <li><a href="retreats.html" class="mobile-nav-link">Retreats</a></li>
-      <li><a href="about.html" class="mobile-nav-link">About</a></li>
-      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
-    </ul>
-  </div>
-
-  <!-- Hero Section with Image Slider -->
-  <section class="hero">
-    <div class="hero-slider">
-      <div class="slide active">
-        <img src="images/hero_courtyard.webp" alt="Palazzo Antico courtyard at dusk" width="1024" height="1024"
-          fetchpriority="high" loading="eager" srcset="
+    <!-- Hero Section with Image Slider -->
+    <section class="hero">
+      <div class="hero-slider">
+        <div class="slide active">
+          <img
+            src="images/hero_courtyard.webp"
+            alt="Palazzo Antico courtyard at dusk"
+            width="1024"
+            height="1024"
+            fetchpriority="high"
+            loading="eager"
+            srcset="
               images/hero_courtyard_400.webp   400w,
               images/hero_courtyard_800.webp   800w,
               images/hero_courtyard_1200.webp 1200w,
               images/hero_courtyard.webp      1920w
-            " sizes="100vw" />
-      </div>
-      <div class="slide">
-        <img src="images/room_tower_suite.webp" alt="Tower Suite with panoramic views" width="1024" height="1024"
-          srcset="
+            "
+            sizes="100vw"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/room_tower_suite.webp"
+            alt="Tower Suite with panoramic views"
+            width="1024"
+            height="1024"
+            srcset="
               images/room_tower_suite_400.webp   400w,
               images/room_tower_suite_800.webp   800w,
               images/room_tower_suite_1200.webp 1200w,
               images/room_tower_suite.webp      1920w
-            " sizes="(max-width: 768px) 100vw, 50vw" />
-      </div>
-      <div class="slide">
-        <img src="images/experience_restaurant.webp" alt="Fine dining in stone cellar" width="1024" height="1024"
-          srcset="
+            "
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/experience_restaurant.webp"
+            alt="Fine dining in stone cellar"
+            width="1024"
+            height="1024"
+            srcset="
               images/experience_restaurant_400.webp   400w,
               images/experience_restaurant_800.webp   800w,
               images/experience_restaurant_1200.webp 1200w,
               images/experience_restaurant.webp      1920w
-            " sizes="(max-width: 768px) 100vw, 50vw" />
-      </div>
-      <div class="slide">
-        <img src="images/experience_terrace.webp" alt="Rooftop terrace at sunset" width="1024" height="1024" srcset="
+            "
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/experience_terrace.webp"
+            alt="Rooftop terrace at sunset"
+            width="1024"
+            height="1024"
+            srcset="
               images/experience_terrace_400.webp   400w,
               images/experience_terrace_800.webp   800w,
               images/experience_terrace_1200.webp 1200w,
               images/experience_terrace.webp      1920w
-            " sizes="(max-width: 768px) 100vw, 50vw" />
+            "
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        </div>
       </div>
-    </div>
-    <div class="hero-overlay"></div>
-    <div class="hero-slider-indicators">
-      <button class="hero-slider-indicator active" aria-label="Slide 1"></button>
-      <button class="hero-slider-indicator" aria-label="Slide 2"></button>
-      <button class="hero-slider-indicator" aria-label="Slide 3"></button>
-      <button class="hero-slider-indicator" aria-label="Slide 4"></button>
-    </div>
-    <div class="hero-content">
-      <p class="hero-subtitle">Est. 1489 • Rhodes, Greece</p>
-      <h1 class="hero-title">Palazzo Antico</h1>
-      <p class="hero-description">
-        Where medieval grandeur meets modern luxury. Experience an
-        unforgettable stay in a restored 15th-century Venetian palazzo in the
-        heart of Rhodes' UNESCO-listed old town.
-      </p>
-      <div class="hero-buttons">
-        <a href="#rooms" class="btn btn-primary">Explore Rooms</a>
-        <a href="contact.html" class="btn btn-secondary">Book Your Stay</a>
+      <div class="hero-overlay"></div>
+      <div class="hero-slider-indicators">
+        <button
+          class="hero-slider-indicator active"
+          aria-label="Slide 1"
+        ></button>
+        <button class="hero-slider-indicator" aria-label="Slide 2"></button>
+        <button class="hero-slider-indicator" aria-label="Slide 3"></button>
+        <button class="hero-slider-indicator" aria-label="Slide 4"></button>
       </div>
-    </div>
-    <div class="hero-scroll">
-      <span>Scroll</span>
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M12 5v14M5 12l7 7 7-7" />
-      </svg>
-    </div>
-  </section>
+      <div class="hero-content">
+        <p class="hero-subtitle">Est. 1489 • Rhodes, Greece</p>
+        <h1 class="hero-title">Palazzo Antico</h1>
+        <p class="hero-description">
+          Where medieval grandeur meets modern luxury. Experience an
+          unforgettable stay in a restored 15th-century Venetian palazzo in the
+          heart of Rhodes' UNESCO-listed old town.
+        </p>
+        <div class="hero-buttons">
+          <a href="#rooms" class="btn btn-primary">Explore Rooms</a>
+          <a href="contact.html" class="btn btn-secondary">Book Your Stay</a>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <span>Scroll</span>
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M12 5v14M5 12l7 7 7-7" />
+        </svg>
+      </div>
+    </section>
 
-  <!-- Welcome Section -->
-  <section class="welcome section-lg">
-    <div class="container">
-      <div class="welcome-grid">
-        <div class="welcome-image fade-in-left">
-          <img src="images/experience_restaurant.webp" alt="Fine dining in our stone-walled restaurant" width="1200"
-            height="800" srcset="
+    <!-- Welcome Section -->
+    <section class="welcome section-lg">
+      <div class="container">
+        <div class="welcome-grid">
+          <div class="welcome-image fade-in-left">
+            <img
+              src="images/experience_restaurant.webp"
+              alt="Fine dining in our stone-walled restaurant"
+              width="1200"
+              height="800"
+              srcset="
                 images/experience_restaurant_400.webp   400w,
                 images/experience_restaurant_800.webp   800w,
                 images/experience_restaurant_1200.webp 1200w,
                 images/experience_restaurant.webp      1920w
-              " sizes="(max-width: 768px) 100vw, 50vw" />
-        </div>
-        <div class="welcome-content fade-in-right">
-          <p class="welcome-eyebrow">Welcome to Our Story</p>
-          <h2 class="welcome-title">A Living Piece of History</h2>
-          <p class="welcome-text">
-            Nestled within the ancient walls of Rhodes' medieval old town,
-            Palazzo Antico is more than a hotel—it's a journey through time.
-            Our carefully restored 15th-century Venetian palazzo preserves the
-            authentic character of its storied past while offering every
-            modern comfort. Available for individual stays and
-            <a href="retreats.html" style="color: var(--terracotta); text-decoration: underline">exclusive retreats</a>.
-          </p>
-          <p class="welcome-text">
-            Each stone tells a story. From the original arched doorways to the
-            hand-carved ceiling beams, our commitment to authentic restoration
-            ensures your stay is truly immersive. Yet modern amenities, from
-            climate control to plush bedding, ensure you rest in complete
-            comfort.
-          </p>
-          <div class="welcome-features">
-            <div class="welcome-feature">
-              <div class="welcome-feature-icon">🏛️</div>
-              <span>15th Century Heritage</span>
-            </div>
-            <div class="welcome-feature">
-              <div class="welcome-feature-icon">⭐</div>
-              <span>Boutique Luxury</span>
-            </div>
-            <div class="welcome-feature">
-              <div class="welcome-feature-icon">🏰</div>
-              <span>UNESCO Old Town</span>
+              "
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+          <div class="welcome-content fade-in-right">
+            <p class="welcome-eyebrow">Welcome to Our Story</p>
+            <h2 class="welcome-title">A Living Piece of History</h2>
+            <p class="welcome-text">
+              Nestled within the ancient walls of Rhodes' medieval old town,
+              Palazzo Antico is more than a hotel—it's a journey through time.
+              Our carefully restored 15th-century Venetian palazzo preserves the
+              authentic character of its storied past while offering every
+              modern comfort. Available for individual stays and
+              <a
+                href="retreats.html"
+                style="color: var(--terracotta); text-decoration: underline"
+                >exclusive retreats</a
+              >.
+            </p>
+            <p class="welcome-text">
+              Each stone tells a story. From the original arched doorways to the
+              hand-carved ceiling beams, our commitment to authentic restoration
+              ensures your stay is truly immersive. Yet modern amenities, from
+              climate control to plush bedding, ensure you rest in complete
+              comfort.
+            </p>
+            <div class="welcome-features">
+              <div class="welcome-feature">
+                <div class="welcome-feature-icon">🏛️</div>
+                <span>15th Century Heritage</span>
+              </div>
+              <div class="welcome-feature">
+                <div class="welcome-feature-icon">⭐</div>
+                <span>Boutique Luxury</span>
+              </div>
+              <div class="welcome-feature">
+                <div class="welcome-feature-icon">🏰</div>
+                <span>UNESCO Old Town</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Rooms Section -->
-  <section id="rooms" class="rooms section-lg">
-    <div class="container">
-      <div class="section-header fade-in">
-        <p class="section-eyebrow">Accommodations</p>
-        <h2 class="section-title">Our Rooms & Suites</h2>
-        <p class="section-description">
-          Five unique spaces, each telling its own medieval tale while
-          cocooning you in contemporary comfort.
-        </p>
-      </div>
+    <!-- Rooms Section -->
+    <section id="rooms" class="rooms section-lg">
+      <div class="container">
+        <div class="section-header fade-in">
+          <p class="section-eyebrow">Accommodations</p>
+          <h2 class="section-title">Our Rooms & Suites</h2>
+          <p class="section-description">
+            Five unique spaces, each telling its own medieval tale while
+            cocooning you in contemporary comfort.
+          </p>
+        </div>
 
-      <div class="rooms-grid">
-        <!-- Knight's Suite -->
-        <div class="room-card fade-in">
-          <div class="room-card-image">
-            <img src="images/room_knights_suite.webp" alt="The Knight's Suite with stone walls and four-poster bed"
-              width="800" height="600" srcset="
+        <div class="rooms-grid">
+          <!-- Knight's Suite -->
+          <div class="room-card fade-in">
+            <div class="room-card-image">
+              <img
+                src="images/room_knights_suite.webp"
+                alt="The Knight's Suite with stone walls and four-poster bed"
+                width="800"
+                height="600"
+                srcset="
                   images/room_knights_suite_400.webp   400w,
                   images/room_knights_suite_800.webp   800w,
                   images/room_knights_suite_1200.webp 1200w,
                   images/room_knights_suite.webp      1920w
-                " sizes="(max-width: 768px) 100vw, 50vw" />
-          </div>
-          <div class="room-card-content">
-            <h3 class="room-card-name">The Knight's Suite</h3>
-            <p class="room-card-description">
-              Our signature suite features exposed stone walls, a magnificent
-              four-poster bed, and an ensuite bathroom with rain shower.
-            </p>
-            <div class="room-card-amenities">
-              <span class="room-amenity">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="3" y="3" width="18" height="18" rx="2" />
-                  <path d="M3 9h18M9 21V9" />
-                </svg>
-                45 m²
-              </span>
-              <span class="room-amenity">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M2 20h20M4 20V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16m-6-15h.01M8 10h.01" />
-                </svg>
-                Courtyard View
-              </span>
-              <span class="room-amenity">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 7h14M5 12h14M5 17h14" />
-                </svg>
-                King Bed
-              </span>
+                "
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
-            <div class="room-card-footer">
-              <span class="room-price">€280 <span>/ night</span></span>
-              <a href="room-knights-suite.html" class="btn btn-outline-dark">View Details</a>
+            <div class="room-card-content">
+              <h3 class="room-card-name">The Knight's Suite</h3>
+              <p class="room-card-description">
+                Our signature suite features exposed stone walls, a magnificent
+                four-poster bed, and an ensuite bathroom with rain shower.
+              </p>
+              <div class="room-card-amenities">
+                <span class="room-amenity">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <path d="M3 9h18M9 21V9" />
+                  </svg>
+                  45 m²
+                </span>
+                <span class="room-amenity">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M2 20h20M4 20V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16m-6-15h.01M8 10h.01"
+                    />
+                  </svg>
+                  Courtyard View
+                </span>
+                <span class="room-amenity">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M5 7h14M5 12h14M5 17h14" />
+                  </svg>
+                  King Bed
+                </span>
+              </div>
+              <div class="room-card-footer">
+                <span class="room-price">€280 <span>/ night</span></span>
+                <a href="room-knights-suite.html" class="btn btn-outline-dark"
+                  >View Details</a
+                >
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Venetian Room -->
-        <div class="room-card fade-in">
-          <div class="room-card-image">
-            <img src="images/room_venetian.webp" alt="The Venetian Room with arched ceiling and balcony" width="800"
-              height="600" srcset="
+          <!-- Venetian Room -->
+          <div class="room-card fade-in">
+            <div class="room-card-image">
+              <img
+                src="images/room_venetian.webp"
+                alt="The Venetian Room with arched ceiling and balcony"
+                width="800"
+                height="600"
+                srcset="
                   images/room_venetian_400.webp   400w,
                   images/room_venetian_800.webp   800w,
                   images/room_venetian_1200.webp 1200w,
                   images/room_venetian.webp      1920w
-                " sizes="(max-width: 768px) 100vw, 50vw" />
-          </div>
-          <div class="room-card-content">
-            <h3 class="room-card-name">The Venetian Room</h3>
-            <p class="room-card-description">
-              Elegant accommodation with terracotta floors, vaulted ceilings,
-              and a private balcony overlooking medieval rooftops.
-            </p>
-            <div class="room-card-amenities">
-              <span class="room-amenity">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="3" y="3" width="18" height="18" rx="2" />
-                  <path d="M3 9h18M9 21V9" />
-                </svg>
-                35 m²
-              </span>
-              <span class="room-amenity">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M2 20h20M4 20V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16m-6-15h.01M8 10h.01" />
-                </svg>
-                Private Balcony
-              </span>
-              <span class="room-amenity">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 7h14M5 12h14M5 17h14" />
-                </svg>
-                Queen Bed
-              </span>
+                "
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
-            <div class="room-card-footer">
-              <span class="room-price">€220 <span>/ night</span></span>
-              <a href="room-venetian.html" class="btn btn-outline-dark">View Details</a>
+            <div class="room-card-content">
+              <h3 class="room-card-name">The Venetian Room</h3>
+              <p class="room-card-description">
+                Elegant accommodation with terracotta floors, vaulted ceilings,
+                and a private balcony overlooking medieval rooftops.
+              </p>
+              <div class="room-card-amenities">
+                <span class="room-amenity">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <path d="M3 9h18M9 21V9" />
+                  </svg>
+                  35 m²
+                </span>
+                <span class="room-amenity">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M2 20h20M4 20V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16m-6-15h.01M8 10h.01"
+                    />
+                  </svg>
+                  Private Balcony
+                </span>
+                <span class="room-amenity">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M5 7h14M5 12h14M5 17h14" />
+                  </svg>
+                  Queen Bed
+                </span>
+              </div>
+              <div class="room-card-footer">
+                <span class="room-price">€220 <span>/ night</span></span>
+                <a href="room-venetian.html" class="btn btn-outline-dark"
+                  >View Details</a
+                >
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Courtyard Room -->
-        <div class="room-card fade-in">
-          <div class="room-card-image">
-            <img src="images/room_courtyard.webp" alt="The Courtyard Room with window view of fountain" width="800"
-              height="600" srcset="
+          <!-- Courtyard Room -->
+          <div class="room-card fade-in">
+            <div class="room-card-image">
+              <img
+                src="images/room_courtyard.webp"
+                alt="The Courtyard Room with window view of fountain"
+                width="800"
+                height="600"
+                srcset="
                   images/room_courtyard_400.webp   400w,
                   images/room_courtyard_800.webp   800w,
                   images/room_courtyard_1200.webp 1200w,
                   images/room_courtyard.webp      1920w
-                " sizes="(max-width: 768px) 100vw, 50vw" />
-          </div>
-          <div class="room-card-content">
-            <h3 class="room-card-name">The Courtyard Room</h3>
-            <p class="room-card-description">
-              Intimate and cozy, this room overlooks our tranquil internal
-              courtyard with its fountain and bougainvillea.
-            </p>
-            <div class="room-card-amenities">
-              <span class="room-amenity">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="3" y="3" width="18" height="18" rx="2" />
-                  <path d="M3 9h18M9 21V9" />
-                </svg>
-                28 m²
-              </span>
-              <span class="room-amenity">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M2 20h20M4 20V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16m-6-15h.01M8 10h.01" />
-                </svg>
-                Courtyard View
-              </span>
-              <span class="room-amenity">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 7h14M5 12h14M5 17h14" />
-                </svg>
-                Double Bed
-              </span>
+                "
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
-            <div class="room-card-footer">
-              <span class="room-price">€180 <span>/ night</span></span>
-              <a href="room-courtyard.html" class="btn btn-outline-dark">View Details</a>
+            <div class="room-card-content">
+              <h3 class="room-card-name">The Courtyard Room</h3>
+              <p class="room-card-description">
+                Intimate and cozy, this room overlooks our tranquil internal
+                courtyard with its fountain and bougainvillea.
+              </p>
+              <div class="room-card-amenities">
+                <span class="room-amenity">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <path d="M3 9h18M9 21V9" />
+                  </svg>
+                  28 m²
+                </span>
+                <span class="room-amenity">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M2 20h20M4 20V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16m-6-15h.01M8 10h.01"
+                    />
+                  </svg>
+                  Courtyard View
+                </span>
+                <span class="room-amenity">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M5 7h14M5 12h14M5 17h14" />
+                  </svg>
+                  Double Bed
+                </span>
+              </div>
+              <div class="room-card-footer">
+                <span class="room-price">€180 <span>/ night</span></span>
+                <a href="room-courtyard.html" class="btn btn-outline-dark"
+                  >View Details</a
+                >
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Tower Suite -->
-        <div class="room-card fade-in">
-          <div class="room-card-image">
-            <img src="images/room_tower_suite.webp" alt="The Tower Suite with panoramic views" width="800" height="600"
-              srcset="
+          <!-- Tower Suite -->
+          <div class="room-card fade-in">
+            <div class="room-card-image">
+              <img
+                src="images/room_tower_suite.webp"
+                alt="The Tower Suite with panoramic views"
+                width="800"
+                height="600"
+                srcset="
                   images/room_tower_suite_400.webp   400w,
                   images/room_tower_suite_800.webp   800w,
                   images/room_tower_suite_1200.webp 1200w,
                   images/room_tower_suite.webp      1920w
-                " sizes="(max-width: 768px) 100vw, 50vw" />
-          </div>
-          <div class="room-card-content">
-            <h3 class="room-card-name">The Tower Suite</h3>
-            <p class="room-card-description">
-              Our crown jewel. A rooftop penthouse with 360° views of the old
-              town, sea, and sunset. Features private terrace.
-            </p>
-            <div class="room-card-amenities">
-              <span class="room-amenity">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="3" y="3" width="18" height="18" rx="2" />
-                  <path d="M3 9h18M9 21V9" />
-                </svg>
-                55 m²
-              </span>
-              <span class="room-amenity">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M2 20h20M4 20V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16m-6-15h.01M8 10h.01" />
-                </svg>
-                360° Views
-              </span>
-              <span class="room-amenity">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 7h14M5 12h14M5 17h14" />
-                </svg>
-                King Bed
-              </span>
+                "
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
-            <div class="room-card-footer">
-              <span class="room-price">€350 <span>/ night</span></span>
-              <a href="room-tower-suite.html" class="btn btn-outline-dark">View Details</a>
+            <div class="room-card-content">
+              <h3 class="room-card-name">The Tower Suite</h3>
+              <p class="room-card-description">
+                Our crown jewel. A rooftop penthouse with 360° views of the old
+                town, sea, and sunset. Features private terrace.
+              </p>
+              <div class="room-card-amenities">
+                <span class="room-amenity">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <path d="M3 9h18M9 21V9" />
+                  </svg>
+                  55 m²
+                </span>
+                <span class="room-amenity">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M2 20h20M4 20V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16m-6-15h.01M8 10h.01"
+                    />
+                  </svg>
+                  360° Views
+                </span>
+                <span class="room-amenity">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M5 7h14M5 12h14M5 17h14" />
+                  </svg>
+                  King Bed
+                </span>
+              </div>
+              <div class="room-card-footer">
+                <span class="room-price">€350 <span>/ night</span></span>
+                <a href="room-tower-suite.html" class="btn btn-outline-dark"
+                  >View Details</a
+                >
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Scholar's Study -->
-        <div class="room-card fade-in">
-          <div class="room-card-image">
-            <img src="images/room_scholars_study.webp" alt="The Scholar's Study with curated library and writing desk"
-              width="800" height="600" srcset="
+          <!-- Scholar's Study -->
+          <div class="room-card fade-in">
+            <div class="room-card-image">
+              <img
+                src="images/room_scholars_study.webp"
+                alt="The Scholar's Study with curated library and writing desk"
+                width="800"
+                height="600"
+                srcset="
                   images/room_scholars_study_400.webp   400w,
                   images/room_scholars_study_800.webp   800w,
                   images/room_scholars_study_1200.webp 1200w,
                   images/room_scholars_study.webp      1920w
-                " sizes="(max-width: 768px) 100vw, 50vw" />
-          </div>
-          <div class="room-card-content">
-            <h3 class="room-card-name">The Scholar's Study</h3>
-            <p class="room-card-description">
-              A haven for curious minds with curated library, vintage writing
-              desk, and views of medieval streets.
-            </p>
-            <div class="room-card-amenities">
-              <span class="room-amenity">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="3" y="3" width="18" height="18" rx="2" />
-                  <path d="M3 9h18M9 21V9" />
-                </svg>
-                32 m²
-              </span>
-              <span class="room-amenity">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M2 20h20M4 20V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16m-6-15h.01M8 10h.01" />
-                </svg>
-                Street View
-              </span>
-              <span class="room-amenity">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 7h14M5 12h14M5 17h14" />
-                </svg>
-                Queen Bed
-              </span>
+                "
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
-            <div class="room-card-footer">
-              <span class="room-price">€200 <span>/ night</span></span>
-              <a href="room-scholars-study.html" class="btn btn-outline-dark">View Details</a>
+            <div class="room-card-content">
+              <h3 class="room-card-name">The Scholar's Study</h3>
+              <p class="room-card-description">
+                A haven for curious minds with curated library, vintage writing
+                desk, and views of medieval streets.
+              </p>
+              <div class="room-card-amenities">
+                <span class="room-amenity">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <path d="M3 9h18M9 21V9" />
+                  </svg>
+                  32 m²
+                </span>
+                <span class="room-amenity">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M2 20h20M4 20V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16m-6-15h.01M8 10h.01"
+                    />
+                  </svg>
+                  Street View
+                </span>
+                <span class="room-amenity">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M5 7h14M5 12h14M5 17h14" />
+                  </svg>
+                  Queen Bed
+                </span>
+              </div>
+              <div class="room-card-footer">
+                <span class="room-price">€200 <span>/ night</span></span>
+                <a href="room-scholars-study.html" class="btn btn-outline-dark"
+                  >View Details</a
+                >
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Instagram Social Grid -->
-  <section class="instagram-section">
-    <div class="container">
-      <div class="section-header fade-in">
-        <p class="section-eyebrow">Guest Moments</p>
-        <h2 class="section-title">Share Your Stay</h2>
-        <p class="section-description">
-          Real moments from our guests. Tag #PalazzoAntico to be featured.
-        </p>
-      </div>
-      <div class="instagram-grid">
-        <div class="instagram-item slide-up stagger-delay-1">
-          <img src="images/hero_courtyard.webp" alt="Guest photo - Courtyard view" loading="lazy" width="600"
-            height="600" srcset="
+    <!-- Instagram Social Grid -->
+    <section class="instagram-section">
+      <div class="container">
+        <div class="section-header fade-in">
+          <p class="section-eyebrow">Guest Moments</p>
+          <h2 class="section-title">Share Your Stay</h2>
+          <p class="section-description">
+            Real moments from our guests. Tag #PalazzoAntico to be featured.
+          </p>
+        </div>
+        <div class="instagram-grid">
+          <div class="instagram-item slide-up stagger-delay-1">
+            <img
+              src="images/hero_courtyard.webp"
+              alt="Guest photo - Courtyard view"
+              loading="lazy"
+              width="600"
+              height="600"
+              srcset="
                 images/hero_courtyard_400.webp   400w,
                 images/hero_courtyard_800.webp   800w,
                 images/hero_courtyard_1200.webp 1200w,
                 images/hero_courtyard.webp      1920w
-              " sizes="(max-width: 768px) 100vw, 50vw" />
-          <div class="instagram-overlay">
-            <span class="instagram-icon">📸</span>
-            <span>@traveler_dreams</span>
+              "
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <div class="instagram-overlay">
+              <span class="instagram-icon">📸</span>
+              <span>@traveler_dreams</span>
+            </div>
           </div>
-        </div>
-        <div class="instagram-item slide-up stagger-delay-2">
-          <img src="images/experience_terrace.webp" alt="Guest photo - Rooftop breakfast" loading="lazy" width="600"
-            height="600" srcset="
+          <div class="instagram-item slide-up stagger-delay-2">
+            <img
+              src="images/experience_terrace.webp"
+              alt="Guest photo - Rooftop breakfast"
+              loading="lazy"
+              width="600"
+              height="600"
+              srcset="
                 images/experience_terrace_400.webp   400w,
                 images/experience_terrace_800.webp   800w,
                 images/experience_terrace_1200.webp 1200w,
                 images/experience_terrace.webp      1920w
-              " sizes="(max-width: 768px) 100vw, 50vw" />
-          <div class="instagram-overlay">
-            <span class="instagram-icon">📸</span>
-            <span>@mediterranean_soul</span>
+              "
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <div class="instagram-overlay">
+              <span class="instagram-icon">📸</span>
+              <span>@mediterranean_soul</span>
+            </div>
           </div>
-        </div>
-        <div class="instagram-item slide-up stagger-delay-3">
-          <img src="images/room_knights_suite.webp" alt="Guest photo - Knights Suite" loading="lazy" width="600"
-            height="600" srcset="
+          <div class="instagram-item slide-up stagger-delay-3">
+            <img
+              src="images/room_knights_suite.webp"
+              alt="Guest photo - Knights Suite"
+              loading="lazy"
+              width="600"
+              height="600"
+              srcset="
                 images/room_knights_suite_400.webp   400w,
                 images/room_knights_suite_800.webp   800w,
                 images/room_knights_suite_1200.webp 1200w,
                 images/room_knights_suite.webp      1920w
-              " sizes="(max-width: 768px) 100vw, 50vw" />
-          <div class="instagram-overlay">
-            <span class="instagram-icon">📸</span>
-            <span>@luxury_escapes</span>
+              "
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <div class="instagram-overlay">
+              <span class="instagram-icon">📸</span>
+              <span>@luxury_escapes</span>
+            </div>
           </div>
-        </div>
-        <div class="instagram-item slide-up stagger-delay-4">
-          <img src="images/experience_restaurant.webp" alt="Guest photo - Fine dining" loading="lazy" width="600"
-            height="600" srcset="
+          <div class="instagram-item slide-up stagger-delay-4">
+            <img
+              src="images/experience_restaurant.webp"
+              alt="Guest photo - Fine dining"
+              loading="lazy"
+              width="600"
+              height="600"
+              srcset="
                 images/experience_restaurant_400.webp   400w,
                 images/experience_restaurant_800.webp   800w,
                 images/experience_restaurant_1200.webp 1200w,
                 images/experience_restaurant.webp      1920w
-              " sizes="(max-width: 768px) 100vw, 50vw" />
-          <div class="instagram-overlay">
-            <span class="instagram-icon">📸</span>
-            <span>@foodie_adventures</span>
+              "
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <div class="instagram-overlay">
+              <span class="instagram-icon">📸</span>
+              <span>@foodie_adventures</span>
+            </div>
           </div>
-        </div>
-        <div class="instagram-item slide-up stagger-delay-5">
-          <img src="images/experience_oldtown.webp" alt="Guest photo - Old town exploration" loading="lazy" width="600"
-            height="600" srcset="
+          <div class="instagram-item slide-up stagger-delay-5">
+            <img
+              src="images/experience_oldtown.webp"
+              alt="Guest photo - Old town exploration"
+              loading="lazy"
+              width="600"
+              height="600"
+              srcset="
                 images/experience_oldtown_400.webp   400w,
                 images/experience_oldtown_800.webp   800w,
                 images/experience_oldtown_1200.webp 1200w,
                 images/experience_oldtown.webp      1920w
-              " sizes="(max-width: 768px) 100vw, 50vw" />
-          <div class="instagram-overlay">
-            <span class="instagram-icon">📸</span>
-            <span>@history_hunter</span>
+              "
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <div class="instagram-overlay">
+              <span class="instagram-icon">📸</span>
+              <span>@history_hunter</span>
+            </div>
           </div>
-        </div>
-        <div class="instagram-item slide-up stagger-delay-6">
-          <img src="images/tower_suite_sunset.webp" alt="Guest photo - Sunset views" loading="lazy" width="600"
-            height="600" srcset="
+          <div class="instagram-item slide-up stagger-delay-6">
+            <img
+              src="images/tower_suite_sunset.webp"
+              alt="Guest photo - Sunset views"
+              loading="lazy"
+              width="600"
+              height="600"
+              srcset="
                 images/tower_suite_sunset_400.webp   400w,
                 images/tower_suite_sunset_800.webp   800w,
                 images/tower_suite_sunset_1200.webp 1200w,
                 images/tower_suite_sunset.webp      1920w
-              " sizes="(max-width: 768px) 100vw, 50vw" />
-          <div class="instagram-overlay">
-            <span class="instagram-icon">📸</span>
-            <span>@sunset_chaser</span>
-          </div>
-        </div>
-      </div>
-      <div class="instagram-cta fade-in">
-        <a href="https://instagram.com/palazzoantico" target="_blank" rel="noopener noreferrer">
-          <span>📷</span> Follow @PalazzoAntico on Instagram
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-
-  <section class="experience" style="background-image: url(&quot;images/experience_oldtown.webp&quot;)">
-    <div class="experience-overlay"></div>
-    <div class="container experience-content">
-      <p class="section-eyebrow text-gold">Medieval Rhodes</p>
-      <h2 class="experience-title">Immerse Yourself in History</h2>
-      <p class="experience-text">
-        Step outside our doors and into a living museum. The medieval old town
-        of Rhodes is one of the best-preserved in Europe, a labyrinth of
-        cobblestone streets, ancient fortifications, and hidden treasures
-        waiting to be discovered.
-      </p>
-
-      <div class="experience-grid">
-        <div class="experience-item fade-in">
-          <div class="experience-icon">🏛️</div>
-          <h3 class="experience-item-title">Old Town Walks</h3>
-          <p class="experience-item-text">
-            Guided tours through 2,400 years of history
-          </p>
-        </div>
-        <div class="experience-item fade-in">
-          <div class="experience-icon">🍽️</div>
-          <h3 class="experience-item-title">Mediterranean Cuisine</h3>
-          <p class="experience-item-text">
-            Farm-to-table dining by
-            <a href="chef-rocco.html" style="color: var(--terracotta)">Chef Rocco</a>
-          </p>
-        </div>
-        <div class="experience-item fade-in">
-          <div class="experience-icon">💆</div>
-          <h3 class="experience-item-title">Hammam & Spa</h3>
-          <p class="experience-item-text">
-            Traditional Turkish bath experience
-          </p>
-        </div>
-        <div class="experience-item fade-in">
-          <div class="experience-icon">🌅</div>
-          <h3 class="experience-item-title">Rooftop Terrace</h3>
-          <p class="experience-item-text">Sunset views over the Aegean Sea</p>
-        </div>
-      </div>
-
-      <a href="experience.html" class="btn btn-gold" style="margin-top: var(--space-10)">Discover More</a>
-    </div>
-  </section>
-
-  <!-- Location Section -->
-  <section class="location section-lg">
-    <div class="container">
-      <div class="location-grid">
-        <div class="location-map fade-in-left">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3226.2!2d28.226!3d36.445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDI2JzQyLjAiTiAyOMKwMTMnMzMuNiJF!5e0!3m2!1sen!2sgr!4v1699999999999!5m2!1sen!2sgr"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            title="Palazzo Antico Location in Rhodes Old Town"></iframe>
-        </div>
-        <div class="location-content fade-in-right">
-          <p class="section-eyebrow text-gold">Our Location</p>
-          <h2 class="location-title">In the Heart of Medieval Rhodes</h2>
-          <p class="location-text">
-            Palazzo Antico is nestled within the ancient walls of Rhodes' Old
-            Town, a UNESCO World Heritage site and one of the best-preserved
-            medieval towns in Europe. Our location places you steps away from
-            iconic landmarks while offering a tranquil escape from the
-            bustling streets.
-          </p>
-          <div class="location-highlights">
-            <div class="location-highlight">
-              <div class="location-highlight-icon">🏰</div>
-              <div class="location-highlight-content">
-                <h4>Palace of the Grand Master</h4>
-                <p>3 minute walk</p>
-              </div>
-            </div>
-            <div class="location-highlight">
-              <div class="location-highlight-icon">⛵</div>
-              <div class="location-highlight-content">
-                <h4>Mandraki Harbor</h4>
-                <p>10 minute walk</p>
-              </div>
-            </div>
-            <div class="location-highlight">
-              <div class="location-highlight-icon">✈️</div>
-              <div class="location-highlight-content">
-                <h4>Rhodes International Airport</h4>
-                <p>25 minute drive</p>
-              </div>
+              "
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <div class="instagram-overlay">
+              <span class="instagram-icon">📸</span>
+              <span>@sunset_chaser</span>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <h3 class="footer-logo">PALAZZO ANTICO</h3>
-          <p class="footer-tagline">Where history meets hospitality</p>
-          <p class="footer-description">
-            A luxury boutique hotel in a restored 15th-century Venetian
-            palazzo, located in the heart of Rhodes' UNESCO-listed medieval
-            old town.
-          </p>
-          <div class="footer-social">
-            <a href="#" class="footer-social-link" aria-label="Facebook">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-              </svg>
-            </a>
-            <a href="#" class="footer-social-link" aria-label="Instagram">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-              </svg>
-            </a>
-            <a href="#" class="footer-social-link" aria-label="TripAdvisor">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm6.447 7.895c.643.355 1.116.977 1.223 1.71h1.33v1.395h-1.23c-.11.733-.58 1.355-1.223 1.71l.9 1.71h-1.617l-.643-1.22c-.435.13-.9.2-1.38.2-.48 0-.945-.07-1.38-.2l-.643 1.22H12.17l.9-1.71c-.643-.355-1.113-.977-1.223-1.71H10.62V9.605h1.227c.11-.733.58-1.355 1.223-1.71l-.9-1.71h1.617l.643 1.22c.435-.13.9-.2 1.38-.2.48 0 .945.07 1.38.2l.643-1.22h1.617l-.903 1.71z" />
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="footer-links-group">
-          <h4 class="footer-title">Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="rooms.html" class="footer-link">Our Rooms</a></li>
-            <li>
-              <a href="experience.html" class="footer-link">Experience</a>
-            </li>
-            <li><a href="retreats.html" class="footer-link">Retreats</a></li>
-            <li>
-              <a href="chef-rocco.html" class="footer-link">Chef Rocco</a>
-            </li>
-            <li><a href="contact.html" class="footer-link">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-links-group">
-          <h4 class="footer-title">Explore</h4>
-          <ul class="footer-links">
-            <li><a href="#" class="footer-link">Old Town Guide</a></li>
-            <li><a href="#" class="footer-link">Dining</a></li>
-            <li><a href="#" class="footer-link">Spa & Wellness</a></li>
-            <li><a href="#" class="footer-link">Local Tours</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-contact">
-          <h4 class="footer-title">Contact</h4>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg>
-            <span>15 Ippoton Street<br />Old Town, Rhodes 85100<br />Greece</span>
-          </div>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path
-                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-            </svg>
-            <span>+30 22410 12345</span>
-          </div>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-              <polyline points="22,6 12,13 2,6" />
-            </svg>
-            <span>info@palazzoantico.gr</span>
-          </div>
+        <div class="instagram-cta fade-in">
+          <a
+            href="https://instagram.com/palazzoantico"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>📷</span> Follow @PalazzoAntico on Instagram
+          </a>
         </div>
       </div>
+    </section>
 
-      <div class="footer-bottom">
-        <p>&copy; 2024 Palazzo Antico. All rights reserved.</p>
-        <div class="footer-legal">
-          <a href="#" class="footer-link">Privacy Policy</a>
-          <a href="#" class="footer-link">Terms of Service</a>
-          <a href="#" class="footer-link">Imprint</a>
+    <!-- Experience Section -->
+
+    <section
+      class="experience"
+      style="background-image: url(&quot;images/experience_oldtown.webp&quot;)"
+    >
+      <div class="experience-overlay"></div>
+      <div class="container experience-content">
+        <p class="section-eyebrow text-gold">Medieval Rhodes</p>
+        <h2 class="experience-title">Immerse Yourself in History</h2>
+        <p class="experience-text">
+          Step outside our doors and into a living museum. The medieval old town
+          of Rhodes is one of the best-preserved in Europe, a labyrinth of
+          cobblestone streets, ancient fortifications, and hidden treasures
+          waiting to be discovered.
+        </p>
+
+        <div class="experience-grid">
+          <div class="experience-item fade-in">
+            <div class="experience-icon">🏛️</div>
+            <h3 class="experience-item-title">Old Town Walks</h3>
+            <p class="experience-item-text">
+              Guided tours through 2,400 years of history
+            </p>
+          </div>
+          <div class="experience-item fade-in">
+            <div class="experience-icon">🍽️</div>
+            <h3 class="experience-item-title">Mediterranean Cuisine</h3>
+            <p class="experience-item-text">
+              Farm-to-table dining by
+              <a href="chef-rocco.html" style="color: var(--terracotta)"
+                >Chef Rocco</a
+              >
+            </p>
+          </div>
+          <div class="experience-item fade-in">
+            <div class="experience-icon">💆</div>
+            <h3 class="experience-item-title">Hammam & Spa</h3>
+            <p class="experience-item-text">
+              Traditional Turkish bath experience
+            </p>
+          </div>
+          <div class="experience-item fade-in">
+            <div class="experience-icon">🌅</div>
+            <h3 class="experience-item-title">Rooftop Terrace</h3>
+            <p class="experience-item-text">Sunset views over the Aegean Sea</p>
+          </div>
+        </div>
+
+        <a
+          href="experience.html"
+          class="btn btn-gold"
+          style="margin-top: var(--space-10)"
+          >Discover More</a
+        >
+      </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location section-lg">
+      <div class="container">
+        <div class="location-grid">
+          <div class="location-map fade-in-left">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3226.2!2d28.226!3d36.445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDI2JzQyLjAiTiAyOMKwMTMnMzMuNiJF!5e0!3m2!1sen!2sgr!4v1699999999999!5m2!1sen!2sgr"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Palazzo Antico Location in Rhodes Old Town"
+            ></iframe>
+          </div>
+          <div class="location-content fade-in-right">
+            <p class="section-eyebrow text-gold">Our Location</p>
+            <h2 class="location-title">In the Heart of Medieval Rhodes</h2>
+            <p class="location-text">
+              Palazzo Antico is nestled within the ancient walls of Rhodes' Old
+              Town, a UNESCO World Heritage site and one of the best-preserved
+              medieval towns in Europe. Our location places you steps away from
+              iconic landmarks while offering a tranquil escape from the
+              bustling streets.
+            </p>
+            <div class="location-highlights">
+              <div class="location-highlight">
+                <div class="location-highlight-icon">🏰</div>
+                <div class="location-highlight-content">
+                  <h4>Palace of the Grand Master</h4>
+                  <p>3 minute walk</p>
+                </div>
+              </div>
+              <div class="location-highlight">
+                <div class="location-highlight-icon">⛵</div>
+                <div class="location-highlight-content">
+                  <h4>Mandraki Harbor</h4>
+                  <p>10 minute walk</p>
+                </div>
+              </div>
+              <div class="location-highlight">
+                <div class="location-highlight-icon">✈️</div>
+                <div class="location-highlight-content">
+                  <h4>Rhodes International Airport</h4>
+                  <p>25 minute drive</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </section>
 
-  <!-- Floating Book Button -->
-  <a href="contact.html" class="book-btn-floating">Book Now</a>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3 class="footer-logo">PALAZZO ANTICO</h3>
+            <p class="footer-tagline">Where history meets hospitality</p>
+            <p class="footer-description">
+              A luxury boutique hotel in a restored 15th-century Venetian
+              palazzo, located in the heart of Rhodes' UNESCO-listed medieval
+              old town.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="footer-social-link" aria-label="Facebook">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="footer-social-link" aria-label="Instagram">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="footer-social-link" aria-label="TripAdvisor">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm6.447 7.895c.643.355 1.116.977 1.223 1.71h1.33v1.395h-1.23c-.11.733-.58 1.355-1.223 1.71l.9 1.71h-1.617l-.643-1.22c-.435.13-.9.2-1.38.2-.48 0-.945-.07-1.38-.2l-.643 1.22H12.17l.9-1.71c-.643-.355-1.113-.977-1.223-1.71H10.62V9.605h1.227c.11-.733.58-1.355 1.223-1.71l-.9-1.71h1.617l.643 1.22c.435-.13.9-.2 1.38-.2.48 0 .945.07 1.38.2l.643-1.22h1.617l-.903 1.71z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
 
-  <!-- JavaScript -->
-  <script src="js/main.js" defer></script>
+          <div class="footer-links-group">
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="rooms.html" class="footer-link">Our Rooms</a></li>
+              <li>
+                <a href="experience.html" class="footer-link">Experience</a>
+              </li>
+              <li><a href="retreats.html" class="footer-link">Retreats</a></li>
+              <li>
+                <a href="chef-rocco.html" class="footer-link">Chef Rocco</a>
+              </li>
+              <li><a href="contact.html" class="footer-link">Contact</a></li>
+            </ul>
+          </div>
 
-  <!-- Service Worker Registration -->
-  
+          <div class="footer-links-group">
+            <h4 class="footer-title">Explore</h4>
+            <ul class="footer-links">
+              <li><a href="#" class="footer-link">Old Town Guide</a></li>
+              <li><a href="#" class="footer-link">Dining</a></li>
+              <li><a href="#" class="footer-link">Spa & Wellness</a></li>
+              <li><a href="#" class="footer-link">Local Tours</a></li>
+            </ul>
+          </div>
 
-  
+          <div class="footer-contact">
+            <h4 class="footer-title">Contact</h4>
+            <div class="footer-contact-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span
+                >15 Ippoton Street<br />Old Town, Rhodes 85100<br />Greece</span
+              >
+            </div>
+            <div class="footer-contact-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                />
+              </svg>
+              <span>+30 22410 12345</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <span>info@palazzoantico.gr</span>
+            </div>
+          </div>
+        </div>
 
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js')
-          .then(reg => console.log('SW registered'))
-          .catch(err => console.log('SW error', err));
-      });
-    }
-  </script>
-</body>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Palazzo Antico. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#" class="footer-link">Privacy Policy</a>
+            <a href="#" class="footer-link">Terms of Service</a>
+            <a href="#" class="footer-link">Imprint</a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
+    <!-- Floating Book Button -->
+    <a href="contact.html" class="book-btn-floating">Book Now</a>
+
+    <!-- JavaScript -->
+    <script src="js/main.js" defer></script>
+
+    <!-- Service Worker Registration -->
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("./sw.js")
+            .then((reg) => console.log("SW registered"))
+            .catch((err) => console.log("SW error", err));
+        });
+      }
+    </script>
+  </body>
 </html>
