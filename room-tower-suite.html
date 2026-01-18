@@ -14,6 +14,21 @@
     <meta name="author" content="Palazzo Antico" />
     <meta name="robots" content="index, follow" />
 
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PLACEHOLDER");
+    </script>
+    <!-- End Google Tag Manager -->
+
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
@@ -170,6 +185,16 @@
   </head>
 
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PLACEHOLDER"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header>
       <nav class="nav scrolled" role="navigation">
         <div class="container nav-inner">
@@ -725,7 +750,9 @@
         </div>
       </div>
     </footer>
-    <a href="contact.html" class="book-btn-floating">Book Now</a>
+    <a href="contact.html?type=booking" class="book-btn-floating fade-in"
+      >Book Your Stay</a
+    >
     <script src="js/main.js" defer></script>
 
     <script>

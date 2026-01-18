@@ -206,6 +206,25 @@ document.addEventListener("DOMContentLoaded", function () {
         contactForm.appendChild(successMessage);
       }
     });
+
+    // --------------------------------------------------------------------------
+    // Pre-fill Form from URL Params
+    // --------------------------------------------------------------------------
+    const urlParams = new URLSearchParams(window.location.search);
+    const typeParam = urlParams.get("type");
+    const subjectSelect = document.getElementById("subject");
+
+    if (typeParam && subjectSelect) {
+      if (typeParam === "booking") {
+        subjectSelect.value = "booking";
+      } else if (typeParam === "dining") {
+        subjectSelect.value = "dining";
+      } else if (typeParam === "spa") {
+        subjectSelect.value = "spa";
+      } else if (typeParam === "event") {
+        subjectSelect.value = "event";
+      }
+    }
   }
 
   function isValidEmail(email) {
