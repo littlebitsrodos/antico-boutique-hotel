@@ -1,3 +1,15 @@
 {
-  "http://localhost:51838/retreats.html": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1768501648554-12229.report.html"
+  "http://localhost:53358/index.html": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1768984235322-72834.report.html",
+  "http://localhost:53358/rooms.html": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1768984246745-77936.report.html",
+  "http://localhost:53358/about.html": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1768984260563-66140.report.html",
+  "http://localhost:53358/contact.html": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1768984269956-17606.report.html",
+  "http://localhost:53358/chef-rocco.html": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1768984275397-224.report.html",
+  "http://localhost:53358/retreats.html": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1768984283386-2861.report.html",
+  "http://localhost:53358/experience.html": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1768984289812-93719.report.html",
+  "http://localhost:53358/offline.html": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1768984293968-78747.report.html",
+  "http://localhost:53358/room-courtyard.html": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1768984299668-18359.report.html",
+  "http://localhost:53358/room-knights-suite.html": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1768984306239-46591.report.html",
+  "http://localhost:53358/room-scholars-study.html": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1768984314155-48086.report.html",
+  "http://localhost:53358/room-tower-suite.html": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1768984319008-55698.report.html",
+  "http://localhost:53358/room-venetian.html": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1768984326521-64303.report.html"
 }

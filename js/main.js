@@ -481,3 +481,37 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// --------------------------------------------------------------------------
+// Card Slider Logic (Global for inline onclick)
+// --------------------------------------------------------------------------
+window.moveCardSlide = function (e, btn, direction) {
+  // Prevent propagation
+  if (e) {
+    e.stopPropagation();
+    e.preventDefault();
+  }
+
+  // Find the slider container
+  const slider = btn.closest(".room-card-image").querySelector(".card-slider");
+  if (!slider) return;
+
+  const slides = slider.querySelectorAll(".card-slide");
+  if (slides.length === 0) return;
+
+  // Get current index from data attribute
+  let currentIndex = parseInt(slider.getAttribute("data-slide-index") || "0");
+
+  // Calculate next index
+  let nextIndex = currentIndex + direction;
+
+  if (nextIndex >= slides.length) nextIndex = 0;
+  if (nextIndex < 0) nextIndex = slides.length - 1;
+
+  // Update active class
+  slides[currentIndex].classList.remove("active");
+  slides[nextIndex].classList.add("active");
+
+  // Update index attribute
+  slider.setAttribute("data-slide-index", nextIndex);
+};
