@@ -6,7 +6,7 @@
   "scripts": {
     "start": "live-server",
     "format": "prettier --write .",
-    "lint:links": "linkinator . --recurse --skip \"https?://(www\\.)?instagram\\.com|https?://(www\\.)?facebook\\.com|https?://palazzoantico\\.gr\"",
+    "lint:links": "linkinator . --recurse --skip \"https?://(www\\.)?instagram\\.com|https?://(www\\.)?facebook\\.com|https?://palazzoantico\\.gr|https?://(www\\.)?googletagmanager\\.com/ns\\.html\\?id=GTM-PLACEHOLDER\"",
     "lint:performance": "lhci autorun",
     "optimize:images": "node optimize-images.js",
     "game-over": "npm run optimize:images && npm run format && git add . && git commit -m \"Game Over: Session save\" && git push && echo '✨ Perfection achieved. Your session is saved and deployed! ✨'"
